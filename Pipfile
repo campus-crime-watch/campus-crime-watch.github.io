@@ -6,3 +6,5 @@ name = 'pypi'
 [packages]
 invoke = "*"
 gitpython = "*"
+jupyterlab = "*"
+pdfplumber = "*"
