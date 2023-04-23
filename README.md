@@ -1,6 +1,6 @@
 # campus crimewatch
 
-This is our code repo
+This is our code repo for extracting the text from the pdf files.
 
 ## Setup
 
