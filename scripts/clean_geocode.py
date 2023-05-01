@@ -22,7 +22,7 @@ def clean():
         new_row['Nature'] = nature_info
         cleaned_data.append(new_row)
     
-    with open('data/processed/stanford_crime_geocoded', 'w') as csvfile:
+    with open('data/processed/stanford_crime_geocoded.csv', 'w') as csvfile:
         fieldnames = ['Nature','Case #','Reported','Occurred','Location','Disposition','On Campus?','Area', 'x', 'y']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
