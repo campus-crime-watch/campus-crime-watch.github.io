@@ -17,11 +17,14 @@ def merge():
             all_data.append(row)
     
     with open('data/processed/stanford_crime_merged.csv', 'w') as csvfile:
-        fieldnames = ['Nature','Case #','Reported','Occurred','Location','Disposition','On Campus?','Area']
+        fieldnames = ['Nature','Case #','Reported','Occurred','Location','Disposition','On Campus?','Area', 'City', 'State', 'Country']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
         writer.writeheader()
         for row in all_data:
+            row['City'] = 'Stanford'
+            row['State'] = 'California'
+            row['Country'] = 'United States of America'
             writer.writerow(row)
 
 merge()
