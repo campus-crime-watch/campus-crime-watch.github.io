@@ -17,18 +17,16 @@ df.insert(4, "time", None, allow_duplicates = True)
 
 from datetime import datetime
 for iterate, entry in df["reported"].iteritems():
-    #if type(entry) != type(0.0):
     try: 
         date_object = datetime.strptime(entry, "%m/%d/%y %H:%M")
-        df.loc[iterate, "date"] = date_object.strptime(entry, "%m/%d/%y")
-        df.loc[iterate, "time"] = date_object.strptime(entry, "%H:%M")
+        df.loc[iterate, "date"] = date_object.strftime("%m/%d/%y")
+        df.loc[iterate, "time"] = date_object.strftime("%H:%M")
     except ValueError:
         df.loc[iterate, "date"] = datetime.strptime(entry, "%m/%d/%y").strftime("%m/%d/%y")
     else:
         clean_time = date_object.strftime("%H:%M")
         clean_date = date_object.strftime("%m/%d/%y")
-    #else:
-        df = df.assign(date = clean_date)
-        df = df.assign(time = clean_time)
+        df.loc[iterate, "date"] = clean_date
+        df.loc[iterate, "time"] = clean_time
 
-print(df)
+df.to_csv("stanford_crime_clean.csv")
