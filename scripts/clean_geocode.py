@@ -1,6 +1,6 @@
 import csv
 
-def clean():
+def geocode():
     # file = "data/raw/stanford_crime.csv"
     # nf = "data/processed/stanford_crime_merge.csv"
 
@@ -30,4 +30,5 @@ def clean():
         for row in cleaned_data:
             writer.writerow(row)
 
-clean()
+if __name__ == "__main__":
+    geocode()
