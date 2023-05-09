@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="main_page.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap" rel="stylesheet">  
+    <script src="scroll.js" defer ></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+  </head>
+
+
+  <body>
+    <!-- navigation bar top -->
+    <nav>
+      <div class="title"><a href="index.html">Campus CrimeWatch</a></div>
+      <ul>
+        <li><a href="clery_act.html">Clery Act</a></li>
+        <li><a href="about_page.html">How We Did It</a></li>
+        <li><a href="other_campus.html">Other Campuses</a></li>
+      </ul>
+    </nav>
+
+    <!--hamburger bar side -->
+    <div role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#mapSection"><li>Map Tool</li></a>
+            <a href="#dataSection"><li>Data</li></a>
+            <a href="#narrativeSection"><li>Story</li></a>
+            <a href="#tipsSection"><li>Your Story</li></a>
+            <a href="#inspoSection"><li>About Us</li></a>
+          </ul>
+      </div>
+    </div>
+
+    <div class="scroll-indicator"></div>
+
+    <section id="landing-page">
+      <p>welcome to</p>
+      <h1>Campus CrimeWatch</h1>
+      <p>where you can find... some text introducing this news app</p>
+    </section>
+
+    <section class="map" id = "mapSection">
+      <h3>and here goes the map which i have no idea how to make ;-;;;</h3>
+      <div id='mapbox'></div>
+      <script src="map.js" defer></script>
+    </section>
+  
+    <section id="dataSection">
+      <div class="data-background">
+        <div class="data-container">
+          <section class="data" id="data_1">
+            <p>In 2021, there were <h1>74</h1> burglaries reported on and around campus.</p>  
+          </section>
+          <section class="data" id="data_2">
+            <p>In 2021, there were <h1>95</h1> petty thefts reported on and around campus.</p>  
+          </section>
+          <section class="data" id="data_3">
+            <p>I've already spent <h1>30 min</h1> trying to create a scroll indicator. </p>
+          </section>
+        </div>
+      </div>
+    </section>
+    
+    <section id="narrativeSection">
+      <div class="story-container">
+        <div class="story">
+          <h2> Stdent voices </h2>
+            <p>“We don't feel protected by the school,” UC Berkeley sophomore Oski Bear said. 
+          Oski Bear was walking home on the southside of campus at 7 p.m. when he was robbed at gunpoint. </p>
+            <br>
+            <p>“I shouldn't feel unsafe on campus,” Bear said.</p>
+        </div>
+        <div class="story">
+          <h2>In the News </h2>
+            <p>Two UC Berkeley students robbed, threatened with taser near northwest corner of campus. </p>
+            <p>House fire on Kains Avenue, no injuries reported</p>
+            <p>Woman robbed at gunpoint at Alcatraz Avenue residence</p>
+        </div>
+    </section>
+
+    <section id="tipsSection">
+      <div id="tips">
+
+      </div>
+    </section>
+
+    <section id="inspoSection">
+        <i><h2> Why we made Campus CrimeWatch </h2>
+        <p>
+            As students, faculty, or staff of a college campus, we are bombarded with email or text notifications 
+          about the latest crimes near or on campus, as mandated by the Clery Act.
+        </p>
+        <p>
+          We want to be informed about crime on campus, we want to feel safe at our place of work and residence. 
+          A constant influx of texts and emails is a disorganized, ineffective way of getting a true idea of campus safety. 
+        </p>
+        <p> 
+          Some universities post their crime statistics buried in a 100-page yearly campus safety report, 
+          which not many people read. Other universities post recent crimes on a non-user friendly map on their school website. 
+        </p>
+        <p>
+          We wanted to create a centralized, accessible picture of crime and safety on the college campuses where we live and work. 
+        </p>
+        <p class="centered">Want to create this site for your college campus? Click on “How we did it” to get started.</p>
+        </i>
+    </section>
+  </body>
+  <footer> 
+    <p> Copyright © 2023 Team NoName. All Rights Reserved (woah I feel cool) </p>
+  </footer>
+
+</html>
+
