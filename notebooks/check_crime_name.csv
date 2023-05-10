@@ -1,306 +1,148 @@
-nature,unnamed:_0,case_#,reported,date,time,occurred,location,disposition,on_campus?,area,x,y
+nature,Unnamed: 0,case_#,reported,date,time,occurred,location,disposition,on_campus?,area,x,y
 Abandoned Vehicle,4,4,4,4,4,4,4,4,4,3,4,4
-"Acquire or possess access card of
-another 
-Petty Theft",1,1,1,1,1,1,1,1,1,1,1,1
-"Acquire/possess personal id info
-w/intent defraud w/pr - Identity
-theft (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Animal Bite, Identifying Info
-Required",1,1,1,1,1,1,1,1,1,0,1,1
+Acquire or possess access card of another  Petty Theft,1,1,1,1,1,1,1,1,1,1,1,1
+Acquire/possess personal id info w/intent defraud w/pr - Identity theft (F),1,1,1,1,1,1,1,1,1,1,1,1
+"Animal Bite, Identifying Info Required",1,1,1,1,1,1,1,1,1,0,1,1
 Annoy/Etc Child -18,3,3,3,3,3,3,3,3,3,2,3,3
-"Annoy/Etc Child -18 
-Contrib To Delinq Of Minr",1,1,1,1,1,1,1,1,1,1,1,1
+Annoy/Etc Child -18  Contrib To Delinq Of Minr,1,1,1,1,1,1,1,1,1,1,1,1
 Annoying Phone Calls,15,15,15,15,15,15,15,15,15,14,15,15
-"Annoying Phone Calls 
-Acc Computer/Alter
-Data/Defraud",1,1,1,1,1,1,1,1,1,1,1,1
-"Annoying Phone Calls 
-Stalking/Electronic",1,1,1,1,1,1,1,1,1,0,1,1
-"Annoying Phone Calls 
-Trespass:occ Prop W/O Con",1,1,1,1,1,1,1,1,1,1,1,1
+Annoying Phone Calls  Acc Computer/Alter Data/Defraud,1,1,1,1,1,1,1,1,1,1,1,1
+Annoying Phone Calls  Stalking/Electronic,1,1,1,1,1,1,1,1,1,0,1,1
+Annoying Phone Calls  Trespass:occ Prop W/O Con,1,1,1,1,1,1,1,1,1,1,1,1
 Annoying Repeat Calls:res,5,5,5,5,5,5,5,5,5,2,5,5
-"Annoying telephone
-call:obscene/threatening -
-Intimidation (M)",3,3,3,3,3,3,3,2,3,2,3,3
-"Annoying telephone
-call:obscene/threatening -
-Intimidation (M) 
-Personate to make other liable
-- False
-pretenses/swindle/confidence
-game (M)",1,1,1,1,1,1,1,1,1,1,1,1
+Annoying telephone call:obscene/threatening - Intimidation (M),3,3,3,3,3,3,3,2,3,2,3,3
+Annoying telephone call:obscene/threatening - Intimidation (M)  Personate to make other liable - False pretenses/swindle/confidence game (M),1,1,1,1,1,1,1,1,1,1,1,1
 Annoying/Etc Calls To 911,1,1,1,1,1,1,1,1,1,1,1,1
-"Annoying/Etc Calls To 911 
-Poss Controlled Substance",1,1,1,1,1,1,1,1,1,0,1,1
+Annoying/Etc Calls To 911  Poss Controlled Substance,1,1,1,1,1,1,1,1,1,0,1,1
 Appropr Lost Prop -$950,9,9,9,9,9,9,9,9,9,6,9,9
-"Appropriate lost property (F) 
-Theft by use of access card
-information - Impersonation (F)",1,1,1,1,1,1,1,1,1,0,1,1
+Appropriate lost property (F)  Theft by use of access card information - Impersonation (F),1,1,1,1,1,1,1,1,1,0,1,1
 Appropriate lost property (M),3,3,3,3,3,3,3,2,3,3,3,3
-"Appropriate lost property (M) 
-Disorderly conduct:lodge
-without owners consent (M)",1,1,1,1,1,1,1,1,1,1,1,1
+Appropriate lost property (M)  Disorderly conduct:lodge without owners consent (M),1,1,1,1,1,1,1,1,1,1,1,1
 Arson:inhabited Structure,1,1,1,1,1,1,1,1,1,1,1,1
 Arson:property,2,2,2,2,2,2,2,2,2,2,2,2
-"Assault On Person 
-False Imprisonment",1,1,1,1,1,1,1,1,1,1,1,1
-"Assault On Person 
-Trespas:enter/occupy
-structures w/o consent",1,1,1,1,1,1,1,1,1,1,1,1
-"Assault to Commit Rape 
-False Imprisonment",1,1,1,1,1,1,1,1,1,1,1,1
-"Assault to Commit Rape 
-Sexual Battery: Restrained
-Person 
-False Imprison W/Violence",1,1,1,1,1,1,1,1,1,1,1,1
-"Assault to commit
-mayhem/rape/etc - Rape (F)",1,1,1,1,1,1,1,1,1,0,1,1
-"Assault to commit lewd or
-lascivious act on child - Rape (F)",1,1,1,1,1,1,1,1,1,0,1,1
-"Assault to commit rape - Rape (F) 
-Give drugs to aid in felony (F)",1,1,1,1,1,1,1,1,1,0,1,1
-"Assault to commit rape - Simple
-(F)",4,4,4,4,4,4,4,4,4,1,4,4
-"Assault w deadly weapon:not
-f/arm (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Assault with deadly weapon or
-instrument",1,1,1,1,1,1,1,1,1,1,1,1
-"Att. Burglary:1st degree-breaking
-& att entry to Residence(F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Att. Burglary:2nd degree-
-breaking & att entry into
-Institutional Bldg",1,1,1,1,1,1,1,1,1,1,1,1
+Assault On Person  False Imprisonment,1,1,1,1,1,1,1,1,1,1,1,1
+Assault On Person  Trespas:enter/occupy structures w/o consent,1,1,1,1,1,1,1,1,1,1,1,1
+Assault to Commit Rape  False Imprisonment,1,1,1,1,1,1,1,1,1,1,1,1
+Assault to Commit Rape  Sexual Battery: Restrained Person  False Imprison W/Violence,1,1,1,1,1,1,1,1,1,1,1,1
+Assault to commit lewd or lascivious act on child - Rape (F),1,1,1,1,1,1,1,1,1,0,1,1
+Assault to commit mayhem/rape/etc - Rape (F),1,1,1,1,1,1,1,1,1,0,1,1
+Assault to commit rape - Rape (F)  Give drugs to aid in felony (F),1,1,1,1,1,1,1,1,1,0,1,1
+Assault to commit rape - Simple (F),4,4,4,4,4,4,4,4,4,1,4,4
+Assault w deadly weapon:not f/arm (M),1,1,1,1,1,1,1,1,1,0,1,1
+Assault with deadly weapon or instrument,1,1,1,1,1,1,1,1,1,1,1,1
+Att. Burglary:1st degree-breaking & att entry to Residence(F),1,1,1,1,1,1,1,1,1,1,1,1
+Att. Burglary:2nd degree- breaking & att entry into Institutional Bldg,1,1,1,1,1,1,1,1,1,1,1,1
 Attempt Commercial Burg,1,1,1,1,1,1,1,1,1,1,1,1
 Attempt Residential Burg,5,5,5,5,5,5,5,5,5,5,5,5
 Attempt Vehicle Burg,13,13,13,13,13,13,13,13,13,11,13,13
-"Attempt Vehicle Burg 
-Tamper With Vehicle",1,1,1,1,1,1,1,1,1,1,1,1
-"Attempt to Obtain money/etc by
-false pretenses (M)",1,1,1,1,1,1,1,1,1,1,1,1
+Attempt Vehicle Burg  Tamper With Vehicle,1,1,1,1,1,1,1,1,1,1,1,1
+Attempt to Obtain money/etc by false pretenses (M),1,1,1,1,1,1,1,1,1,1,1,1
 Attempted Petty Theft,8,8,8,8,8,8,8,8,8,6,8,8
-"Attempted Petty Theft 
-Appropr Lost Prop -$950 
-Possess Burglary Tools",1,1,1,1,1,1,1,1,1,0,1,1
-"Attempted Petty theft - From
-motor vehicle (M)",4,4,4,4,4,4,4,4,4,3,4,4
+Attempted Petty Theft  Appropr Lost Prop -$950  Possess Burglary Tools,1,1,1,1,1,1,1,1,1,0,1,1
+Attempted Petty theft - From motor vehicle (M),4,4,4,4,4,4,4,4,4,3,4,4
 Attempted Robbery,1,1,1,1,1,1,1,1,1,1,1,1
 Attempted Vehicle Theft,2,2,2,2,2,2,2,2,2,2,2,2
-"Attempted Vehicle Theft 
-Tamper With Vehicle",2,2,2,2,2,2,2,2,2,0,2,2
+Attempted Vehicle Theft  Tamper With Vehicle,2,2,2,2,2,2,2,2,2,0,2,2
 Battery On Person,27,27,27,27,27,27,27,27,27,15,27,27
-"Battery On Person 
-Civ Rgt Viol:violent Inj",2,2,2,2,2,2,2,2,2,1,2,2
-"Battery On Person 
-Vio Civil Rghts:frce/Thrt",1,1,1,1,1,1,1,1,1,1,1,1
-"Battery Spouse/Ex-
-Spouse/Date/Etc",13,13,13,13,13,13,13,13,13,12,13,13
-"Battery Spouse/Ex-
-Spouse/Date/Etc 
-Annoy/Etc Child -18",1,1,1,1,1,1,1,1,1,1,1,1
-"Battery Spouse/Ex-
-Spouse/Date/Etc 
-False Imprisonment",1,1,1,1,1,1,1,1,1,1,1,1
+Battery On Person  Civ Rgt Viol:violent Inj,2,2,2,2,2,2,2,2,2,1,2,2
+Battery On Person  Vio Civil Rghts:frce/Thrt,1,1,1,1,1,1,1,1,1,1,1,1
+Battery Spouse/Ex- Spouse/Date/Etc,13,13,13,13,13,13,13,13,13,12,13,13
+Battery Spouse/Ex- Spouse/Date/Etc  Annoy/Etc Child -18,1,1,1,1,1,1,1,1,1,1,1,1
+Battery Spouse/Ex- Spouse/Date/Etc  False Imprisonment,1,1,1,1,1,1,1,1,1,1,1,1
 Battery W/Serious Injury Felony,2,2,2,2,2,2,2,2,2,1,2,2
-"Battery W/Serious Injury Felony 
-Disord Conduct:alcohol",1,1,1,1,1,1,1,1,1,1,1,1
-"Battery on Peace
-Officer/Emergency Personnel",1,1,1,1,1,1,1,1,1,1,1,1
-"Battery on Peace
-Officer/Emergency Personnel 
-Obstruct Public Officer",1,1,1,1,1,1,1,1,1,1,1,1
+Battery W/Serious Injury Felony  Disord Conduct:alcohol,1,1,1,1,1,1,1,1,1,1,1,1
+Battery on Peace Officer/Emergency Personnel,1,1,1,1,1,1,1,1,1,1,1,1
+Battery on Peace Officer/Emergency Personnel  Obstruct Public Officer,1,1,1,1,1,1,1,1,1,1,1,1
 Battery on person - Simple (M),1,1,1,1,1,1,1,1,1,1,1,1
 Battery w/Serious Injury Misd,1,1,1,1,1,1,1,1,1,1,1,1
 Burglary - Commercial,13,13,13,13,13,13,13,13,13,12,13,13
-"Burglary - Commercial 
-Threatn Sch/Pub Ofcr/Empl 
-Under Influence Cntl Sub",1,1,1,1,1,1,1,1,1,1,1,1
+Burglary - Commercial  Threatn Sch/Pub Ofcr/Empl  Under Influence Cntl Sub,1,1,1,1,1,1,1,1,1,1,1,1
 Burglary - From motor vehicle (F),4,4,4,4,4,4,4,4,4,2,4,4
 Burglary - Institutional,26,26,26,26,26,26,26,26,26,24,26,26
-"Burglary - Institutional 
-Outside Warrant Arrest Felony",1,1,1,1,1,1,1,1,1,1,1,1
+Burglary - Institutional  Outside Warrant Arrest Felony,1,1,1,1,1,1,1,1,1,1,1,1
 Burglary - Residential,47,47,47,47,47,47,47,47,47,42,47,47
-"Burglary - Residential 
-Disrd Condct:loiter/No Id 
-Theft by access card $950 or
-under",1,1,1,1,1,1,1,1,1,1,1,1
-"Burglary - Residential 
-Disrd Condct:loiter/No Id 
-Trespass:closed Lands 
-Vandalism:damage Property",1,1,1,1,1,1,1,1,1,0,1,1
-"Burglary - Residential 
-ID Theft to obtain credit etc 
-Mail Theft 
-Contempt:disobey Crt Ordr 
-Receive Known Stolen Prop
-$950 or Under",1,1,1,1,1,1,1,1,1,1,1,1
+Burglary - Residential  Disrd Condct:loiter/No Id  Theft by access card $950 or under,1,1,1,1,1,1,1,1,1,1,1,1
+Burglary - Residential  Disrd Condct:loiter/No Id  Trespass:closed Lands  Vandalism:damage Property,1,1,1,1,1,1,1,1,1,0,1,1
+Burglary - Residential  ID Theft to obtain credit etc  Mail Theft  Contempt:disobey Crt Ordr  Receive Known Stolen Prop $950 or Under,1,1,1,1,1,1,1,1,1,1,1,1
 Burglary - Vehicle,480,480,480,480,479,480,480,480,480,337,480,480
-"Burglary - Vehicle 
-Burglary - Vehicle 
-Petty Thft: Prop/From Vehicle",1,1,1,1,1,1,1,1,1,1,1,1
-"Burglary - Vehicle 
-Conspiracy:commit Crime",1,1,1,1,1,1,1,1,1,0,1,1
-"Burglary - Vehicle 
-Grnd Thft: Prop/from Vehicle
-+950 
-Grnd Thft: Prop/from Vehicle
-+950",1,1,1,1,1,1,1,1,1,0,1,1
-"Burglary:1st degree -
-Burglary/breaking & entering
-Residence(F)",2,2,2,2,2,2,2,2,2,2,2,2
-"Burglary:1st degree -
-Burglary/breaking & entering
-Student Residence(F)",3,3,3,3,3,3,3,3,3,3,3,3
-"Burglary:1st degree -
-Burglary/breaking & entering
-Student Residence(F) 
-Vandalism less than $400 (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Burglary:2nd degree -
-Burglary/breaking & entering -
-Commerical (F)",4,4,4,4,4,4,4,4,4,3,4,4
-"Burglary:2nd degree -
-Burglary/breaking & entering -
-Commerical (F) 
-Obstruct/resist/etc
-public/peace officer/emergency
-med tech - All other offenses (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Burglary:2nd degree -
-Burglary/breaking & entering -
-Institutional (F)",2,2,2,2,2,2,2,2,2,2,2,2
-"Burglary:2nd degree - From
-motor vehicle (F)",31,31,31,31,31,31,31,30,31,16,31,31
-"Burglary:2nd degree - From
-motor vehicle (F) 
-Attempt to take vehicle w/o
-owners consent -  Att. Motor
-vehicle theft (F)",1,1,1,1,1,1,1,1,1,0,1,1
-"Burglary:2nd degree - From
-motor vehicle (F) 
-Theft by use of access card
-information - Impersonation (F)",1,1,1,1,1,1,1,1,1,1,1,1
+Burglary - Vehicle  Burglary - Vehicle  Petty Thft: Prop/From Vehicle,1,1,1,1,1,1,1,1,1,1,1,1
+Burglary - Vehicle  Conspiracy:commit Crime,1,1,1,1,1,1,1,1,1,0,1,1
+Burglary - Vehicle  Grnd Thft: Prop/from Vehicle +950  Grnd Thft: Prop/from Vehicle +950,1,1,1,1,1,1,1,1,1,0,1,1
+Burglary:1st degree - Burglary/breaking & entering Residence(F),2,2,2,2,2,2,2,2,2,2,2,2
+Burglary:1st degree - Burglary/breaking & entering Student Residence(F),3,3,3,3,3,3,3,3,3,3,3,3
+Burglary:1st degree - Burglary/breaking & entering Student Residence(F)  Vandalism less than $400 (M),1,1,1,1,1,1,1,1,1,1,1,1
+Burglary:2nd degree - Burglary/breaking & entering - Commerical (F),4,4,4,4,4,4,4,4,4,3,4,4
+Burglary:2nd degree - Burglary/breaking & entering - Commerical (F)  Obstruct/resist/etc public/peace officer/emergency med tech - All other offenses (M),1,1,1,1,1,1,1,1,1,0,1,1
+Burglary:2nd degree - Burglary/breaking & entering - Institutional (F),2,2,2,2,2,2,2,2,2,2,2,2
+Burglary:2nd degree - From motor vehicle (F),31,31,31,31,31,31,31,30,31,16,31,31
+Burglary:2nd degree - From motor vehicle (F)  Attempt to take vehicle w/o owners consent -  Att. Motor vehicle theft (F),1,1,1,1,1,1,1,1,1,0,1,1
+Burglary:2nd degree - From motor vehicle (F)  Theft by use of access card information - Impersonation (F),1,1,1,1,1,1,1,1,1,1,1,1
 Carjacking,1,1,1,1,1,1,1,1,1,1,1,1
-"Cause inj elder/dep adult -
-Aggravated (F)",1,1,1,1,1,1,1,1,1,1,1,1
+Cause inj elder/dep adult - Aggravated (F),1,1,1,1,1,1,1,1,1,1,1,1
 Causing Fire Of Property,1,1,1,1,1,1,1,1,1,0,1,1
 Clery Act/Stalking,13,13,13,13,13,13,13,13,13,9,13,13
 Cntl Sub Paraphernalia,1,1,1,1,1,1,1,1,1,1,1,1
-"Cntl Sub Paraphernalia 
-Expired Registration",1,1,1,1,1,1,1,1,1,0,1,1
-"Cntl Sub Paraphernalia 
-Vio Health & Safety Order",1,1,1,1,1,1,1,1,1,0,1,1
-"Cntl Sub Paraphernalia 
-Warrant Arrest Misdemeanor 
-Disorderly conduct:loiter/etc
-private property (M)",1,1,1,1,1,1,1,1,1,1,1,1
+Cntl Sub Paraphernalia  Expired Registration,1,1,1,1,1,1,1,1,1,0,1,1
+Cntl Sub Paraphernalia  Vio Health & Safety Order,1,1,1,1,1,1,1,1,1,0,1,1
+Cntl Sub Paraphernalia  Warrant Arrest Misdemeanor  Disorderly conduct:loiter/etc private property (M),1,1,1,1,1,1,1,1,1,1,1,1
 Contempt:disobey Crt Ordr,2,2,2,2,2,2,2,2,2,2,2,2
-"Cruelty To Animals (Felony) 
-Poisoning Animals",1,1,1,1,1,1,1,1,1,1,1,1
+Cruelty To Animals (Felony)  Poisoning Animals,1,1,1,1,1,1,1,1,1,1,1,1
 Crul:eld/Dep Adlt: Injury,2,2,2,2,2,2,2,2,2,2,2,2
 DUI; Influence Alcohol,10,10,10,10,10,10,10,10,10,4,10,10
-"DUI; Influence Alcohol 
-Drive W/O License 
-Disord Conduct:alcohol",1,1,1,1,1,1,1,1,1,1,1,1
-"DUI; Influence Alcohol 
-Dui Alcohol/0.08 Percent",4,4,4,4,4,4,4,4,4,0,4,4
-"DUI; Influence Alcohol 
-Hit&run Prop Damag:notify",1,1,1,1,1,1,1,1,1,1,1,1
-"DUI; Influence Alcohol 
-Hit&run Rnwy Veh:prop Dam",1,1,1,1,1,1,1,1,1,0,1,1
+DUI; Influence Alcohol  Drive W/O License  Disord Conduct:alcohol,1,1,1,1,1,1,1,1,1,1,1,1
+DUI; Influence Alcohol  Dui Alcohol/0.08 Percent,4,4,4,4,4,4,4,4,4,0,4,4
+DUI; Influence Alcohol  Hit&run Prop Damag:notify,1,1,1,1,1,1,1,1,1,1,1,1
+DUI; Influence Alcohol  Hit&run Rnwy Veh:prop Dam,1,1,1,1,1,1,1,1,1,0,1,1
 Damage Prop:vio Civl Rght,2,2,2,2,2,2,2,2,2,1,2,2
-"Damage/etc property to violate
-civil rights (M)",7,7,7,7,7,7,7,7,7,2,7,7
+Damage/etc property to violate civil rights (M),7,7,7,7,7,7,7,7,7,2,7,7
 Deface W/Paint/Etc,31,31,31,31,31,31,31,31,31,23,31,31
-"Deface W/Paint/Etc 
-Damage Prop:vio Civl Rght",1,1,1,1,1,1,1,1,1,1,1,1
+Deface W/Paint/Etc  Damage Prop:vio Civl Rght,1,1,1,1,1,1,1,1,1,1,1,1
 Defraud Innkeeper -$950,2,2,2,2,2,2,2,2,2,0,2,2
 Dis Cndct:peek Inhab Bldg,1,1,1,1,1,1,1,1,1,0,1,1
-"Dis Con:peeks Inhab Bldg 
-Stalking/Other",1,1,1,1,1,1,1,1,1,1,1,1
+Dis Con:peeks Inhab Bldg  Stalking/Other,1,1,1,1,1,1,1,1,1,1,1,1
 Disord Conduct:alcohol,29,29,29,29,29,29,29,29,29,10,29,29
-"Disord Conduct:alcohol 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,1,1,1
-"Disord Conduct:alcohol 
-Unlawful Use Of D.l.",1,1,1,1,1,1,1,1,1,1,1,1
-"Disord Conduct:u Inf Drug 
-Possess Controlled Substance 
-Cntl Sub Paraphernalia",1,1,1,1,1,1,1,1,1,0,1,1
-"Disorderly Conduct: Distribute
-Intimate Photos",2,2,2,2,2,2,2,2,2,2,2,2
+Disord Conduct:alcohol  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,1,1,1
+Disord Conduct:alcohol  Unlawful Use Of D.l.,1,1,1,1,1,1,1,1,1,1,1,1
+Disord Conduct:u Inf Drug  Possess Controlled Substance  Cntl Sub Paraphernalia,1,1,1,1,1,1,1,1,1,0,1,1
+Disorderly Conduct: Distribute Intimate Photos,2,2,2,2,2,2,2,2,2,2,2,2
 Disorderly conduct:alcohol (M),2,2,2,2,2,2,2,2,2,2,2,2
-"Disorderly conduct:alcohol (M) 
-Assault on peace
-officer/firefighters/etc - Simple
-(M) 
-Obstruct/resist/etc
-public/peace officer/emergency
-med tech - Simple (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Disorderly conduct:intox drug
-with alcohol - Drug/narcotics
-violations (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Disorderly conduct:lodge without
-owners consent (M)",3,3,3,3,3,3,3,3,3,1,3,3
-"Disorderly conduct:loiter/etc
-private property (M)",6,6,6,6,6,6,6,6,6,5,6,6
-"Disorderly conduct:loiter/etc
-private property (M) 
-Attempted Petty Theft",1,1,1,1,1,1,1,1,1,0,1,1
-"Disorderly conduct:loiter/etc
-private property (M) 
-Attempted Petty Theft 
-Possess unlawful
-paraphernalia (M) 
-Possess controlled substance
-(M) 
-Appropriate lost property (M)",1,1,1,1,1,1,1,1,1,1,1,1
+Disorderly conduct:alcohol (M)  Assault on peace officer/firefighters/etc - Simple (M)  Obstruct/resist/etc public/peace officer/emergency med tech - Simple (M),1,1,1,1,1,1,1,1,1,0,1,1
+Disorderly conduct:intox drug with alcohol - Drug/narcotics violations (M),1,1,1,1,1,1,1,1,1,0,1,1
+Disorderly conduct:lodge without owners consent (M),3,3,3,3,3,3,3,3,3,1,3,3
+Disorderly conduct:loiter/etc private property (M),6,6,6,6,6,6,6,6,6,5,6,6
+Disorderly conduct:loiter/etc private property (M)  Attempted Petty Theft,1,1,1,1,1,1,1,1,1,0,1,1
+Disorderly conduct:loiter/etc private property (M)  Attempted Petty Theft  Possess unlawful paraphernalia (M)  Possess controlled substance (M)  Appropriate lost property (M),1,1,1,1,1,1,1,1,1,1,1,1
 Display Unauth Placard,4,4,4,4,4,4,4,4,4,4,4,4
 Disrd Condct:loiter/No Id,10,10,10,10,10,10,10,10,10,5,10,10
-"Disrd Condct:loiter/No Id 
-Trespass:closed Lands 
-Receive Known Stolen Prop
-$950 or Over",1,1,1,1,1,1,1,1,1,1,1,1
+Disrd Condct:loiter/No Id  Trespass:closed Lands  Receive Known Stolen Prop $950 or Over,1,1,1,1,1,1,1,1,1,1,1,1
 Disrupt/Deny/Etc Comp Svs,1,1,1,1,1,1,1,1,1,1,1,1
-"Disrupt/Deny/Etc Comp Svs 
-Threaten Crime With Intent to
-Terrorize",1,1,1,1,1,1,1,1,1,1,1,1
+Disrupt/Deny/Etc Comp Svs  Threaten Crime With Intent to Terrorize,1,1,1,1,1,1,1,1,1,1,1,1
 Disturb religious meeting (M),1,1,1,1,1,1,1,1,1,1,1,1
-"Disturbance/etc at assembly/etc
-(M)",1,1,1,1,1,1,1,1,1,1,1,1
+Disturbance/etc at assembly/etc (M),1,1,1,1,1,1,1,1,1,1,1,1
 Drive Susp Lic:spec Circ,4,4,4,4,4,4,4,4,4,0,4,4
-"Drive Susp Lic:spec Circ 
-Outside Warrant Arrest MISD",1,1,1,1,1,1,1,1,1,1,1,1
+Drive Susp Lic:spec Circ  Outside Warrant Arrest MISD,1,1,1,1,1,1,1,1,1,1,1,1
 Drive W/Lic Susp For Dui,6,6,6,6,6,6,6,6,6,0,6,6
-"Drive W/Lic Susp For Dui 
-Possess Controlled Substance",1,1,1,1,1,1,1,1,1,1,1,1
+Drive W/Lic Susp For Dui  Possess Controlled Substance,1,1,1,1,1,1,1,1,1,1,1,1
 Drive W/License Suspended,12,12,12,12,12,12,12,12,12,2,12,12
-"Drive W/License Suspended 
-Expired Registration",1,1,1,1,1,1,1,1,1,0,1,1
-"Drive W/License Suspended 
-Warrant Arrest Misdemeanor",1,1,1,1,1,1,1,1,1,1,1,1
+Drive W/License Suspended  Expired Registration,1,1,1,1,1,1,1,1,1,0,1,1
+Drive W/License Suspended  Warrant Arrest Misdemeanor,1,1,1,1,1,1,1,1,1,1,1,1
 Drive W/O License,128,128,128,128,128,128,128,128,128,26,128,128
 Drive W/Susp Lic:reckless,3,3,3,3,3,3,3,3,3,2,3,3
-"Drive with suspended/revoked
-license: for driving DUI, alcohol,
-drug or combination",1,1,1,1,1,1,1,1,1,0,1,1
+"Drive with suspended/revoked license: for driving DUI, alcohol, drug or combination",1,1,1,1,1,1,1,1,1,0,1,1
 Dui Alcohol/0.08 Percent,2,2,2,2,2,2,2,2,2,1,2,2
-"Dui Alcohol/0.08 Percent 
-Hit&run Prop Damag:notify",1,1,1,1,1,1,1,1,1,0,1,1
-"Elder Abuse-Theft Fraud Embezz
-over $950",1,1,1,1,1,1,1,1,1,1,1,1
+Dui Alcohol/0.08 Percent  Hit&run Prop Damag:notify,1,1,1,1,1,1,1,1,1,0,1,1
+Elder Abuse-Theft Fraud Embezz over $950,1,1,1,1,1,1,1,1,1,1,1,1
 Embez By Employee $950+,1,1,1,1,1,1,1,1,1,1,1,1
 Embezzle Rented Vehicle,1,1,1,1,1,1,1,1,1,0,1,1
 Embezzlement $950+ (F),1,1,1,1,1,1,1,1,1,0,1,1
 Embezzlement-Felony,4,4,4,4,4,4,4,4,4,1,4,4
 Embezzlement-Misdemeanor,1,1,1,1,1,1,1,1,1,1,1,1
 Enter Noncomm Dwelling,2,2,2,2,2,2,2,2,2,1,2,2
-"Enter Noncomm Dwelling 
-Battery On Person",1,1,1,1,1,1,1,1,1,1,1,1
-"Enter Noncomm Dwelling 
-Warrant Arrest Misdemeanor",1,1,1,1,1,1,1,1,1,1,1,1
-"Evading Peace Officer 
-Obstruct Public Officer",1,1,1,1,1,1,1,1,1,0,1,1
+Enter Noncomm Dwelling  Battery On Person,1,1,1,1,1,1,1,1,1,1,1,1
+Enter Noncomm Dwelling  Warrant Arrest Misdemeanor,1,1,1,1,1,1,1,1,1,1,1,1
+Evading Peace Officer  Obstruct Public Officer,1,1,1,1,1,1,1,1,1,0,1,1
 Evading Po:disregard Sfty,1,1,1,1,1,1,1,1,1,1,1,1
-"Evading Po:disregard Sfty 
-Reckless Driving:highway",1,1,1,1,1,1,1,1,1,0,1,1
+Evading Po:disregard Sfty  Reckless Driving:highway,1,1,1,1,1,1,1,1,1,0,1,1
 Exhibit Deadwpn:not F/Arm,1,1,1,1,1,1,1,1,1,0,1,1
 Extortion,10,10,10,10,10,10,10,10,10,7,10,10
 Extortion (F),1,1,1,1,1,1,1,1,1,0,1,1
@@ -308,1001 +150,402 @@ Fail To Appear,1,1,1,1,1,1,1,1,1,0,1,1
 Fail To Obey Police Officer,1,1,1,1,1,1,1,1,1,0,1,1
 False Bomb Report,1,1,1,1,1,1,1,1,1,1,1,1
 False Bomb/Etc Rep:po/Etc,2,2,2,2,2,2,2,2,2,2,2,2
-"False Id To Specific Po 
-Minor Possess Alcohol",1,1,1,1,1,1,1,1,1,0,1,1
+False Id To Specific Po  Minor Possess Alcohol,1,1,1,1,1,1,1,1,1,0,1,1
 False Imprisonment,1,1,1,1,1,1,1,1,1,1,1,1
-"False Imprisonment 
-Battery Spouse/Ex-
-Spouse/Date/Etc",1,1,1,1,1,1,1,1,1,1,1,1
+False Imprisonment  Battery Spouse/Ex- Spouse/Date/Etc,1,1,1,1,1,1,1,1,1,1,1,1
 False Pretenses: less than $950,9,9,9,9,9,9,9,9,9,8,9,9
 False Pretenses:> $950,25,25,25,25,25,25,25,25,25,20,25,25
 False Reg/Plate without Intent,1,1,1,1,1,1,1,1,1,0,1,1
 False Report Emergency,1,1,1,1,1,1,1,1,1,0,1,1
-"False identification to specific
-peace officer - Impersonation
-(M) 
-Student Safety 
-Petty theft - All other larceny
-(M)",1,1,1,1,1,1,1,1,1,1,1,1
-"False personation of
-another:spec circ - False
-pretenses/swindle/confidence
-game (M)",1,1,1,1,1,1,1,0,1,0,1,1
+False identification to specific peace officer - Impersonation (M)  Student Safety  Petty theft - All other larceny (M),1,1,1,1,1,1,1,1,1,1,1,1
+False personation of another:spec circ - False pretenses/swindle/confidence game (M),1,1,1,1,1,1,1,0,1,0,1,1
 Firearm At School,1,1,1,1,1,1,1,1,1,0,1,1
-"Furnish Minor W/Marijuana 
-Contrib To Delinq Of Minr 
-Annoy/Etc Child -18",1,1,1,1,1,1,1,1,1,0,1,1
-"Get credit/etc others id - False
-pretenses/swindle/confidence
-game (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Get credit/etc others id - Identity
-theft (F)",5,5,5,5,5,5,5,5,5,3,5,5
-"Get credit/etc others id - Identity
-theft (F) 
-Alter/etc computer
-systems/etc:illegal use - False
-pretenses/swindle/confidence
-game (F)",1,1,1,1,1,1,1,1,1,1,1,1
+Furnish Minor W/Marijuana  Contrib To Delinq Of Minr  Annoy/Etc Child -18,1,1,1,1,1,1,1,1,1,0,1,1
+Get credit/etc others id - False pretenses/swindle/confidence game (F),1,1,1,1,1,1,1,1,1,1,1,1
+Get credit/etc others id - Identity theft (F),5,5,5,5,5,5,5,5,5,3,5,5
+Get credit/etc others id - Identity theft (F)  Alter/etc computer systems/etc:illegal use - False pretenses/swindle/confidence game (F),1,1,1,1,1,1,1,1,1,1,1,1
 Give Drugs Aid In Felony,4,4,4,4,4,4,4,4,4,3,4,4
-"Give Drugs Aid In Felony 
-Assault to Commit Rape",1,1,1,1,1,1,1,1,1,1,1,1
-"Grand
-theft:money/labor/property -
-From building (F)",12,12,12,12,12,12,12,12,12,10,12,12
-"Grand
-theft:money/labor/property -
-From building (F) 
-Obstruct/resist exec ofcr -
-Intimidation (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Grand
-theft:money/labor/property -
-From building (F) 
-Possess controlled substance
-(M) 
-Appropriate lost property (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Grand
-theft:money/labor/property -
-From building (F) 
-Theft by use of access card
-information - Credit card/atm (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Grand
-theft:money/labor/property -
-From building (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Grand
-theft:money/labor/property -
-From motor vehicle (F)",2,2,2,2,2,2,2,2,2,0,2,2
-"Grand
-theft:money/labor/property -
-From motor vehicle (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Grand
-theft:money/labor/property -
-Motor vehicle parts/accessories
-(F)",6,6,6,6,6,6,6,6,6,4,6,6
-"Grand
-theft:money/labor/property -
-Motor vehicle parts/accessories
-(M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Grand
-theft:money/labor/property - All
-other larceny (F)",11,11,11,11,11,11,11,11,11,7,11,11
-"Grand
-theft:money/labor/property - All
-other larceny (F) 
-Damage/etc property to
-violate civil rights (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Grand
-theft:money/labor/property - All
-other larceny (F) 
-Theft by use of access card
-information - Credit card/atm
-(M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Grand Theft by Fraudulent
-Means (Non-UCR)",15,15,15,15,15,15,15,15,15,11,15,15
-"Grand Theft from Person $950 or
-Under",1,1,1,1,1,1,1,1,1,1,1,1
+Give Drugs Aid In Felony  Assault to Commit Rape,1,1,1,1,1,1,1,1,1,1,1,1
+Grand Theft by Fraudulent Means (Non-UCR),15,15,15,15,15,15,15,15,15,11,15,15
+Grand Theft from Person $950 or Under,1,1,1,1,1,1,1,1,1,1,1,1
 Grand Theft: bike,134,134,134,134,133,134,134,134,134,111,134,134
 Grand Theft: scooter,8,8,8,8,8,8,8,8,8,6,8,8
 Grand theft - Pocket-picking (F),1,1,1,1,1,1,1,1,1,0,1,1
 Grand theft: scooter (F),6,6,6,6,6,6,6,6,6,3,6,6
 Grand theft:bike (F),32,32,32,32,32,32,32,31,32,22,32,32
-"Grnd Thft: Prop/from Vehicle
-+950",127,127,127,127,127,127,127,127,127,108,127,127
-"Grnd Thft: Prop/from Vehicle
-+950 
-Burglary - Vehicle",1,1,1,1,1,1,1,1,1,0,1,1
-"Grnd Thft: Prop/from Vehicle
-+950 
-Tamper With Vehicle",1,1,1,1,1,1,1,1,1,0,1,1
-"Grnd Thft: Prop/from Vehicle
-+950 
-Theft by access card $950 or
-under",1,1,1,1,1,1,1,1,1,0,1,1
-"Grnd Thft: Prop/from Vehicle
-+950 
-Theft by access card over $950",2,2,2,2,2,2,2,2,2,1,2,2
+Grand theft:money/labor/property - All other larceny (F),11,11,11,11,11,11,11,11,11,7,11,11
+Grand theft:money/labor/property - All other larceny (F)  Damage/etc property to violate civil rights (M),1,1,1,1,1,1,1,1,1,1,1,1
+Grand theft:money/labor/property - All other larceny (F)  Theft by use of access card information - Credit card/atm (M),1,1,1,1,1,1,1,1,1,0,1,1
+Grand theft:money/labor/property - From building (F),12,12,12,12,12,12,12,12,12,10,12,12
+Grand theft:money/labor/property - From building (F)  Obstruct/resist exec ofcr - Intimidation (M),1,1,1,1,1,1,1,1,1,1,1,1
+Grand theft:money/labor/property - From building (F)  Possess controlled substance (M)  Appropriate lost property (M),1,1,1,1,1,1,1,1,1,1,1,1
+Grand theft:money/labor/property - From building (F)  Theft by use of access card information - Credit card/atm (F),1,1,1,1,1,1,1,1,1,1,1,1
+Grand theft:money/labor/property - From building (M),1,1,1,1,1,1,1,1,1,0,1,1
+Grand theft:money/labor/property - From motor vehicle (F),2,2,2,2,2,2,2,2,2,0,2,2
+Grand theft:money/labor/property - From motor vehicle (M),1,1,1,1,1,1,1,1,1,1,1,1
+Grand theft:money/labor/property - Motor vehicle parts/accessories (F),6,6,6,6,6,6,6,6,6,4,6,6
+Grand theft:money/labor/property - Motor vehicle parts/accessories (M),1,1,1,1,1,1,1,1,1,1,1,1
+Grnd Thft: Prop/from Vehicle +950,127,127,127,127,127,127,127,127,127,108,127,127
+Grnd Thft: Prop/from Vehicle +950  Burglary - Vehicle,1,1,1,1,1,1,1,1,1,0,1,1
+Grnd Thft: Prop/from Vehicle +950  Tamper With Vehicle,1,1,1,1,1,1,1,1,1,0,1,1
+Grnd Thft: Prop/from Vehicle +950  Theft by access card $950 or under,1,1,1,1,1,1,1,1,1,0,1,1
+Grnd Thft: Prop/from Vehicle +950  Theft by access card over $950,2,2,2,2,2,2,2,2,2,1,2,2
 Grnd Thft:prop/Etc $950+,122,122,122,122,122,122,122,122,122,103,122,122
-"Grnd Thft:prop/Etc $950+ 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,0,1,1
-"Grnd Thft:prop/Etc $950+ 
-Poss Weapon At School 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,1,1,1
-"Grnd Thft:prop/Etc $950+ 
-Theft by access card $950 or
-under",1,1,1,1,1,1,1,1,1,1,1,1
-"Grnd Thft:prop/Etc $950+ 
-Use of Access Card $950 or
-Under",2,2,2,2,2,2,2,2,2,2,2,2
+Grnd Thft:prop/Etc $950+  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,0,1,1
+Grnd Thft:prop/Etc $950+  Poss Weapon At School  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,1,1,1
+Grnd Thft:prop/Etc $950+  Theft by access card $950 or under,1,1,1,1,1,1,1,1,1,1,1,1
+Grnd Thft:prop/Etc $950+  Use of Access Card $950 or Under,2,2,2,2,2,2,2,2,2,2,2,2
 Hanging Noose on Prop,1,1,1,1,1,1,1,1,1,1,1,1
 Hit & Run:death/Injury,2,2,2,2,2,2,2,2,2,0,2,2
 Hit & Run:injury,1,1,1,1,1,1,1,1,1,0,1,1
-"Hit and run collision, property
-damage, including vehicles",20,20,20,20,20,20,20,20,20,10,20,20
+"Hit and run collision, property damage, including vehicles",20,20,20,20,20,20,20,20,20,10,20,20
 Hit and run resulting in injury (M),1,1,1,1,1,1,1,1,1,1,1,1
 Hit&run Prop Damag:locate,20,20,20,20,20,20,20,20,20,13,20,20
 Hit&run Prop Damag:notify,20,20,20,20,20,20,20,20,20,8,20,20
 Hit&run Rnwy Veh:prop Dam,1,1,1,1,1,1,1,1,1,1,1,1
 ID Theft to obtain credit etc,27,27,27,27,27,27,27,27,27,24,27,27
-"Impersonation thru Internet Web
-Site",4,4,4,4,4,4,4,4,4,4,4,4
-"Impersonation thru Internet Web
-Site 
-Annoying Phone Calls 
-Stalking/Electronic",1,1,1,1,1,1,1,1,1,0,1,1
+Impersonation thru Internet Web Site,4,4,4,4,4,4,4,4,4,4,4,4
+Impersonation thru Internet Web Site  Annoying Phone Calls  Stalking/Electronic,1,1,1,1,1,1,1,1,1,0,1,1
 Indecent Exposure,5,5,5,5,5,5,5,5,5,1,5,5
-"Indecent Exposure 
-Cntl Sub Paraphernalia",1,1,1,1,1,1,1,1,1,1,1,1
-"Indecent Exposure W/Prior 
-Solicit Lewd Act 
-Loiter/Etc Private Prop",1,1,1,1,1,1,1,1,1,1,1,1
+Indecent Exposure  Cntl Sub Paraphernalia,1,1,1,1,1,1,1,1,1,1,1,1
+Indecent Exposure W/Prior  Solicit Lewd Act  Loiter/Etc Private Prop,1,1,1,1,1,1,1,1,1,1,1,1
 Inf Corp Inj:spouse/Cohab,3,3,3,3,3,3,3,3,3,3,3,3
 Inf Corp Injury:spouse/Cohab,4,4,4,4,4,4,4,4,4,3,4,4
-"Inf Corp Injury:spouse/Cohab 
-Vandalism:damage Property",1,1,1,1,1,1,1,1,1,1,1,1
-"Inflict corporal injury on
-spouse/cohabitant/datng
-relatnshp - Simple (F)",1,1,1,1,1,1,1,1,1,0,1,1
-"Inflict corporal injury on
-spouse/cohabitant/datng
-relatnshp - Simple (M)",1,1,1,1,1,1,1,1,1,0,1,1
+Inf Corp Injury:spouse/Cohab  Vandalism:damage Property,1,1,1,1,1,1,1,1,1,1,1,1
+Inflict corporal injury on spouse/cohabitant/datng relatnshp - Simple (F),1,1,1,1,1,1,1,1,1,0,1,1
+Inflict corporal injury on spouse/cohabitant/datng relatnshp - Simple (M),1,1,1,1,1,1,1,1,1,0,1,1
 Invad:peek In Hole:bathrm,2,2,2,2,2,2,2,2,2,2,2,2
 L&l W/Child -14:force/Etc,1,1,1,1,1,1,1,1,1,0,1,1
 L&l W/Child Under 14,1,1,1,1,1,1,1,1,1,1,1,1
-"L&l W/Child Under 14 
-Child Cruelty:pos Inj/Dth",1,1,1,1,1,1,1,1,1,1,1,1
+L&l W/Child Under 14  Child Cruelty:pos Inj/Dth,1,1,1,1,1,1,1,1,1,1,1,1
 Leash Law Violation,3,3,3,3,3,3,3,3,3,1,3,3
-"Lewd or lascivious acts w/child
-under 14 years - Fondling (F)",1,1,1,1,1,1,1,1,1,1,1,1
+Lewd or lascivious acts w/child under 14 years - Fondling (F),1,1,1,1,1,1,1,1,1,1,1,1
 Loiter/Etc Private Prop,12,12,12,12,12,12,12,12,12,9,12,12
-"Loiter/Etc Private Prop 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,1,1,1
-"Loiter/Etc Private Prop 
-Appropr Lost Prop -$950 
-Conspiracy:commit Crime",1,1,1,1,1,1,1,1,1,0,1,1
-"Loiter/Etc Private Prop 
-Drive W/O License",1,1,1,1,1,1,1,1,1,1,1,1
-"Loiter/Etc Private Prop 
-False Id To Specific Po's 
-Poss of Heroin/Cocaine, Etc 
-Receive Known Stolen Prop
-$950 or Under",1,1,1,1,1,1,1,1,1,1,1,1
-"Loiter/Etc Private Prop 
-Obstruct Public Officer",1,1,1,1,1,1,1,1,1,1,1,1
-"Loiter/Etc Private Prop 
-Petty Theft 
-Receive Known Stolen Prop
-$950 or Under 
-Evading Peace Officer 
-Drive W/Lic Susp For Dui",1,1,1,1,1,1,1,1,1,1,1,1
-"Loiter/Etc Private Prop 
-Petty theft; bike parts",1,1,1,1,1,1,1,1,1,1,1,1
-"Loiter/Etc Private Prop 
-Possess Burglary Tools 
-Appropr Lost Prop -$950 
-Possess Unlawful
-Paraphernalia",1,1,1,1,1,1,1,1,1,1,1,1
-"Loiter/Etc Private Prop 
-Possess Burglary Tools 
-Cntl Sub Paraphernalia 
-Receive Known Stolen Prop
-$950 or Under",1,1,1,1,1,1,1,1,1,1,1,1
-"Loiter/Etc Private Prop 
-Possess Unlawful
-Paraphernalia 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,0,1,1
-"Loiter/Etc Private Prop 
-Possess Unlawful
-Paraphernalia 
-Poss Controlled Substance",1,1,1,1,1,1,1,1,1,1,1,1
-"Loiter/Etc Private Prop 
-Possess Unlawful
-Paraphernalia 
-Possess Controlled Substance 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,0,1,1
-"Loiter/Etc Private Prop 
-Receive Known Stolen Prop
-$950 or Under",1,1,1,1,1,1,1,1,1,1,1,1
-"Loiter/Etc Private Prop 
-Warrant Arrest Misdemeanor",1,1,1,1,1,1,1,1,1,1,1,1
-"Loud/unreasonable noise within
-university/etc (M)",1,1,1,1,1,1,1,1,1,1,1,1
+Loiter/Etc Private Prop  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,1,1,1
+Loiter/Etc Private Prop  Appropr Lost Prop -$950  Conspiracy:commit Crime,1,1,1,1,1,1,1,1,1,0,1,1
+Loiter/Etc Private Prop  Drive W/O License,1,1,1,1,1,1,1,1,1,1,1,1
+"Loiter/Etc Private Prop  False Id To Specific Po's  Poss of Heroin/Cocaine, Etc  Receive Known Stolen Prop $950 or Under",1,1,1,1,1,1,1,1,1,1,1,1
+Loiter/Etc Private Prop  Obstruct Public Officer,1,1,1,1,1,1,1,1,1,1,1,1
+Loiter/Etc Private Prop  Petty Theft  Receive Known Stolen Prop $950 or Under  Evading Peace Officer  Drive W/Lic Susp For Dui,1,1,1,1,1,1,1,1,1,1,1,1
+Loiter/Etc Private Prop  Petty theft; bike parts,1,1,1,1,1,1,1,1,1,1,1,1
+Loiter/Etc Private Prop  Possess Burglary Tools  Appropr Lost Prop -$950  Possess Unlawful Paraphernalia,1,1,1,1,1,1,1,1,1,1,1,1
+Loiter/Etc Private Prop  Possess Burglary Tools  Cntl Sub Paraphernalia  Receive Known Stolen Prop $950 or Under,1,1,1,1,1,1,1,1,1,1,1,1
+Loiter/Etc Private Prop  Possess Unlawful Paraphernalia  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,0,1,1
+Loiter/Etc Private Prop  Possess Unlawful Paraphernalia  Poss Controlled Substance,1,1,1,1,1,1,1,1,1,1,1,1
+Loiter/Etc Private Prop  Possess Unlawful Paraphernalia  Possess Controlled Substance  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,0,1,1
+Loiter/Etc Private Prop  Receive Known Stolen Prop $950 or Under,1,1,1,1,1,1,1,1,1,1,1,1
+Loiter/Etc Private Prop  Warrant Arrest Misdemeanor,1,1,1,1,1,1,1,1,1,1,1,1
+Loud/unreasonable noise within university/etc (M),1,1,1,1,1,1,1,1,1,1,1,1
 Mail Theft,6,6,6,6,6,6,6,6,6,6,6,6
-"Mail Theft 
-Theft by access card $950 or
-under",1,1,1,1,1,1,1,1,1,1,1,1
+Mail Theft  Theft by access card $950 or under,1,1,1,1,1,1,1,1,1,1,1,1
 Maintain Public Nuisance,1,1,1,1,1,1,1,1,1,1,1,1
-"Make/pass/etc ficticious check
-with intent to defraud (F)",1,1,1,1,1,1,1,1,1,1,1,1
+Make/pass/etc ficticious check with intent to defraud (F),1,1,1,1,1,1,1,1,1,1,1,1
 Minor Possess Alcohol,35,35,35,35,35,35,35,35,35,24,35,35
-"NSF/Fraud/Forgery Checks, Etc
-$950 or Over",1,1,1,1,1,1,1,1,1,1,1,1
+"NSF/Fraud/Forgery Checks, Etc $950 or Over",1,1,1,1,1,1,1,1,1,1,1,1
 Non-Criminal Hate Violence,72,72,72,72,72,72,72,72,72,33,72,72
-"Non-Criminal Hate Violence 
-Annoying Phone Calls",1,1,1,1,1,1,1,1,1,0,1,1
-"Non-Criminal Hate Violence 
-Offensive Words:public Pl",1,1,1,1,1,1,1,1,1,0,1,1
+Non-Criminal Hate Violence  Annoying Phone Calls,1,1,1,1,1,1,1,1,1,0,1,1
+Non-Criminal Hate Violence  Offensive Words:public Pl,1,1,1,1,1,1,1,1,1,0,1,1
 Obstruct Public Officer,3,3,3,3,3,3,3,3,3,3,3,3
-"Obstruct Public Officer 
-Battery on Peace
-Officer/Emergency Personnel",1,1,1,1,1,1,1,1,1,0,1,1
-"Obstruct Public Officer 
-Petty Theft 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,1,1,1
-"Obstruct/Resist Exec Off 
-Battery on Peace
-Officer/Emergency Personnel 
-Obstruct Public Officer",1,1,1,1,1,1,1,1,1,1,1,1
-"Obstruct/Resist Exec Off 
-Resist Po:cause Death/Sbi 
-Disord Conduct:alcohol 
-Under Influence Cntl Sub",1,1,1,1,1,1,1,1,1,1,1,1
-"Obstruct/resist/etc public/peace
-officer/emergency med tech -
-Simple (M) 
-Grand theft: scooter (F) 
-Battery on peace
-officer/emergency personnel/etc
-- Simple (M) 
-Possess unlawful
-paraphernalia (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Obtain credit/etc:use others id -
-False
-pretenses/swindle/confidence
-game (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Obtain credit/etc:use others id -
-Identity theft (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Obtain credit/etc:use others id -
-Impersonation (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Obtain money/etc by false
-pretenses [over $400] (F)",13,13,13,13,13,13,13,11,13,9,13,13
-"Obtain money/etc by false
-pretenses [over $400] (F) 
-Personate to get
-money/property [over $400] -
-False
-pretenses/swindle/confidence
-game (F) 
-Make/pass/etc ficticious check
-with intent to defraud (F)",1,1,1,1,1,1,1,1,1,1,1,1
+Obstruct Public Officer  Battery on Peace Officer/Emergency Personnel,1,1,1,1,1,1,1,1,1,0,1,1
+Obstruct Public Officer  Petty Theft  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,1,1,1
+Obstruct/Resist Exec Off  Battery on Peace Officer/Emergency Personnel  Obstruct Public Officer,1,1,1,1,1,1,1,1,1,1,1,1
+Obstruct/Resist Exec Off  Resist Po:cause Death/Sbi  Disord Conduct:alcohol  Under Influence Cntl Sub,1,1,1,1,1,1,1,1,1,1,1,1
+Obstruct/resist/etc public/peace officer/emergency med tech - Simple (M)  Grand theft: scooter (F)  Battery on peace officer/emergency personnel/etc - Simple (M)  Possess unlawful paraphernalia (M),1,1,1,1,1,1,1,1,1,1,1,1
+Obtain credit/etc:use others id - False pretenses/swindle/confidence game (M),1,1,1,1,1,1,1,1,1,1,1,1
+Obtain credit/etc:use others id - Identity theft (M),1,1,1,1,1,1,1,1,1,1,1,1
+Obtain credit/etc:use others id - Impersonation (M),1,1,1,1,1,1,1,1,1,1,1,1
+Obtain money/etc by false pretenses [over $400] (F),13,13,13,13,13,13,13,11,13,9,13,13
+Obtain money/etc by false pretenses [over $400] (F)  Personate to get money/property [over $400] - False pretenses/swindle/confidence game (F)  Make/pass/etc ficticious check with intent to defraud (F),1,1,1,1,1,1,1,1,1,1,1,1
 Offensive Words:public Pl,2,2,2,2,2,2,2,2,2,2,2,2
-"Offensive Words:public Pl 
-Battery On Person",1,1,1,1,1,1,1,1,1,0,1,1
+Offensive Words:public Pl  Battery On Person,1,1,1,1,1,1,1,1,1,0,1,1
 Outside Warrant Arrest Felony,3,3,3,3,3,3,3,3,3,2,3,3
 Outside Warrant Arrest MISD,14,14,14,14,14,14,14,14,14,5,14,14
-"POSS WEAPON/ETC AT SCHOOL
-(MISD) 
-Mfg/import/sale/poss of
-metal knuckles (M) 
-Petty Theft: bike",1,1,1,1,1,1,1,1,1,0,1,1
+POSS WEAPON/ETC AT SCHOOL (MISD)  Mfg/import/sale/poss of metal knuckles (M)  Petty Theft: bike,1,1,1,1,1,1,1,1,1,0,1,1
 Peek bedroom/etc inv priv (M),2,2,2,2,2,2,2,2,2,1,2,2
 Peek inhab bldg w/loitrng (M),2,2,2,2,2,2,2,2,2,1,2,2
 Personate Get Money/Prop,2,2,2,2,2,2,2,2,2,1,2,2
 Petty Theft,218,218,218,218,218,218,218,218,218,179,218,218
-"Petty Theft 
-Forgery: False Checks/Records
-$950 or Over",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft 
-Loiter/Etc Private Prop",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft 
-Mail Theft",1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft  Forgery: False Checks/Records $950 or Over,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft  Loiter/Etc Private Prop,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft  Mail Theft,1,1,1,1,1,1,1,1,1,1,1,1
 Petty Theft: Bike,191,191,191,191,191,191,191,182,191,144,191,191
-"Petty Theft: Bike 
-Drive with revoked/suspended
-license:offenses not related to
-driving ability",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: Bike 
-Obstruct/resist/etc
-public/peace officer/emergency
-med tech - Simple (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: Bike 
-Poss Wpn/Etc:cmps:not Gun 
-Warrant Arrest Misdemeanor 
-Possess controlled substance
-(M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: Bike 
-Possess unlawful
-paraphernalia (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: Bike 
-Receive Known Stolen Prop
-$950 or Under",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: Bike 
-Receive/etc known stolen
-property (M)",2,2,2,2,2,2,2,2,2,2,2,2
-"Petty Theft: Bike 
-Vandalism less than $400 (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: Bike 
-Warrant Arrest Felony",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: Bike 
-Warrant Arrest Misdemeanor",1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: Bike  Drive with revoked/suspended license:offenses not related to driving ability,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: Bike  Obstruct/resist/etc public/peace officer/emergency med tech - Simple (M),1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: Bike  Poss Wpn/Etc:cmps:not Gun  Warrant Arrest Misdemeanor  Possess controlled substance (M),1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: Bike  Possess unlawful paraphernalia (M),1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: Bike  Receive Known Stolen Prop $950 or Under,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: Bike  Receive/etc known stolen property (M),2,2,2,2,2,2,2,2,2,2,2,2
+Petty Theft: Bike  Vandalism less than $400 (M),1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: Bike  Warrant Arrest Felony,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: Bike  Warrant Arrest Misdemeanor,1,1,1,1,1,1,1,1,1,0,1,1
 Petty Theft: Bike Parts,14,14,14,14,14,14,14,14,14,12,14,14
 Petty Theft: Prop/From Vehicle,2,2,2,2,2,2,2,2,2,2,2,2
-"Petty Theft: Prop/From Vehicle 
-Tamper With Vehicle",1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: Prop/From Vehicle  Tamper With Vehicle,1,1,1,1,1,1,1,1,1,0,1,1
 Petty Theft: Scooter,12,12,12,12,12,12,12,12,12,8,12,12
 Petty Theft: bike,663,663,663,663,663,663,663,663,663,518,663,663
-"Petty Theft: bike 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Appropr Lost Prop -$950 
-Cntl Sub Paraphernalia",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Attempted Petty Theft",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: bike 
-Cntl Sub Paraphernalia",3,3,3,3,3,3,3,3,3,2,3,3
-"Petty Theft: bike 
-Dis Cndct:peek Inhab Bldg 
-Conspiracy to Commit Crime 
-Cntl Sub Paraphernalia 
-Possess Controlled Substance",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-False Id To Specific Po's 
-Loiter/Etc Private Prop 
-Possess Controlled Substance 
-Cntl Sub Paraphernalia",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Loiter/Etc Private Prop",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Loiter/Etc Private Prop 
-Conspiracy to Commit Crime 
-Cntl Sub Paraphernalia 
-Possess Controlled Substance 
-Possess a Controlled Sub W/O
-Prescription MISD 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: bike 
-Obstruct Public Officer",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: bike 
-Obstruct Public Officer 
-Possess Controlled Substance 
-Cntl Sub Paraphernalia 
-Pos Wpn/Etc:cmpus:not Gun",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-POSS WEAPON/ETC AT
-SCHOOL (MISD) 
-Loiter/Etc Private Prop",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: bike 
-Poss Controlled Substance 
-Cntl Sub Paraphernalia",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Possess Burglary Tools 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Possess Burglary Tools 
-Poss of Heroin/Cocaine, Etc",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Possess Burglary Tools 
-Possess Unlawful
-Paraphernalia",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Possess Burglary Tools 
-Receive Known Stolen Prop
-$950 or Under 
-Possess Controlled Substance",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Possess Controlled Substance",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: bike 
-Possess Controlled Substance 
-Cntl Sub Paraphernalia",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: bike 
-Possess Controlled Substance 
-Warrant Arrest Misdemeanor",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: bike 
-Receive Known Stolen Prop
-$950 or Under 
-Contempt:disobey Crt Ordr 
-Mail Theft",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Vandalism:damage Property",2,2,2,2,2,2,2,2,2,2,2,2
-"Petty Theft: bike 
-Warrant Arrest Felony 
-Pos Wpn/Etc:cmpus:not Gun 
-Possess Burglary Tools 
-Possess Controlled Substance",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Theft: bike 
-Warrant Arrest Felony 
-Warrant Arrest Misdemeanor",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty Theft: bike 
-Warrant Arrest Misdemeanor",1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Appropr Lost Prop -$950  Cntl Sub Paraphernalia,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Attempted Petty Theft,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: bike  Cntl Sub Paraphernalia,3,3,3,3,3,3,3,3,3,2,3,3
+Petty Theft: bike  Dis Cndct:peek Inhab Bldg  Conspiracy to Commit Crime  Cntl Sub Paraphernalia  Possess Controlled Substance,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  False Id To Specific Po's  Loiter/Etc Private Prop  Possess Controlled Substance  Cntl Sub Paraphernalia,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Loiter/Etc Private Prop,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Loiter/Etc Private Prop  Conspiracy to Commit Crime  Cntl Sub Paraphernalia  Possess Controlled Substance  Possess a Controlled Sub W/O Prescription MISD  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: bike  Obstruct Public Officer,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: bike  Obstruct Public Officer  Possess Controlled Substance  Cntl Sub Paraphernalia  Pos Wpn/Etc:cmpus:not Gun,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  POSS WEAPON/ETC AT SCHOOL (MISD)  Loiter/Etc Private Prop,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: bike  Poss Controlled Substance  Cntl Sub Paraphernalia,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Possess Burglary Tools  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,1,1,1
+"Petty Theft: bike  Possess Burglary Tools  Poss of Heroin/Cocaine, Etc",1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Possess Burglary Tools  Possess Unlawful Paraphernalia,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Possess Burglary Tools  Receive Known Stolen Prop $950 or Under  Possess Controlled Substance,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Possess Controlled Substance,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: bike  Possess Controlled Substance  Cntl Sub Paraphernalia,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: bike  Possess Controlled Substance  Warrant Arrest Misdemeanor,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: bike  Receive Known Stolen Prop $950 or Under  Contempt:disobey Crt Ordr  Mail Theft,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Vandalism:damage Property,2,2,2,2,2,2,2,2,2,2,2,2
+Petty Theft: bike  Warrant Arrest Felony  Pos Wpn/Etc:cmpus:not Gun  Possess Burglary Tools  Possess Controlled Substance,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: bike  Warrant Arrest Felony  Warrant Arrest Misdemeanor,1,1,1,1,1,1,1,1,1,1,1,1
+Petty Theft: bike  Warrant Arrest Misdemeanor,1,1,1,1,1,1,1,1,1,1,1,1
 Petty Theft: scooter,38,38,38,38,38,38,38,38,38,32,38,38
-"Petty Theft: scooter 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,0,1,1
+Petty Theft: scooter  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,0,1,1
 Petty Thft: Prop/From Vehicle,69,69,69,69,68,69,69,69,69,53,69,69
-"Petty Thft: Prop/From Vehicle 
-ID Theft to obtain credit etc",3,3,3,3,3,3,3,3,3,1,3,3
-"Petty Thft: Prop/From Vehicle 
-Theft by access card over $950",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty Thft: Prop/From Vehicle 
-Use of Access Card $950 or
-Under",1,1,1,1,1,1,1,1,1,1,1,1
+Petty Thft: Prop/From Vehicle  ID Theft to obtain credit etc,3,3,3,3,3,3,3,3,3,1,3,3
+Petty Thft: Prop/From Vehicle  Theft by access card over $950,1,1,1,1,1,1,1,1,1,0,1,1
+Petty Thft: Prop/From Vehicle  Use of Access Card $950 or Under,1,1,1,1,1,1,1,1,1,1,1,1
 Petty theft - All other larceny (M),20,20,20,20,20,20,20,20,20,15,20,20
-"Petty theft - All other larceny (M) 
-Theft by use of access card
-information -
-Counterfeiting/forgery (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty theft - All other larceny (M) 
-Theft by use of access card
-information - Credit card/atm
-(M)",1,1,1,1,1,1,1,1,1,0,1,1
+Petty theft - All other larceny (M)  Theft by use of access card information - Counterfeiting/forgery (M),1,1,1,1,1,1,1,1,1,1,1,1
+Petty theft - All other larceny (M)  Theft by use of access card information - Credit card/atm (M),1,1,1,1,1,1,1,1,1,0,1,1
 Petty theft - From building (M),23,23,23,23,23,23,23,21,23,17,23,23
-"Petty theft - From building (M) 
-Theft by use of access card
-information - Credit card/atm
-(M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty theft - From motor vehicle
-(M)",22,22,22,22,22,22,22,22,22,15,22,22
-"Petty theft - From motor vehicle
-(M) 
-Get credit/etc others id -
-Identity theft (F) 
-Theft by use of access card
-information - Credit card/atm (F)",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty theft - From motor vehicle
-(M) 
-Theft by use of access card
-information - Credit card/atm
-(M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty theft - From motor vehicle
-(M) 
-Theft by use of access card
-information - Credit card/atm (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty theft - From motor vehicle
-(M) 
-Theft by use of access card
-information - Impersonation (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty theft - From motor vehicle
-(M) 
-Vandalism:damage property
-(M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Petty theft - Motor vehicle
-parts/accessories (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Petty theft - Motor vehicle theft
-(M)",1,1,1,1,1,1,1,1,1,1,1,1
+Petty theft - From building (M)  Theft by use of access card information - Credit card/atm (M),1,1,1,1,1,1,1,1,1,1,1,1
+Petty theft - From motor vehicle (M),22,22,22,22,22,22,22,22,22,15,22,22
+Petty theft - From motor vehicle (M)  Get credit/etc others id - Identity theft (F)  Theft by use of access card information - Credit card/atm (F),1,1,1,1,1,1,1,1,1,0,1,1
+Petty theft - From motor vehicle (M)  Theft by use of access card information - Credit card/atm (F),1,1,1,1,1,1,1,1,1,1,1,1
+Petty theft - From motor vehicle (M)  Theft by use of access card information - Credit card/atm (M),1,1,1,1,1,1,1,1,1,1,1,1
+Petty theft - From motor vehicle (M)  Theft by use of access card information - Impersonation (F),1,1,1,1,1,1,1,1,1,1,1,1
+Petty theft - From motor vehicle (M)  Vandalism:damage property (M),1,1,1,1,1,1,1,1,1,0,1,1
+Petty theft - Motor vehicle parts/accessories (M),1,1,1,1,1,1,1,1,1,1,1,1
+Petty theft - Motor vehicle theft (M),1,1,1,1,1,1,1,1,1,1,1,1
 Petty theft; bike parts,44,44,44,44,44,44,44,44,44,34,44,44
-"Petty theft; bike parts 
-Vandalism:damage Property",1,1,1,1,1,1,1,1,1,1,1,1
+Petty theft; bike parts  Vandalism:damage Property,1,1,1,1,1,1,1,1,1,1,1,1
 Pos Wpn/Etc:cmpus:not Gun,2,2,2,2,2,2,2,2,2,1,2,2
-"Pos Wpn/Etc:cmpus:not Gun 
-ID Theft to obtain credit etc 
-Cntl Sub Paraphernalia",1,1,1,1,1,1,1,1,1,1,1,1
-"Pos Wpn/Etc:cmpus:not Gun 
-Loiter/Etc Private Prop 
-Possess Burglary Tools 
-Receive Known Stolen Prop
-$950 or Under",1,1,1,1,1,1,1,1,1,0,1,1
-"Pos Wpn/Etc:cmpus:not Gun 
-Outside Warrant Arrest MISD",1,1,1,1,1,1,1,1,1,1,1,1
-"Pos Wpn/Etc:cmpus:not Gun 
-Possess Controlled Substance 
-Petty Theft: bike",1,1,1,1,1,1,1,1,1,1,1,1
-"Pos Wpn/Etc:cmpus:not Gun 
-Receive Known Stolen Prop
-$950 or Over 
-Poss Controlled Substance 
-Possess Unlawful
-Paraphernalia 
-Petty Theft: Bike",1,1,1,1,1,1,1,1,1,0,1,1
-"Pos/Pur F/Sale Narc/C/Sub 
-Poss of Heroin/Cocaine, Etc 
-Possess Unlawful
-Paraphernalia 
-Under Influence Cntl Sub 
-Display False Reg w/intent",1,1,1,1,1,1,1,1,1,1,1,1
+Pos Wpn/Etc:cmpus:not Gun  ID Theft to obtain credit etc  Cntl Sub Paraphernalia,1,1,1,1,1,1,1,1,1,1,1,1
+Pos Wpn/Etc:cmpus:not Gun  Loiter/Etc Private Prop  Possess Burglary Tools  Receive Known Stolen Prop $950 or Under,1,1,1,1,1,1,1,1,1,0,1,1
+Pos Wpn/Etc:cmpus:not Gun  Outside Warrant Arrest MISD,1,1,1,1,1,1,1,1,1,1,1,1
+Pos Wpn/Etc:cmpus:not Gun  Possess Controlled Substance  Petty Theft: bike,1,1,1,1,1,1,1,1,1,1,1,1
+Pos Wpn/Etc:cmpus:not Gun  Receive Known Stolen Prop $950 or Over  Poss Controlled Substance  Possess Unlawful Paraphernalia  Petty Theft: Bike,1,1,1,1,1,1,1,1,1,0,1,1
+"Pos/Pur F/Sale Narc/C/Sub  Poss of Heroin/Cocaine, Etc  Possess Unlawful Paraphernalia  Under Influence Cntl Sub  Display False Reg w/intent",1,1,1,1,1,1,1,1,1,1,1,1
 Poss Marijuana W/Driving < 1oz,1,1,1,1,1,1,1,1,1,0,1,1
 Poss Open Container,1,1,1,1,1,1,1,1,1,0,1,1
 Poss Weapon At School,2,2,2,2,2,2,2,2,2,2,2,2
-"Poss Weapon At School 
-Loiter/Etc Private Prop 
-Poss of Heroin/Cocaine, Etc 
-Violation Of Parole:fel",1,1,1,1,1,1,1,1,1,1,1,1
-"Poss Weapon At School 
-Petty Theft 
-Cntl Sub Paraphernalia 
-Possess Controlled Substance 
-Poss of Heroin/Cocaine, Etc",1,1,1,1,1,1,1,1,1,1,1,1
-"Poss Weapon At School 
-Petty Theft: bike 
-Possess Controlled Substance 
-Obstruct Public Officer",1,1,1,1,1,1,1,1,1,0,1,1
-"Poss Weapon At School 
-Possess Controlled Substance 
-Cntl Sub Paraphernalia",1,1,1,1,1,1,1,1,1,1,1,1
-"Poss Weapon At School 
-Receive Known Stolen Prop
-$950 or Over 
-ID Theft to obtain credit etc 
-Drive W/O License 
-Mail Theft",1,1,1,1,1,1,1,1,1,0,1,1
-"Poss Weapon At School 
-Violation Of Parole:fel",1,1,1,1,1,1,1,1,1,1,1,1
-"Poss Weapon At School 
-Warrant Arrest Felony",1,1,1,1,1,1,1,1,1,1,1,1
-"Poss Wpn/Etc:cmps:not Gun 
-Poss Controlled Substance",1,1,1,1,1,1,1,1,1,0,1,1
-"Poss controlled substance while
-armed w/loaded firearm (F) 
-Possess/etc loaded
-firearm:university/etc (F) 
-Carry concealed weapon on
-person (F)",1,1,1,1,1,1,1,1,1,1,1,1
+"Poss Weapon At School  Loiter/Etc Private Prop  Poss of Heroin/Cocaine, Etc  Violation Of Parole:fel",1,1,1,1,1,1,1,1,1,1,1,1
+"Poss Weapon At School  Petty Theft  Cntl Sub Paraphernalia  Possess Controlled Substance  Poss of Heroin/Cocaine, Etc",1,1,1,1,1,1,1,1,1,1,1,1
+Poss Weapon At School  Petty Theft: bike  Possess Controlled Substance  Obstruct Public Officer,1,1,1,1,1,1,1,1,1,0,1,1
+Poss Weapon At School  Possess Controlled Substance  Cntl Sub Paraphernalia,1,1,1,1,1,1,1,1,1,1,1,1
+Poss Weapon At School  Receive Known Stolen Prop $950 or Over  ID Theft to obtain credit etc  Drive W/O License  Mail Theft,1,1,1,1,1,1,1,1,1,0,1,1
+Poss Weapon At School  Violation Of Parole:fel,1,1,1,1,1,1,1,1,1,1,1,1
+Poss Weapon At School  Warrant Arrest Felony,1,1,1,1,1,1,1,1,1,1,1,1
+Poss Wpn/Etc:cmps:not Gun  Poss Controlled Substance,1,1,1,1,1,1,1,1,1,0,1,1
+Poss controlled substance while armed w/loaded firearm (F)  Possess/etc loaded firearm:university/etc (F)  Carry concealed weapon on person (F),1,1,1,1,1,1,1,1,1,1,1,1
 "Poss of Heroin/Cocaine, Etc",1,1,1,1,1,1,1,1,1,0,1,1
-"Poss of Heroin/Cocaine, Etc 
-POSS WEAPON/ETC AT
-SCHOOL (MISD)",1,1,1,1,1,1,1,1,1,1,1,1
-"Poss of Heroin/Cocaine, Etc 
-Under Influence Cntl Sub 
-Poss Weapon At School 
-False Id To Specific Po's",1,1,1,1,1,1,1,1,1,1,1,1
-"Poss. Personal Ident. Info w/
-intent to defraud",3,3,3,3,3,3,3,3,3,3,3,3
-"Poss. Personal Ident. Info w/
-intent to defraud 
-Annoying Phone Calls",1,1,1,1,1,1,1,1,1,1,1,1
-"Poss. Personal Ident. Info w/
-intent to defraud 
-Stalking/Electronic",1,1,1,1,1,1,1,1,1,1,1,1
+"Poss of Heroin/Cocaine, Etc  POSS WEAPON/ETC AT SCHOOL (MISD)",1,1,1,1,1,1,1,1,1,1,1,1
+"Poss of Heroin/Cocaine, Etc  Under Influence Cntl Sub  Poss Weapon At School  False Id To Specific Po's",1,1,1,1,1,1,1,1,1,1,1,1
+Poss. Personal Ident. Info w/ intent to defraud,3,3,3,3,3,3,3,3,3,3,3,3
+Poss. Personal Ident. Info w/ intent to defraud  Annoying Phone Calls,1,1,1,1,1,1,1,1,1,1,1,1
+Poss. Personal Ident. Info w/ intent to defraud  Stalking/Electronic,1,1,1,1,1,1,1,1,1,1,1,1
 Poss/buy/use stun gun by felon,1,1,1,1,1,1,1,1,1,1,1,1
 Possess Burglary Tools,1,1,1,1,1,1,1,1,1,1,1,1
 Possess Controlled Substance,1,1,1,1,1,1,1,1,1,1,1,1
-"Possess Controlled Substance 
-Cntl Sub Paraphernalia",4,4,4,4,4,4,4,4,4,1,4,4
-"Possess Controlled Substance 
-Petty theft; bike parts",1,1,1,1,1,1,1,1,1,0,1,1
-"Possess Controlled Substance 
-Possess Unlawful
-Paraphernalia",2,2,2,2,2,2,2,2,2,1,2,2
+Possess Controlled Substance  Cntl Sub Paraphernalia,4,4,4,4,4,4,4,4,4,1,4,4
+Possess Controlled Substance  Petty theft; bike parts,1,1,1,1,1,1,1,1,1,0,1,1
+Possess Controlled Substance  Possess Unlawful Paraphernalia,2,2,2,2,2,2,2,2,2,1,2,2
 Possess Nitrous Oxide,3,3,3,3,3,3,3,3,3,1,3,3
-"Possess Obscene Matter
-Involving Minor in Sex Act",1,1,1,1,1,1,1,1,1,0,1,1
+Possess Obscene Matter Involving Minor in Sex Act,1,1,1,1,1,1,1,1,1,0,1,1
 Possess Unlawful Paraphernalia,3,3,3,3,3,3,3,3,3,1,3,3
-"Possess Unlawful Paraphernalia 
-Appropr Lost Prop -$950",1,1,1,1,1,1,1,1,1,0,1,1
-"Possess a Controlled Sub W/O
-Prescription MISD",1,1,1,1,1,1,1,1,1,0,1,1
-"Possess controlled substance (M) 
-Possess unlawful
-paraphernalia (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Possess unlawful paraphernalia
-(M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Possess unlawful paraphernalia
-(M) 
-Possess controlled substance
-(M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Possess unlawful paraphernalia
-(M) 
-Warrant Arrest Misdemeanor",1,1,1,1,1,1,1,1,1,0,1,1
-"Possess/etc
-firearm:university/etc (F) 
-Petty theft - All other larceny
-(M) 
-Appropriate lost property (M) 
-Possess/etc burglary tools (M)",1,1,1,1,1,1,1,1,1,1,1,1
+Possess Unlawful Paraphernalia  Appropr Lost Prop -$950,1,1,1,1,1,1,1,1,1,0,1,1
+Possess a Controlled Sub W/O Prescription MISD,1,1,1,1,1,1,1,1,1,0,1,1
+Possess controlled substance (M)  Possess unlawful paraphernalia (M),1,1,1,1,1,1,1,1,1,0,1,1
+Possess unlawful paraphernalia (M),1,1,1,1,1,1,1,1,1,1,1,1
+Possess unlawful paraphernalia (M)  Possess controlled substance (M),1,1,1,1,1,1,1,1,1,0,1,1
+Possess unlawful paraphernalia (M)  Warrant Arrest Misdemeanor,1,1,1,1,1,1,1,1,1,0,1,1
+Possess/etc firearm:university/etc (F)  Petty theft - All other larceny (M)  Appropriate lost property (M)  Possess/etc burglary tools (M),1,1,1,1,1,1,1,1,1,1,1,1
 Probation Violation Misdmeanor,1,1,1,1,1,1,1,1,1,0,1,1
 Public Nuisance,3,3,3,3,3,3,3,3,3,3,3,3
-"Public Nuisance 
-False Id To Specific Po",1,1,1,1,1,1,1,1,1,1,1,1
+Public Nuisance  False Id To Specific Po,1,1,1,1,1,1,1,1,1,1,1,1
 Rape By Force/Fear/Etc,5,5,5,5,5,5,5,5,5,3,5,5
-"Rape By Force/Fear/Etc 
-Oral Copulation by Use of
-Force or Injury",1,1,1,1,1,1,1,1,1,1,1,1
+Rape By Force/Fear/Etc  Oral Copulation by Use of Force or Injury,1,1,1,1,1,1,1,1,1,1,1,1
 Rape Of Drugged Victim,3,3,3,3,3,3,3,3,3,1,3,3
 Rape by force/fear/etc (F),3,3,3,3,3,3,3,3,3,1,3,3
-"Rape by force/fear/etc (F) 
-Adw with force:possible gbi (F)",1,1,1,1,1,1,1,1,1,0,1,1
+Rape by force/fear/etc (F)  Adw with force:possible gbi (F),1,1,1,1,1,1,1,1,1,0,1,1
 Rape:vict Incpbl Of Cnsnt,3,3,3,3,3,3,3,3,3,2,3,3
-"Rape:victim incapable of giving
-consent (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Rape:victim unconscious of the
-nature of the act (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Receive Known Stolen Prop $950
-or Under",2,2,2,2,2,2,2,2,2,0,2,2
-"Receive/etc known stolen
-property (M)",1,1,1,1,1,1,1,1,1,0,1,1
+Rape:victim incapable of giving consent (F),1,1,1,1,1,1,1,1,1,1,1,1
+Rape:victim unconscious of the nature of the act (F),1,1,1,1,1,1,1,1,1,1,1,1
+Receive Known Stolen Prop $950 or Under,2,2,2,2,2,2,2,2,2,0,2,2
+Receive/etc known stolen property (M),1,1,1,1,1,1,1,1,1,0,1,1
 Reckless Driving:highway,2,2,2,2,2,2,2,2,2,0,2,2
-"Reckless Driving:highway 
-Drive W/O License",1,1,1,1,1,1,1,1,1,1,1,1
-"Report false crime to any on duty
-peace officer (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Riding bicycle under influence of
-alcohol and/or drugs (M)",1,1,1,1,1,1,1,1,1,0,1,1
+Reckless Driving:highway  Drive W/O License,1,1,1,1,1,1,1,1,1,1,1,1
+Report false crime to any on duty peace officer (M),1,1,1,1,1,1,1,1,1,0,1,1
+Riding bicycle under influence of alcohol and/or drugs (M),1,1,1,1,1,1,1,1,1,0,1,1
 Robbery,4,4,4,4,4,4,4,4,4,2,4,4
-"Send/Sell/Etc Obs Mtr:mnr 
-Annoying Phone Calls",1,1,1,1,1,1,1,1,1,0,1,1
-"Send/etc false fire alarm by any
-method (M) 
-Unauth entr of dwelling (M) 
-Vandalism less than $400 (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Send/sell/etc obscene matter
-depicting minor (M) 
-Annoying telephone
-call:obscene/threatening -
-Intimidation (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Sex Pen W/Foreign Obj: Victim
-Drugged/Etc",1,1,1,1,1,1,1,1,1,1,1,1
+Send/Sell/Etc Obs Mtr:mnr  Annoying Phone Calls,1,1,1,1,1,1,1,1,1,0,1,1
+Send/etc false fire alarm by any method (M)  Unauth entr of dwelling (M)  Vandalism less than $400 (M),1,1,1,1,1,1,1,1,1,0,1,1
+Send/sell/etc obscene matter depicting minor (M)  Annoying telephone call:obscene/threatening - Intimidation (M),1,1,1,1,1,1,1,1,1,0,1,1
+Sex Pen W/Foreign Obj: Victim Drugged/Etc,1,1,1,1,1,1,1,1,1,1,1,1
 Sex W/Minor:+ Or - 3 Yrs,1,1,1,1,1,1,1,1,1,0,1,1
-"Sexual Penetration
-W/Force/Fear/Etc",1,1,1,1,1,1,1,1,1,1,1,1
-"Sexual battery - Unrestrained
-victim",6,6,6,6,6,6,6,6,6,4,6,6
-"Sexual battery - Unrestrained
-victim 
-False Imprisonment 
-Attempted Extortion",1,1,1,1,1,1,1,1,1,1,1,1
-"Sexually Exploit Child-Develop
-Photo Etc",1,1,1,1,1,1,1,1,1,1,1,1
+Sexual Penetration W/Force/Fear/Etc,1,1,1,1,1,1,1,1,1,1,1,1
+Sexual battery - Unrestrained victim,6,6,6,6,6,6,6,6,6,4,6,6
+Sexual battery - Unrestrained victim  False Imprisonment  Attempted Extortion,1,1,1,1,1,1,1,1,1,1,1,1
+Sexually Exploit Child-Develop Photo Etc,1,1,1,1,1,1,1,1,1,1,1,1
 Shoplift/Petty Theft,4,4,4,4,4,4,4,4,4,2,4,4
 Shoplifting $950 or Under,1,1,1,1,1,1,1,1,1,0,1,1
 Smoking MJ in Public Place,2,2,2,2,2,2,2,2,2,2,2,2
-"Sodomy by force/violence/fear -
-Intimidation (F)",1,1,1,1,1,1,1,1,1,1,1,1
+Sodomy by force/violence/fear - Intimidation (F),1,1,1,1,1,1,1,1,1,1,1,1
 Solicit Lewd Act,3,3,3,3,3,3,3,3,3,2,3,3
-"Solicit Lewd Act 
-False Id To Specific Po's",1,1,1,1,1,1,1,1,1,1,1,1
-"Solicit Lewd Act 
-Indecent Exposure",1,1,1,1,1,1,1,1,1,1,1,1
+Solicit Lewd Act  False Id To Specific Po's,1,1,1,1,1,1,1,1,1,1,1,1
+Solicit Lewd Act  Indecent Exposure,1,1,1,1,1,1,1,1,1,1,1,1
 Solicit lewd act in public (M),1,1,1,1,1,1,1,1,1,1,1,1
-"Solicit lewd act in public (M) 
-Disorderly conduct:lodge
-without owners consent (M) 
-Clery Act/Stalking",1,1,1,1,1,1,1,1,1,1,1,1
+Solicit lewd act in public (M)  Disorderly conduct:lodge without owners consent (M)  Clery Act/Stalking,1,1,1,1,1,1,1,1,1,1,1,1
 Stalking,2,2,2,2,2,2,2,2,2,1,2,2
-"Stalking 
-Dis Cndct:peek Inhab Bldg",1,1,1,1,1,1,1,1,1,1,1,1
-"Stalking 
-Vio Civil Rghts:frce/Thrt",1,1,1,1,1,1,1,1,1,1,1,1
+Stalking  Dis Cndct:peek Inhab Bldg,1,1,1,1,1,1,1,1,1,1,1,1
+Stalking  Vio Civil Rghts:frce/Thrt,1,1,1,1,1,1,1,1,1,1,1,1
 Stalking (F),1,1,1,1,1,1,1,1,1,0,1,1
 Stalking/Electronic,1,1,1,1,1,1,1,1,1,1,1,1
-"Stalking/Electronic 
-Student Safety",1,1,1,1,1,1,1,1,1,0,1,1
+Stalking/Electronic  Student Safety,1,1,1,1,1,1,1,1,1,0,1,1
 Stalking/Other,7,7,7,7,7,7,7,7,7,6,7,7
-"Stalking/Other 
-Battery On Person",1,1,1,1,1,1,1,1,1,1,1,1
+Stalking/Other  Battery On Person,1,1,1,1,1,1,1,1,1,1,1,1
 Student Safety,10,10,10,10,10,10,10,10,10,8,10,10
-"Student Safety 
-Annoy/Etc Child -18",2,2,2,2,2,2,2,2,2,2,2,2
-"Student Safety 
-Annoying Phone Calls",2,2,2,2,2,2,2,2,2,1,2,2
-"Student Safety 
-Annoying Phone Calls 
-False Imprisonment 
-Stalking",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Assault On Person",3,3,3,3,3,3,3,3,3,2,3,3
-"Student Safety 
-Assault to Commit Rape",42,42,42,42,42,42,42,42,42,16,42,42
-"Student Safety 
-Assault to Commit Rape 
-Assault to Commit Rape 
-Assault to Commit Rape",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Assault to commit rape -
-Aggravated (F)",2,2,2,2,2,2,2,2,2,0,2,2
-"Student Safety 
-Assault to commit rape -
-Simple (F)",2,2,2,2,2,2,2,1,2,0,2,2
-"Student Safety 
-Assault to commit rape - Rape
-(F)",3,3,3,3,3,3,3,3,3,0,3,3
-"Student Safety 
-Assault to penetrate w/foreign
-object - Simple (F)",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Assault w/ Force likely to
-cause GBI",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Assault w/ Force likely to
-cause GBI 
-Robbery",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Assault w/int to rape/etc -
-Rape (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Assault w/int to rape/etc -
-Simple (F)",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Battery On Person",20,20,20,20,20,20,20,20,20,12,20,20
-"Student Safety 
-Battery Spouse/Ex-
-Spouse/Date/Etc",8,8,8,8,7,8,8,8,8,4,8,8
-"Student Safety 
-Battery on person - Simple (M)",4,4,4,4,4,4,4,4,4,1,4,4
-"Student Safety 
-Battery:spouse/ex
-spouse/date/etc - Simple (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Battery:spouse/ex
-spouse/date/etc - Simple (M) 
-False imprisonment (M) 
-Threaten crime with intent to
-terrorize (F)",1,1,1,1,1,1,1,0,1,0,1,1
-"Student Safety 
-Burglary - Institutional",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Burglary - Residential",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Clery Act/Stalking",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Contact Minor With Intent Sex",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Damage/etc property to
-violate civil rights (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Damage/etc property to
-violate civil rights (M) 
-Petty theft - From building (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Eavesdropping",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Enter Noncomm Dwelling",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Exhibit Deadwpn:not F/Arm",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Exhibit deadly weapon other
-than firearm - Aggravated (M) 
-Threaten crime with intent to
-terrorize (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Exhibit deadly weapon other
-than firearm - Weapon law
-violations (M) 
-Poss wpn univ not f/arm (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-False Imprisonment",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-False Imprisonment 
-Battery On Person",2,2,2,2,2,2,2,2,2,2,2,2
-"Student Safety 
-False Pretenses: less than
-$950",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Give Drugs Aid In Felony",9,9,9,9,9,9,9,9,9,8,9,9
-"Student Safety 
-Illegal Use of Tear Gas/Tear
-Gas Weapon 
-Battery with serious bodily
-injury (punishment) (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Inf Corp Injury:spouse/Cohab",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Inflict corporal injury on
-spouse/cohabitant/datng
-relatnshp - Simple (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Offensive Words:public Pl",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Oral Copulation",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Petty Theft",2,2,2,2,2,2,2,2,2,2,2,2
-"Student Safety 
-Petty Theft 
-Petty Theft 
-Petty Theft: bike",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Petty theft - From building (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Petty theft - From building (M) 
-Violate civil rights by force or
-threat of force - Simple (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Possess narcotic controlled
-substance (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Rape By Force/Fear/Etc",9,9,9,9,9,9,9,9,9,3,9,9
-"Student Safety 
-Rape By Force/Fear/Etc 
-Assault with deadly weapon or
-instrument",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Rape:vict Incpbl Of Cnsnt",4,4,4,4,4,4,4,4,4,4,4,4
-"Student Safety 
-Rape:vict Incpbl Of Cnsnt 
-Sexual Battery of restrained
-person",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Rape:victim incapable of
-giving consent (F)",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Sell/etc liquor to minor (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Sex Pen W/Foreign Obj: No
-Consent: Vic/Def Mntl",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Sexual Pen W/Foreign Obj: Vic
-Incapable of Consent",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Sexual battery - Unrestrained
-victim",22,22,22,22,22,22,22,22,22,13,22,22
-"Student Safety 
-Solicit Lewd Act",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Stalking",2,2,2,2,2,2,2,2,2,1,2,2
-"Student Safety 
-Stalking (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Stalking (M)",2,2,2,2,2,2,2,2,2,1,2,2
-"Student Safety 
-Stalking/Electronic",2,2,2,2,2,2,2,2,2,1,2,2
-"Student Safety 
-Stalking/Other",9,9,9,9,9,9,9,9,9,5,9,9
-"Student Safety 
-Touch person intimately
-against will for sexual arousal/etc
-(M)",2,2,2,2,2,2,2,2,2,1,2,2
-"Student Safety 
-Trespass:closed Lands",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Use of Camera: to Record view
-of body/underwear",3,3,3,3,3,3,3,3,3,3,3,3
-"Student Safety 
-Vandalism:damage Property 
-Damage Prop:vio Civl Rght",1,1,1,1,1,1,1,1,1,0,1,1
-"Student Safety 
-Violate civil rights by force or
-threat of force - Simple (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Student Safety 
-Willful poisoning/etc of
-food/etc - Aggravated (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Take vehicle w/o owners
-consent/vehicle theft - Motor
-vehicle parts/accessories (F)",1,1,1,1,1,1,1,1,1,1,1,1
-"Take vehicle w/o owners
-consent/vehicle theft - Motor
-vehicle theft (F)",21,21,21,21,21,21,21,21,21,15,21,21
-"Take vehicle w/o owners
-consent/vehicle theft - Motor
-vehicle theft (F) 
-Receive/etc known stolen
-property (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Take vehicle w/o owners
-consent/vehicle theft - Motor
-vehicle theft (F) 
-Vandalism less than $400 (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Take vehicle without owners
-consent - Motor vehicle theft (M)",1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Annoy/Etc Child -18,2,2,2,2,2,2,2,2,2,2,2,2
+Student Safety  Annoying Phone Calls,2,2,2,2,2,2,2,2,2,1,2,2
+Student Safety  Annoying Phone Calls  False Imprisonment  Stalking,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Assault On Person,3,3,3,3,3,3,3,3,3,2,3,3
+Student Safety  Assault to Commit Rape,42,42,42,42,42,42,42,42,42,16,42,42
+Student Safety  Assault to Commit Rape  Assault to Commit Rape  Assault to Commit Rape,1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Assault to commit rape - Aggravated (F),2,2,2,2,2,2,2,2,2,0,2,2
+Student Safety  Assault to commit rape - Rape (F),3,3,3,3,3,3,3,3,3,0,3,3
+Student Safety  Assault to commit rape - Simple (F),2,2,2,2,2,2,2,1,2,0,2,2
+Student Safety  Assault to penetrate w/foreign object - Simple (F),1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Assault w/ Force likely to cause GBI,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Assault w/ Force likely to cause GBI  Robbery,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Assault w/int to rape/etc - Rape (F),1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Assault w/int to rape/etc - Simple (F),1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Battery On Person,20,20,20,20,20,20,20,20,20,12,20,20
+Student Safety  Battery Spouse/Ex- Spouse/Date/Etc,8,8,8,8,7,8,8,8,8,4,8,8
+Student Safety  Battery on person - Simple (M),4,4,4,4,4,4,4,4,4,1,4,4
+Student Safety  Battery:spouse/ex spouse/date/etc - Simple (M),1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Battery:spouse/ex spouse/date/etc - Simple (M)  False imprisonment (M)  Threaten crime with intent to terrorize (F),1,1,1,1,1,1,1,0,1,0,1,1
+Student Safety  Burglary - Institutional,1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Burglary - Residential,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Clery Act/Stalking,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Contact Minor With Intent Sex,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Damage/etc property to violate civil rights (M),1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Damage/etc property to violate civil rights (M)  Petty theft - From building (M),1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Eavesdropping,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Enter Noncomm Dwelling,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Exhibit Deadwpn:not F/Arm,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Exhibit deadly weapon other than firearm - Aggravated (M)  Threaten crime with intent to terrorize (F),1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Exhibit deadly weapon other than firearm - Weapon law violations (M)  Poss wpn univ not f/arm (M),1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  False Imprisonment,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  False Imprisonment  Battery On Person,2,2,2,2,2,2,2,2,2,2,2,2
+Student Safety  False Pretenses: less than $950,1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Give Drugs Aid In Felony,9,9,9,9,9,9,9,9,9,8,9,9
+Student Safety  Illegal Use of Tear Gas/Tear Gas Weapon  Battery with serious bodily injury (punishment) (M),1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Inf Corp Injury:spouse/Cohab,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Inflict corporal injury on spouse/cohabitant/datng relatnshp - Simple (M),1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Offensive Words:public Pl,1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Oral Copulation,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Petty Theft,2,2,2,2,2,2,2,2,2,2,2,2
+Student Safety  Petty Theft  Petty Theft  Petty Theft: bike,1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Petty theft - From building (M),1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Petty theft - From building (M)  Violate civil rights by force or threat of force - Simple (M),1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Possess narcotic controlled substance (M),1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Rape By Force/Fear/Etc,9,9,9,9,9,9,9,9,9,3,9,9
+Student Safety  Rape By Force/Fear/Etc  Assault with deadly weapon or instrument,1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Rape:vict Incpbl Of Cnsnt,4,4,4,4,4,4,4,4,4,4,4,4
+Student Safety  Rape:vict Incpbl Of Cnsnt  Sexual Battery of restrained person,1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Rape:victim incapable of giving consent (F),1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Sell/etc liquor to minor (M),1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Sex Pen W/Foreign Obj: No Consent: Vic/Def Mntl,1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Sexual Pen W/Foreign Obj: Vic Incapable of Consent,1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Sexual battery - Unrestrained victim,22,22,22,22,22,22,22,22,22,13,22,22
+Student Safety  Solicit Lewd Act,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Stalking,2,2,2,2,2,2,2,2,2,1,2,2
+Student Safety  Stalking (F),1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Stalking (M),2,2,2,2,2,2,2,2,2,1,2,2
+Student Safety  Stalking/Electronic,2,2,2,2,2,2,2,2,2,1,2,2
+Student Safety  Stalking/Other,9,9,9,9,9,9,9,9,9,5,9,9
+Student Safety  Touch person intimately against will for sexual arousal/etc (M),2,2,2,2,2,2,2,2,2,1,2,2
+Student Safety  Trespass:closed Lands,1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Use of Camera: to Record view of body/underwear,3,3,3,3,3,3,3,3,3,3,3,3
+Student Safety  Vandalism:damage Property  Damage Prop:vio Civl Rght,1,1,1,1,1,1,1,1,1,0,1,1
+Student Safety  Violate civil rights by force or threat of force - Simple (M),1,1,1,1,1,1,1,1,1,1,1,1
+Student Safety  Willful poisoning/etc of food/etc - Aggravated (F),1,1,1,1,1,1,1,1,1,1,1,1
+Take vehicle w/o owners consent/vehicle theft - Motor vehicle parts/accessories (F),1,1,1,1,1,1,1,1,1,1,1,1
+Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F),21,21,21,21,21,21,21,21,21,15,21,21
+Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F)  Receive/etc known stolen property (M),1,1,1,1,1,1,1,1,1,1,1,1
+Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F)  Vandalism less than $400 (M),1,1,1,1,1,1,1,1,1,1,1,1
+Take vehicle without owners consent - Motor vehicle theft (M),1,1,1,1,1,1,1,1,1,1,1,1
 Tamper With Vehicle,7,7,7,7,7,7,7,7,7,5,7,7
-"Tamper With Vehicle 
-Grnd Thft: Prop/from Vehicle
-+950",1,1,1,1,1,1,1,1,1,0,1,1
-"Tamper With Vehicle 
-Petty Theft",2,2,2,2,2,2,2,2,2,0,2,2
-"Tamper With Vehicle 
-Petty Thft: Prop/From Vehicle",1,1,1,1,1,1,1,1,1,1,1,1
-"Tamper with vehicle -
-Destruction/damage/vandalism
-of property (M)",1,1,1,1,1,1,1,1,1,1,1,1
+Tamper With Vehicle  Grnd Thft: Prop/from Vehicle +950,1,1,1,1,1,1,1,1,1,0,1,1
+Tamper With Vehicle  Petty Theft,2,2,2,2,2,2,2,2,2,0,2,2
+Tamper With Vehicle  Petty Thft: Prop/From Vehicle,1,1,1,1,1,1,1,1,1,1,1,1
+Tamper with vehicle - Destruction/damage/vandalism of property (M),1,1,1,1,1,1,1,1,1,1,1,1
 Tamper/Etc W/Firealrm/Etc,1,1,1,1,1,1,1,1,1,0,1,1
 Terrorize swastika 2+ (F),1,1,1,1,1,1,1,1,1,1,1,1
-"Theft by access card $950 or
-under",13,13,13,13,13,13,13,13,13,11,13,13
+Theft by access card $950 or under,13,13,13,13,13,13,13,13,13,11,13,13
 Theft by access card over $950,11,11,11,11,11,11,11,11,11,9,11,11
-"Theft by access card over $950 
-Petty Theft",1,1,1,1,1,1,1,1,1,0,1,1
-"Theft by access card over $950 
-Petty Thft: Prop/From Vehicle",1,1,1,1,1,1,1,1,1,1,1,1
-"Theft by use of access card
-information -
-Counterfeiting/forgery (F) 
-Appropriate lost property (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Theft of Access Cards $950 or
-under",1,1,1,1,1,1,1,1,1,1,1,1
-"Theft of personal property - All
-other larceny (M)",2,2,2,2,2,2,2,2,2,1,2,2
-"Theft of personal property - From
-building (M)",3,3,3,3,3,3,3,3,3,1,3,3
-"Theft of personal property - From
-building (M) 
-Enter/etc noncommercial
-dwelling (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Theft of personal property - From
-motor vehicle (M)",2,2,2,2,2,2,2,2,2,1,2,2
-"Threaten Crime With Intent to
-Terrorize",1,1,1,1,1,1,1,1,1,1,1,1
-"Threaten crime with intent to
-terrorize (F) 
-Annoying telephone
-call:obscene/threatening -
-Intimidation (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Threaten crime with intent to
-terrorize (M)",1,1,1,1,1,1,1,1,1,0,1,1
+Theft by access card over $950  Petty Theft,1,1,1,1,1,1,1,1,1,0,1,1
+Theft by access card over $950  Petty Thft: Prop/From Vehicle,1,1,1,1,1,1,1,1,1,1,1,1
+Theft by use of access card information - Counterfeiting/forgery (F)  Appropriate lost property (M),1,1,1,1,1,1,1,1,1,1,1,1
+Theft of Access Cards $950 or under,1,1,1,1,1,1,1,1,1,1,1,1
+Theft of personal property - All other larceny (M),2,2,2,2,2,2,2,2,2,1,2,2
+Theft of personal property - From building (M),3,3,3,3,3,3,3,3,3,1,3,3
+Theft of personal property - From building (M)  Enter/etc noncommercial dwelling (M),1,1,1,1,1,1,1,1,1,1,1,1
+Theft of personal property - From motor vehicle (M),2,2,2,2,2,2,2,2,2,1,2,2
+Threaten Crime With Intent to Terrorize,1,1,1,1,1,1,1,1,1,1,1,1
+Threaten crime with intent to terrorize (F)  Annoying telephone call:obscene/threatening - Intimidation (M),1,1,1,1,1,1,1,1,1,0,1,1
+Threaten crime with intent to terrorize (M),1,1,1,1,1,1,1,1,1,0,1,1
 Thrtn Crime:int:terrorize,6,6,6,6,6,6,6,6,6,4,6,6
-"Thrtn Crime:int:terrorize 
-Annoying Phone Calls",1,1,1,1,1,1,1,1,1,1,1,1
-"Thrtn Crime:int:terrorize 
-Thrtng Ltr W/Int To Extor",1,1,1,1,1,1,1,1,1,0,1,1
+Thrtn Crime:int:terrorize  Annoying Phone Calls,1,1,1,1,1,1,1,1,1,1,1,1
+Thrtn Crime:int:terrorize  Thrtng Ltr W/Int To Extor,1,1,1,1,1,1,1,1,1,0,1,1
 Thrtng Ltr W/Int To Extor,1,1,1,1,1,1,1,1,1,0,1,1
-"Touch person intimately against
-will for sexual arousal/etc (M)",4,4,4,4,4,4,4,4,4,1,4,4
-"Trespas:enter/occupy structures
-w/o consent",4,4,4,4,4,4,4,4,4,3,4,4
-"Trespas:enter/occupy structures
-w/o consent 
-Obstruct Public Officer 
-Loiter/Etc Private Prop",1,1,1,1,1,1,1,1,1,0,1,1
+Touch person intimately against will for sexual arousal/etc (M),4,4,4,4,4,4,4,4,4,1,4,4
+Trespas:enter/occupy structures w/o consent,4,4,4,4,4,4,4,4,4,3,4,4
+Trespas:enter/occupy structures w/o consent  Obstruct Public Officer  Loiter/Etc Private Prop,1,1,1,1,1,1,1,1,1,0,1,1
 Trespass:closed Lands,9,9,9,9,9,9,9,9,9,5,9,9
-"Trespass:closed Lands 
-Warrant Arrest Misdemeanor",1,1,1,1,1,1,1,1,1,1,1,1
-"Trespass:occ Prop W/O Con 
-Disrd Condct:loiter/No Id",1,1,1,1,1,1,1,1,1,1,1,1
-"Trespass:occupy property
-without consent (M)",8,8,8,8,8,8,8,8,8,3,8,8
-"Trespass:occupy property
-without consent (M) 
-Disorderly conduct:lodge
-without owners consent (M) 
-False identification to specific
-peace officer - False
-pretenses/swindle/confidence
-game (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Trespass:refuse to leave
-property:owner request (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Trespass:refuse to leave property
-(M)",2,2,2,2,2,2,2,2,2,1,2,2
+Trespass:closed Lands  Warrant Arrest Misdemeanor,1,1,1,1,1,1,1,1,1,1,1,1
+Trespass:occ Prop W/O Con  Disrd Condct:loiter/No Id,1,1,1,1,1,1,1,1,1,1,1,1
+Trespass:occupy property without consent (M),8,8,8,8,8,8,8,8,8,3,8,8
+Trespass:occupy property without consent (M)  Disorderly conduct:lodge without owners consent (M)  False identification to specific peace officer - False pretenses/swindle/confidence game (M),1,1,1,1,1,1,1,1,1,1,1,1
+Trespass:refuse to leave property (M),2,2,2,2,2,2,2,2,2,1,2,2
+Trespass:refuse to leave property:owner request (M),1,1,1,1,1,1,1,1,1,1,1,1
 Trespassing (M),2,2,2,2,2,2,2,2,2,2,2,2
 Trspss:refuse To Lv Prop,1,1,1,1,1,1,1,1,1,1,1,1
 Unauth Entry Posted Land,6,6,6,6,6,6,6,6,6,5,6,6
-"Unauth Use Computer Data 
-Extortion",1,1,1,1,1,1,1,1,1,0,1,1
+Unauth Use Computer Data  Extortion,1,1,1,1,1,1,1,1,1,0,1,1
 Unauth entry occu dwling (M),1,1,1,1,1,1,1,0,1,1,1,1
 Under Influence Cntl Sub,1,1,1,1,1,1,1,1,1,0,1,1
 Unlawful Use Of D.l.,2,2,2,2,2,2,2,2,2,0,2,2
-"Unlawful Use Of D.l. 
-Drive W/O License",1,1,1,1,1,1,1,1,1,0,1,1
+Unlawful Use Of D.l.  Drive W/O License,1,1,1,1,1,1,1,1,1,0,1,1
 Unlawful to Dump Waste Matter,1,1,1,1,1,1,1,1,1,0,1,1
-"Unlawful to litter on
-public/private property",1,1,1,1,1,1,1,1,1,1,1,1
+Unlawful to litter on public/private property,1,1,1,1,1,1,1,1,1,1,1,1
 Unreasonable Noise,1,1,1,1,1,1,1,1,1,1,1,1
 Use Others ID to Obtain Credit,2,2,2,2,2,2,2,2,2,2,2,2
-"Use of Access Card $950 or
-Under",1,1,1,1,1,1,1,1,1,1,1,1
-"Use of Camera: to Record view of
-body/underwear",1,1,1,1,1,1,1,1,1,1,1,1
-"Use of Camera: to Record view of
-body/underwear 
-Eavesdropping 
-Extortion",1,1,1,1,1,1,1,1,1,1,1,1
+Use of Access Card $950 or Under,1,1,1,1,1,1,1,1,1,1,1,1
+Use of Camera: to Record view of body/underwear,1,1,1,1,1,1,1,1,1,1,1,1
+Use of Camera: to Record view of body/underwear  Eavesdropping  Extortion,1,1,1,1,1,1,1,1,1,1,1,1
 Vandalism ($400 or more) (F),14,14,14,14,14,14,14,14,14,7,14,14
 Vandalism ($400 or more) (M),3,3,3,3,3,3,3,3,3,3,3,3
-"Vandalism ($400 or more) (M) 
-Loud/unreasonable noise
-within university/etc (M)",1,1,1,1,1,1,1,1,1,0,1,1
+Vandalism ($400 or more) (M)  Loud/unreasonable noise within university/etc (M),1,1,1,1,1,1,1,1,1,0,1,1
 Vandalism less than $400 (M),9,9,9,9,9,9,9,8,9,4,9,9
-"Vandalism less than $400 (M) 
-Disorderly conduct:lodge
-without owners consent (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Vandalism less than $400 (M) 
-Petty theft - From building (M) 
-Disorderly conduct:loiter/etc
-private property (M)",1,1,1,1,1,1,1,1,1,0,1,1
+Vandalism less than $400 (M)  Disorderly conduct:lodge without owners consent (M),1,1,1,1,1,1,1,1,1,1,1,1
+Vandalism less than $400 (M)  Petty theft - From building (M)  Disorderly conduct:loiter/etc private property (M),1,1,1,1,1,1,1,1,1,0,1,1
 Vandalism over $400 Felony,37,37,37,37,37,37,37,37,37,16,37,37
-"Vandalism over $400 Felony 
-Burglary - Institutional",1,1,1,1,1,1,1,1,1,1,1,1
-"Vandalism over $400 Felony 
-Theft Of Utility Services",1,1,1,1,1,1,1,1,1,0,1,1
+Vandalism over $400 Felony  Burglary - Institutional,1,1,1,1,1,1,1,1,1,1,1,1
+Vandalism over $400 Felony  Theft Of Utility Services,1,1,1,1,1,1,1,1,1,0,1,1
 Vandalism:damage Property,42,42,42,42,42,42,42,42,42,30,42,42
-"Vandalism:damage Property 
-Attempted Petty Theft",1,1,1,1,1,1,1,1,1,1,1,1
-"Vandalism:damage Property 
-Petty Theft",1,1,1,1,1,1,1,1,1,0,1,1
-"Vandalism:damage Property 
-Trespass:occ Prop W/O Con",1,1,1,1,1,1,1,1,1,0,1,1
+Vandalism:damage Property  Attempted Petty Theft,1,1,1,1,1,1,1,1,1,1,1,1
+Vandalism:damage Property  Petty Theft,1,1,1,1,1,1,1,1,1,0,1,1
+Vandalism:damage Property  Trespass:occ Prop W/O Con,1,1,1,1,1,1,1,1,1,0,1,1
 Vandalism:damage property (F),3,3,3,3,3,3,3,3,3,2,3,3
 Vandalism:damage property (M),1,1,1,1,1,1,1,1,1,1,1,1
 Vandalism:deface property (M),2,2,2,2,2,2,2,2,2,1,2,2
@@ -1311,49 +554,24 @@ Vehicle Theft,64,64,64,64,64,64,64,64,64,48,64,64
 Vio Civil Rghts:frce/Thrt,4,4,4,4,4,4,4,4,4,3,4,4
 Vio Dom Vio Crt Ord:p/Inj,1,1,1,1,1,1,1,1,1,0,1,1
 Vio Health & Safety Order,3,3,3,3,3,3,3,3,3,1,3,3
-"Vio Health & Safety Order 
-Obstruct Public Officer",1,1,1,1,1,1,1,1,1,1,1,1
-"Vio Ord:prevnt Domes Viol 
-Stalking 
-Kidnapping",1,1,1,1,1,1,1,1,1,1,1,1
+Vio Health & Safety Order  Obstruct Public Officer,1,1,1,1,1,1,1,1,1,1,1,1
+Vio Ord:prevnt Domes Viol  Stalking  Kidnapping,1,1,1,1,1,1,1,1,1,1,1,1
 Viol crt ord dom violence (M),1,1,1,1,1,1,1,1,1,1,1,1
 Violation Of Parole:fel,1,1,1,1,1,1,1,1,1,0,1,1
 Warrant Arrest Felony,5,5,5,5,5,5,5,5,5,5,5,5
-"Warrant Arrest Felony 
-POSS WEAPON/ETC AT
-SCHOOL (MISD)",1,1,1,1,1,1,1,1,1,0,1,1
-"Warrant Arrest Felony 
-Petty Theft: bike",1,1,1,1,1,1,1,1,1,0,1,1
-"Warrant Arrest Felony 
-Possess/etc substance similar
-to toluene (M)",1,1,1,1,1,1,1,1,1,1,1,1
-"Warrant Arrest Felony 
-Warrant Arrest Misdemeanor 
-Warrant Arrest Misdemeanor",1,1,1,1,1,1,1,1,1,0,1,1
+Warrant Arrest Felony  POSS WEAPON/ETC AT SCHOOL (MISD),1,1,1,1,1,1,1,1,1,0,1,1
+Warrant Arrest Felony  Petty Theft: bike,1,1,1,1,1,1,1,1,1,0,1,1
+Warrant Arrest Felony  Possess/etc substance similar to toluene (M),1,1,1,1,1,1,1,1,1,1,1,1
+Warrant Arrest Felony  Warrant Arrest Misdemeanor  Warrant Arrest Misdemeanor,1,1,1,1,1,1,1,1,1,0,1,1
 Warrant Arrest Misdemeanor,38,38,38,38,38,38,38,37,38,15,38,38
-"Warrant Arrest Misdemeanor 
-Disord Conduct:alcohol",1,1,1,1,1,1,1,1,1,1,1,1
-"Warrant Arrest Misdemeanor 
-Disorderly conduct:lodge
-without owners consent (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Warrant Arrest Misdemeanor 
-Drive Susp Lic:spec Circ",1,1,1,1,1,1,1,1,1,0,1,1
-"Warrant Arrest Misdemeanor 
-Loiter/Etc Private Prop",1,1,1,1,1,1,1,1,1,1,1,1
-"Warrant Arrest Misdemeanor 
-Outside Warrant Arrest MISD 
-Outside Warrant Arrest MISD",1,1,1,1,1,1,1,1,1,1,1,1
-"Warrant Arrest Misdemeanor 
-Petty Theft: Bike",1,1,1,1,1,1,1,1,1,0,1,1
-"Warrant Arrest Misdemeanor 
-Possess Controlled Substance 
-Possess Unlawful
-Paraphernalia",1,1,1,1,1,1,1,1,1,0,1,1
-"Wear/etc id/etc:impers po - False
-pretenses/swindle/confidence
-game (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Wilfl dschrg bb gn gr neg -
-Aggravated (M)",1,1,1,1,1,1,1,1,1,0,1,1
-"Wilfl dschrg bb gn gr neg -
-Weapon law violations (M)",1,1,1,1,1,1,1,1,1,0,1,1
+Warrant Arrest Misdemeanor  Disord Conduct:alcohol,1,1,1,1,1,1,1,1,1,1,1,1
+Warrant Arrest Misdemeanor  Disorderly conduct:lodge without owners consent (M),1,1,1,1,1,1,1,1,1,0,1,1
+Warrant Arrest Misdemeanor  Drive Susp Lic:spec Circ,1,1,1,1,1,1,1,1,1,0,1,1
+Warrant Arrest Misdemeanor  Loiter/Etc Private Prop,1,1,1,1,1,1,1,1,1,1,1,1
+Warrant Arrest Misdemeanor  Outside Warrant Arrest MISD  Outside Warrant Arrest MISD,1,1,1,1,1,1,1,1,1,1,1,1
+Warrant Arrest Misdemeanor  Petty Theft: Bike,1,1,1,1,1,1,1,1,1,0,1,1
+Warrant Arrest Misdemeanor  Possess Controlled Substance  Possess Unlawful Paraphernalia,1,1,1,1,1,1,1,1,1,0,1,1
+Wear/etc id/etc:impers po - False pretenses/swindle/confidence game (M),1,1,1,1,1,1,1,1,1,0,1,1
+Wilfl dschrg bb gn gr neg - Aggravated (M),1,1,1,1,1,1,1,1,1,0,1,1
+Wilfl dschrg bb gn gr neg - Weapon law violations (M),1,1,1,1,1,1,1,1,1,0,1,1
 Willful Cruelty To Child,1,1,1,1,1,1,1,1,1,1,1,1
