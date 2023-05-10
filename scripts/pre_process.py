@@ -19,7 +19,6 @@ def merge():
 
         writer.writeheader()
         for row in all_data:
-            print(row)
             writer.writerow(row)
 
 def clean_date():
