@@ -14,14 +14,12 @@ def merge():
             all_data.append(row)
     
     with open('data/processed/stanford_crime_merged.csv', 'w') as csvfile:
-        fieldnames = ['Nature','Case #','Reported','Occurred','Location','Disposition','On Campus?','Area', 'City', 'State', 'Country']
+        fieldnames = ['Nature','Case #','Reported','Occurred','Location','Disposition','On Campus?','Area']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
         writer.writeheader()
         for row in all_data:
-            row['City'] = 'Stanford'
-            row['State'] = 'California'
-            row['Country'] = 'United States of America'
+            print(row)
             writer.writerow(row)
 
 def clean_date():
