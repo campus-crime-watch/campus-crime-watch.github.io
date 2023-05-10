@@ -53,11 +53,6 @@ class ArcGIS:
         self.endpoint = "https://locator.stanford.edu/arcgis/rest/services/Geocode/NorthAmerica_Composite/GeocodeServer/geocodeAddresses"
 
     def geocode_csv(self, csv_path, field_mapping=DEFAULT_FIELD_MAPPING):
-        # add new rows 
-        # location to address
-        # city to stanford
-        # region to CA
-
         rows_by_id = {}
         to_geocode = []
         print("Preparing data for geocoding...")
