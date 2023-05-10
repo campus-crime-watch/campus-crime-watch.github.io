@@ -120,7 +120,7 @@ class ArcGIS:
                 'OBJECTID': object_id,
                 'Address': row[address_key].strip(),
                 'City': 'Stanford',
-                'Region': 'CA'
+                'Region': 'California'
             }
         }
         try:
