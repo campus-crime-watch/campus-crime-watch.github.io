@@ -38,14 +38,14 @@ def clean_date():
     from datetime import datetime
     for iterate, entry in df["reported"].iteritems():
         try: 
-            date_object = datetime.strptime(entry, "%m/%d/%y %H:%M")
-            df.loc[iterate, "date"] = date_object.strftime("%m/%d/%y")
+            date_object = datetime.strptime(entry, "%m/%d/%Y %H:%M")
+            df.loc[iterate, "date"] = date_object.strftime("%m/%d/%Y")
             df.loc[iterate, "time"] = date_object.strftime("%H:%M")
         except ValueError:
-            df.loc[iterate, "date"] = datetime.strptime(entry, "%m/%d/%y").strftime("%m/%d/%y")
+            df.loc[iterate, "date"] = datetime.strptime(entry, "%m/%d/%Y").strftime("%m/%d/%Y")
         else:
             clean_time = date_object.strftime("%H:%M")
-            clean_date = date_object.strftime("%m/%d/%y")
+            clean_date = date_object.strftime("%m/%d/%Y")
             df.loc[iterate, "date"] = clean_date
             df.loc[iterate, "time"] = clean_time
 
