@@ -2,7 +2,6 @@ import csv
 import pandas as pd
 import os
 from datetime import datetime 
-import re
 
 from pathlib import Path
 base_dir = Path(__file__).parents[1]
@@ -43,15 +42,6 @@ crime_flags = {"Homicide": ["homicide", "manslaughter"],
                                  "no id", "display unauth placard", "contempt", "false re", "nuisance", "unlawful",
                                  "disrupt", "disturb", "disturbance", "enter", "evading", "false bomb", "false id",
                                  "terrorize", "fail to", "obstruct", "reckless"]}
-
-"""""
-crime_values = {"Homicide" : 0, "Sexual assault": 0, "Burglary": 0, "Assault": 0, "Theft": 0, "Arson": 0,
-                "Destruction of property": 0, "Domestic violence": 0, "Stalking": 0, "Weapons law violations": 0,
-                "Drug abuse violations": 0, "Liquor law violations": 0, "Fraud": 0, "Annoying phone calls": 0,
-                "Hit & Run": 0, "Hate crime": 0, "Non-Clery Act": 0}
-"""""
-
-## is it detecting like a regex? where it counts for every one instance in the row?
 
 crime_count = {}
 
