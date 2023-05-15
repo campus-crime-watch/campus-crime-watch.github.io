@@ -6,7 +6,7 @@ def to_json():
     csv_file = 'data/processed/stanford_crime_clean_geocoded.csv'  
     data = pd.read_csv(csv_file)
 
-    data = data.rename(columns={'x':'longitude','y':'latitude'})
+    data = data.rename(columns={'x_long':'longitude','y_lat':'latitude'})
 
     geometry = [Point(xy) for xy in zip(data.longitude, data.latitude)]
 
