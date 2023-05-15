@@ -10,7 +10,7 @@ df = pd.read_csv(path)
 
 df.insert(5, "year", None, allow_duplicates = True)
 
-for iterate, date in df["date"].iteritems():
+for iterate, date in df["date"].items():
     date_object = datetime.strptime(date, "%m/%d/%Y")
     clean_year = date_object.strftime("%Y")
     df.loc[iterate, "year"] = clean_year
