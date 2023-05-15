@@ -1,0 +1,42 @@
+name: run scripts/feed.py
+
+on:
+  schedule:
+   - cron: '0 */2 * * *'
+  workflow_dispatch:
+  
+permissions:
+    contents: write
+    packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content
+
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+
+      - name: pip install feedparser
+        run: pip install feedparser
+        
+      - name: Pull
+        run: git pull
+
+      - name: execute py script # run main.py
+        run: python scripts/feed.py
+
+      - name: Add and commit
+        id: add_commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          committer_name: Automated
+          committer_email: actions@users.noreply.github.com
+          message: "Latest stanford daily crime-and-safety newsfeed data"
+      
+      - name: Push	
+        run: git push
