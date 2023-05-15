@@ -22,6 +22,9 @@ jobs:
         uses: palewire/install-python-pipenv-pipfile@v3
         with:
           python-version: 3.9
+          
+      - name: Run pipenv shell=
+        run: pipenv shell
 
       - name: execute py script # run main.py
         run: python scripts/feed.py
