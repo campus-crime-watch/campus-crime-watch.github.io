@@ -8,11 +8,36 @@ function initializeMap() {
       zoom: 12.62
     });
     
+
+    const dataSource = 'https://campus-crime-watch.github.io/data/stanford_crime.geojson'
+    const filterGroup = document.getElementById('filter-group')
+
+    map.on('load', () => {
+      map.addSource('su-crimes', {
+        type: 'geojson',
+        // Use a URL for the value for the `data` property.
+        data: dataSource
+      });
+
+      map.addLayer({
+        'id': 'su-crimes-layer',
+        'type': 'circle',
+        'source': 'su-crimes',
+        'paint': {
+        'circle-radius': 4,
+        'circle-stroke-width': 1,
+        'circle-color': '#fee2e2',
+        'circle-opacity':0.7,
+        'circle-stroke-color': 'white'
+        }
+      });
+    });
+
 /* an event listener that runs when a user clicks on the map element. */
     map.on('click', (event) => {
   // If the user clicked on one of your markers, get its information.
     const features = map.queryRenderedFeatures(event.point, {
-    layers: ['toy-data'] // replace with your layer name
+    layers: ['su-crimes-layer'] // replace with your layer name
     });
     if (!features.length) {
         return;
@@ -31,15 +56,57 @@ function initializeMap() {
   .addTo(map);});
 
   /* cursor change when hover */
-  map.on('mouseenter', 'toy-data', () => {
+  map.on('mouseenter', 'su-crimes-layer', () => {
     map.getCanvas().style.cursor = 'pointer';
   });
   
-  map.on('mouseleave', 'toy-data', () => {
+  map.on('mouseleave', 'su-crimes-layer', () => {
     map.getCanvas().style.cursor = '';
   });
   
 }
+
+  /* filter fuction */
+filters: [
+  {
+    type: 'dropdown',
+    title: 'Crime Category: ',
+    columnHeader: 'Category',
+    listItems: [
+      'Theft',
+      'Assault',
+      'etc',
+    ],
+  },
+  {
+    type: 'checkbox',
+    title: 'On Campus? ',
+    columnHeader: 'on_campus?', // Case sensitive - must match spreadsheet entry
+    listItems: ['Yes', 'No'], // Case sensitive - must match spreadsheet entry; This will take up to six inputs but is best used with a maximum of three;
+  },
+]
+
+function createFilterObject(filterSettings) {
+  filterSettings.forEach((filter) => {
+    if (filter.type === 'checkbox') {
+      const keyValues = {};
+      Object.assign(keyValues, {
+        header: filter.columnHeader,
+        value: filter.listItems,
+      });
+      checkboxFilters.push(keyValues);
+    }
+    if (filter.type === 'dropdown') {
+      const keyValues = {};
+      Object.assign(keyValues, {
+        header: filter.columnHeader,
+        value: filter.listItems,
+      });
+      selectFilters.push(keyValues);
+    }
+  });
+}
+
 
 
 initializeMap();
