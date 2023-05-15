@@ -23,6 +23,9 @@ jobs:
 
       - name: pip install feedparser
         run: pip install feedparser
+        
+      - name: Pull
+        run: git pull
 
       - name: execute py script # run main.py
         run: python scripts/feed.py
@@ -32,7 +35,7 @@ jobs:
           git add .	
           git config user.name "Automated"	
           git config user.email "actions@users.noreply.github.com"	
-          git commit -m "Latest data" 	
+          git commit -m "Latest feed data" 	
       
       - name: Push	
         run: git push
