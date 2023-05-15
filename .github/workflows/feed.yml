@@ -26,6 +26,10 @@ jobs:
       - name: Install pipenv
         run: |
           python -m pip install --upgrade pipenv wheel
+      
+      - name: Open pipenv shell
+        run: |
+          pipenv shell
 
       - name: execute py script # run main.py
         run: python scripts/feed.py
