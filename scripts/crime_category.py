@@ -58,6 +58,7 @@ for index, row in df.iterrows():
             crime_count[year][key] += 1
 
 count_df = pd.DataFrame.from_dict(crime_count, orient = "index")
+count_df = count_df.rename_axis("Year")
 count_df.columns = crime_flags.keys()
 
 count_df.to_csv("data/processed/crime_categories.csv")
