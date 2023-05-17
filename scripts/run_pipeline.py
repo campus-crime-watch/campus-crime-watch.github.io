@@ -1,6 +1,7 @@
 from extract import grab_data
 from pre_process import merge, clean_date
 from clean_geocode import geocode_pipeline
+from csv_to_geojson import to_json
 
 """
 1: grab data
@@ -26,7 +27,9 @@ def main():
     # output: stanford_crime_clean_geocoded.csv in data/processed
     geocode_pipeline()
 
-    #TODO: turn data into json file
+    # input: stanford_crime_clean_geocoded.csv in data/processed
+    # output: stanford_crime.geojson in docs/data
+    to_json()
 
 if __name__ == "__main__":
     main()
