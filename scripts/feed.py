@@ -21,13 +21,12 @@ for entry in entries:
                     "link": link
                 }
             )
-print(news_dict)
 
 # Serializing json
 json_object = json.dumps(news_dict, indent=4)
  
 # Writing to sample.json
-with open("../docs/data/news_feed.json", "w") as outfile:
+with open("docs/data/news_feed.json", "w") as outfile:
     outfile.write(json_object)
 
 # for (let i = 0; i < feed.items.length; i++) {

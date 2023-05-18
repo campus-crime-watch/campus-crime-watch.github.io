@@ -36,7 +36,9 @@ def clean_date():
     df.insert(4, "time", None, allow_duplicates = True)
 
     from datetime import datetime
-    for iterate, entry in df["reported"].iteritems():
+    for iterate, row in df.iterrows():
+        entry = row["reported"]
+    # for iterate, entry in df["reported"].iteritems():
         try: 
             date_object = datetime.strptime(entry, "%m/%d/%Y %H:%M")
             df.loc[iterate, "date"] = date_object.strftime("%m/%d/%Y")

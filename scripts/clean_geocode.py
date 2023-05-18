@@ -50,7 +50,7 @@ class GeocodingError(Exception):
 class ArcGIS:
 
     def __init__(self):
-        self.endpoint = "https://locator.stanford.edu/arcgis/rest/services/Geocode/NorthAmerica_Composite/GeocodeServer/geocodeAddresses"
+        self.endpoint = "https://locator.stanford.edu/arcgis/rest/services/geocode/NorthAmerica/GeocodeServer/geocodeAddresses"
 
     def geocode_csv(self, csv_path, field_mapping=DEFAULT_FIELD_MAPPING):
         rows_by_id = {}

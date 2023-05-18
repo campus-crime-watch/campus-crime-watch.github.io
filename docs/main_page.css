@@ -212,6 +212,7 @@ nav {
   bottom: 20px;
   right:20px;
   box-shadow: 0px 0px 35px -5px rgba(100, 181, 129, 1);
+  z-index: 1;
 }
 
   .scroll-indicator::before {
@@ -330,14 +331,14 @@ nav {
 }
 
 .map {
-  margin: 400px auto 100px;
+  margin: 200px 0 100px;
   text-align: center;
 }
 
 #mapbox {
   position: relative;
-  width:75%;
-  height: 500px;
+  width:100%;
+  height: 700px;
   margin: 0 auto;
 }
 
