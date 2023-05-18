@@ -53,11 +53,10 @@ def standardize_crimes():
         if year not in crime_count:
             crime_count[year] = {key: 0 for key in crime_flags.keys()}
         
-        words = nature.split()
         for key, value in crime_flags.items():
-            if any(word.lower() in value for word in words):
+            if any(word.lower() in nature.lower() for word in value):
                 crime_count[year][key] += 1
-
+        
     count_df = pd.DataFrame.from_dict(crime_count, orient = "index")
     count_df = count_df.rename_axis("Year")
     count_df.columns = crime_flags.keys()
