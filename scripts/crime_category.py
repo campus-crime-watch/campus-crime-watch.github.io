@@ -63,7 +63,5 @@ def standardize_crimes():
 
     count_df.to_csv("data/processed/crime_categories.csv")
 
-    print(count_df.sum().sum())
-
 if __name__ == "__main__":
     standardize_crimes()
