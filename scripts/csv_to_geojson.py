@@ -2,8 +2,8 @@ import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
 
-def to_json():
-    csv_file = 'data/processed/stanford_crime_clean_geocoded.csv'  
+def to_geojson():
+    csv_file = 'data/processed/stanford_crime_clean_geocoded_categorized.csv'  
     data = pd.read_csv(csv_file)
 
     data = data.rename(columns={'x_long':'longitude','y_lat':'latitude'})
@@ -17,4 +17,4 @@ def to_json():
 
 
 if __name__ == '__main__':
-    to_json()
+    to_geojson()
