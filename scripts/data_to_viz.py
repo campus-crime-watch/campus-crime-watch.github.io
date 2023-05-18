@@ -24,8 +24,5 @@ def vizualize():
             labelAngle = 0
     )
 
-## need to figure out how to have this visual appear on the site (i figure i 
-# need to go to the front end repo and do some stuff there?)
-
 if __name__ == "__main__":
     vizualize()
