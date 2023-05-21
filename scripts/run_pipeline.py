@@ -1,7 +1,7 @@
 from extract import grab_data
 from pre_process import merge, clean_date
 from clean_geocode import geocode_pipeline
-from crime_category import standardize_crimes
+from crime_category import standardize_crimes, create_sentences
 from data_to_viz import vizualize 
 from csv_to_geojson import to_json
 
@@ -32,6 +32,10 @@ def main():
     # input: stanford_crime_clean.csv in data/processed
     # output: crime_categories.csv in data/processed
     standardize_crimes()
+
+    # input: crime_categories.csv in data/processed
+    # output: sentences to go to HTML file?
+    create_sentences()
 
     # input: crime_categories.csv in data/processed
     # output: NONE RIGHT NOW,,,, should be HTML code? add it to JSON file? i don't know

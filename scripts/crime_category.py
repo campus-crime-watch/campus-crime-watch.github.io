@@ -63,5 +63,34 @@ def standardize_crimes():
 
     count_df.to_csv("data/processed/crime_categories.csv")
 
+def create_sentences():
+    base_dir = Path(__file__).parents[1]
+    path = os.path.join(base_dir, "data/processed/crime_categories.csv")
+    df = pd.read_csv(path)
+
+    prev_year = None
+    prev_data = None
+    sentences = []
+
+    for index, row in df.iterrows():
+        year = row["Year"]
+        data = {category: int(row[category]) for category in df.columns if category != "Year"}
+
+        if prev_year is not None:
+            for category, value in data.items():
+                prev_value = prev_data.get(category)
+                if prev_value is not None:
+                    if prev_value != 0:
+                        pct_change = ((value - prev_value) / prev_value) * 100
+                    else:
+                        pct_change = 0
+                    change_type = "increase" if pct_change > 0 else "decrease"
+                    stat_sentence = f"{year}: {pct_change: .2f}% {change_type} in {category}"  
+                    sentences.append(stat_sentence)  
+            
+        prev_year = year
+        prev_data = data
+
 if __name__ == "__main__":
     standardize_crimes()
+    create_sentences()
