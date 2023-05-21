@@ -23,8 +23,8 @@ def standardize_crimes():
                                     "peek", "sodomy", "oral", "sexual", "rape", "underwear", "sex"], 
                     "Burglary": ["burglary", "burg", "robbery"], 
                     "Assault": ["assault", "battery", "aggrevated", "injury", "false imprisonment"],
-                    "Theft": ["petty theft", "lost property", "grand theft", "grnd thft",
-                            "carjacking", "theft", "shoplifting", "stolen"],
+                    "Theft": ["lost property", "grand theft", "grnd thft",
+                            "carjacking", "theft",  "stolen"],
                     "Arson": ["fire"], 
                     "Destruction of property": ["vandl", "vandalism", "deface", "damage"],
                     "Domestic violence": ["battery spouse", "spouse", "dom violence"],
@@ -33,16 +33,15 @@ def standardize_crimes():
                     "Drug abuse violations": ["paraphernalia", "dui", "alcohol", "drug", "controlled substance",
                                             "cntl sub", "marijuana", "heroin", "smoking", "nitrous oxide"],
                     "Liquor law violations": ["liquor", "alcohol", "open container"], 
-                    "Fraud": ["defraud", "false pretenses", "identity theft", "impersonation", "extortion", "fraud", "embez"],
-                    "Annoying phone calls": ["annoy"],
-                    "Hit and Run": ["hit"],
                     "Hate crime": ["swastika", "vio civil rghts", "noose", "hate"], 
                     "Non-Clery Act": ["animal bite", "abandoned vehicle", "cruelty to animals", "fire", "dis cndct", 
                                     "disord conduct", "disorderly conduct", "leash", "loiter", "loud", "drive",
                                     "tresspass", "trspss", "eavesdropping", "warrant", "wilfl dschrg", "offensive words", 
                                     "no id", "display unauth placard", "contempt", "false re", "nuisance", "unlawful",
                                     "disrupt", "disturb", "disturbance", "enter", "evading", "false bomb", "false id",
-                                    "terrorize", "fail to", "obstruct", "reckless"]}
+                                    "terrorize", "fail to", "obstruct", "reckless", "annoy", "petty theft",
+                                    "shoplifting", "hit", "defraud", "false pretenses", "identity theft",
+                                    "impersonation", "extortion", "fraud", "embez"]}
 
     crime_count = {}
     category_column = []
