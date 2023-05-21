@@ -61,7 +61,7 @@ function initializeMap() {
               200,
               '#CA9791'
             ],
-            'circle-opacity':0.8,
+            'circle-opacity':0.9,
             'circle-radius': [
               'step',
               ['get', 'point_count'],
@@ -95,7 +95,7 @@ function initializeMap() {
             'circle-color': '#fee2e2',
             'circle-radius': 4,
             'circle-stroke-width': 1,
-            'circle-opacity': 0.7,
+            'circle-opacity': 0.9,
             'circle-stroke-color': '#fff'
             }
         });
@@ -156,7 +156,8 @@ function initializeMap() {
     .setLngLat(feature.geometry.coordinates)
     .setHTML(
       `<p> 
-        <b>Crime Type</b>: ${feature.properties.nature}<br> 
+        <b>Crime Type</b>: ${feature.properties.category}<br> 
+        <b>Description</b>: ${feature.properties.nature}<br> 
         <b>Date</b>: ${feature.properties.date}<br>
         <b>Status</b>: ${feature.properties.disposition}</p>`
     )

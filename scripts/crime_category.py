@@ -6,12 +6,12 @@ from pathlib import Path
 
 def standardize_crimes():
     base_dir = Path(__file__).parents[1]
-    path = os.path.join(base_dir, "data/processed/stanford_crime_clean.csv")
+    path = os.path.join(base_dir, "data/processed/stanford_crime_clean_geocoded.csv")
     df = pd.read_csv(path)
 
     df.insert(5, "year", None, allow_duplicates = True)
 
-    for iterate, date in df["date"].iteritems():
+    for iterate, date in df["date"].items():
         date_object = datetime.strptime(date, "%m/%d/%Y")
         clean_year = date_object.strftime("%Y")
         df.loc[iterate, "year"] = clean_year
@@ -45,6 +45,8 @@ def standardize_crimes():
                                     "terrorize", "fail to", "obstruct", "reckless"]}
 
     crime_count = {}
+    category_column = []
+
 
     for index, row in df.iterrows():
         year = row["year"]
@@ -53,15 +55,25 @@ def standardize_crimes():
         if year not in crime_count:
             crime_count[year] = {key: 0 for key in crime_flags.keys()}
         
+        categories = []
         for key, value in crime_flags.items():
             if any(word.lower() in nature.lower() for word in value):
                 crime_count[year][key] += 1
+                categories.append(key)
         
+        category_column.append(categories)
+
+    # Counts
     count_df = pd.DataFrame.from_dict(crime_count, orient = "index")
     count_df = count_df.rename_axis("Year")
     count_df.columns = crime_flags.keys()
 
-    count_df.to_csv("data/processed/crime_categories.csv")
+    count_df.to_csv("data/processed/crime_categories.csv") 
+
+    # Category column
+    df["category"] = category_column
+    df.to_csv("data/processed/stanford_crime_clean_geocoded_categorized.csv")
+
 
 def create_sentences():
     base_dir = Path(__file__).parents[1]
