@@ -31,10 +31,10 @@ jobs:
         run: pip install pathlib
 
       - name: pip install geopandas
-        run: pip install geopandas        
+        run: pip install geopandas
 
-      - name: pip install shapely.geometry
-        run: pip install shapely.geometry
+      - name: pip install Point
+        run: pip install Point          
 
       - name: pip install altair
         run: pip install altair
