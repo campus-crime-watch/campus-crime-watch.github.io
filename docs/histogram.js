@@ -56,12 +56,12 @@ function updateOption(selectedOption) {
     } else if (selectedOption == "day") {
 
     }
-    
-    update(data2)
+
+    updateHistogram(data2)
 }
 
  // A function that create / update the plot for a given variable:
-function update(data) {
+function updateHistogram(data) {
     console.log("entered update function")
    // Update the X axis
    x.domain(data.map(d => d.group))
@@ -74,8 +74,6 @@ function update(data) {
    // Create the u variable
    var u = svg.selectAll("rect")
      .data(data)
- 
-   u
      .join("rect") // Add a new rect for each new elements
      .transition()
      .duration(1000)
@@ -87,14 +85,4 @@ function update(data) {
  }
  
  // Initialize the plot with the first dataset
-update(data1)
-
-// const options = document.querySelectorAll('input[name="option"]');
-// options.forEach(option => {
-//   option.addEventListener('change', event => {
-//     const selectedOption = event.target.value;
-//     console.log('Option changed:', selectedOption);
-//     console.log(data2)
-//     update(data2)
-//   });
-// });
+ updateHistogram(data1)
