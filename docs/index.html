@@ -50,10 +50,54 @@
       <script src="news_ticker.js" defer></script>
     </div>
 
+
+
     <section class="map" id="mapSection">
-      <div id='mapbox'></div>
-      <script src="map.js" defer></script>
+      <div id='mapbox1' class="mapbox active"></div>
+      <div id='mapbox2' class="mapbox">
+        <nav id="filter-group" class="filter-group"></nav>
+      </div>
+      <div id="tabs">
+        <button class="tab active" data-map="mapbox1">Map with Clusters</button>
+        <button class="tab" data-map="mapbox2">Map with Filters</button>
+      </div>
     </section>
+
+    <script src="map1.js" defer></script>
+    <script src="map2.js" defer></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.tab').forEach((tab) => {
+            tab.addEventListener('click', (event) => {
+                const mapId = event.target.dataset.map;
+
+                // Show the selected map and hide the others
+                document.querySelectorAll('.mapbox').forEach((mapbox) => {
+                    if (mapbox.id === mapId) {
+                        mapbox.classList.add('active');
+                    } else {
+                        mapbox.classList.remove('active');
+                    }
+                });
+                    if (mapId === 'mapbox1') {
+                        map1.resize();
+                    } else {
+                        map2.resize();
+                    }
+
+                // Highlight the selected tab and unhighlight the others
+                document.querySelectorAll('.tab').forEach((tab) => {
+                    if (tab.dataset.map === mapId) {
+                        tab.classList.add('active');
+                    } else {
+                        tab.classList.remove('active');
+                    }
+                });
+              });
+          });
+        });
+      </script>
   
     <section id="dataSection">
       <div class="data-background">
