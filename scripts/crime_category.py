@@ -13,7 +13,7 @@ def standardize_crimes():
 
     for iterate, date in df["date"].items():
         date_object = datetime.strptime(date, "%m/%d/%Y")
-        clean_year = date_object.strftime("%Y")
+        clean_year = int(date_object.strftime("%Y"))
         df.loc[iterate, "year"] = clean_year
 
     df["nature"] = df["nature"].str.replace(r'[/\:]',' ').str.lower()
