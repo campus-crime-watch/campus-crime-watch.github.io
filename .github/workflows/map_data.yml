@@ -26,9 +26,6 @@ jobs:
 
       - name: pip install pandas
         run: pip install pandas
-
-      - name: pip install os
-        run: pip install os
       
       - name: pip install pathlib
         run: pip install pathlib
