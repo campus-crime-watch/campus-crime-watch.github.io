@@ -102,6 +102,10 @@ def create_sentences():
         prev_year = year
         prev_data = data
 
+# spit out JSON file at the end, have it go to the docs/data, 
+# use scrollreveal base code to turn it into javascript file that tracy 
+# can put into html 
+
 if __name__ == "__main__":
     standardize_crimes()
     create_sentences()

@@ -1,0 +1,66 @@
+name: run scripts/run_pipeline.py
+
+on:
+  schedule:
+   - cron: '0 */2 * * *'
+  workflow_dispatch:
+  
+permissions:
+    contents: write
+    packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content
+
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+
+      - name: pip install time
+        run: pip install time
+
+      - name: pip install requests
+        run: pip install requests
+
+      - name: pip install pandas
+        run: pip install pandas
+
+      - name: pip install os
+        run: pip install os
+      
+      - name: pip install pathlib
+        run: pip install pathlib
+
+      - name: pip install geopandas
+        run: pip install geopandas        
+
+      - name: pip install shapely.geometry
+        run: pip install shapely.geometry
+
+      - name: pip install altair
+        run: pip install altair
+      
+      - name: pip install pdfplumber
+        run: pip install pdfplumber
+
+      - name: Pull
+        run: git pull
+
+      - name: execute py script 
+        run: python scripts/run_pipeline.py
+
+      - name: Add and commit
+        id: add_commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          committer_name: Automated
+          committer_email: actions@users.noreply.github.com
+          message: "Latest Stanford daily crime data for the map/homepage"
+      
+      - name: Push	
+        run: git push
