@@ -15,10 +15,10 @@
   <body>
     <!-- navigation bar top -->
     <nav>
-      <div class="title"><a href="index.html">Campus CrimeWatch</a></div>
+      <div class="title"><a href="index.html">Campus Crimewatch</a></div>
       <ul>
         <li><a href="clery_act.html">Clery Act</a></li>
-        <li><a href="about_page.html">How We Did It</a></li>
+        <li><a href="about_page.html">Recreate this site</a></li>
         <li><a href="other_campus.html">Other Campuses</a></li>
       </ul>
     </nav>
@@ -44,8 +44,8 @@
 
     <section id="landing-page">
       <p>welcome to</p>
-      <h1>Campus CrimeWatch</h1>
-      <p>where you can find... some text introducing this news app</p>
+      <h1>Campus Crimewatch</h1>
+      <p>where college campus crime is made accessible</p>
     </section>
 
     <div class="news-ticker">
@@ -53,23 +53,65 @@
       <script src="news_ticker.js" defer></script>
     </div>
 
+
+
     <section class="map" id="mapSection">
-      <div id='mapbox'></div>
-      <script src="map.js" defer></script>
+      <div id='mapbox1' class="mapbox active"></div>
+      <div id='mapbox2' class="mapbox">
+        <nav id="filter-group" class="filter-group"></nav>
+      </div>
+      <div id="tabs">
+        <button class="tab active" data-map="mapbox1">Map with Clusters</button>
+        <button class="tab" data-map="mapbox2">Map with Filters</button>
+      </div>
     </section>
+
+    <script src="map1.js" defer></script>
+    <script src="map2.js" defer></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.tab').forEach((tab) => {
+            tab.addEventListener('click', (event) => {
+                const mapId = event.target.dataset.map;
+
+                // Show the selected map and hide the others
+                document.querySelectorAll('.mapbox').forEach((mapbox) => {
+                    if (mapbox.id === mapId) {
+                        mapbox.classList.add('active');
+                    } else {
+                        mapbox.classList.remove('active');
+                    }
+                });
+                    if (mapId === 'mapbox1') {
+                        map1.resize();
+                    } else {
+                        map2.resize();
+                    }
+
+                // Highlight the selected tab and unhighlight the others
+                document.querySelectorAll('.tab').forEach((tab) => {
+                    if (tab.dataset.map === mapId) {
+                        tab.classList.add('active');
+                    } else {
+                        tab.classList.remove('active');
+                    }
+                });
+              });
+          });
+        });
+      </script>
   
     <section id="dataSection">
       <div class="data-background">
         <div class="data-container">
           <section class="data" id="data_1">
-            <p>In 2021, there were <h1>74</h1> burglaries reported on and around campus.</p>  
-          </section>
-          <section class="data" id="data_2">
-            <p>In 2021, there were <h1>95</h1> petty thefts reported on and around campus.</p>  
-          </section>
-          <section class="data" id="data_3">
-            <p>I've already spent <h1>30 min</h1> trying to create a scroll indicator. </p>
-          </section>
+            <div class = "text-holder left">
+                <div id="json-content"></div>
+                <script type="module" src="sentences.js"></script>
+            <div class = "text-holder right">
+                  <img src = "histogram.png" alt = "This is a histogram of crime categories" id = "histogram">
+          </div>
         </div>
       </div>
       <!-- Create a div where the graph will take place -->
@@ -91,17 +133,11 @@
     <section id="narrativeSection">
       <div class="story-container">
         <div class="story">
-          <h2> Stdent voices </h2>
+          <h2> Student voices </h2>
             <p>“We don't feel protected by the school,” UC Berkeley sophomore Oski Bear said. 
           Oski Bear was walking home on the southside of campus at 7 p.m. when he was robbed at gunpoint. </p>
             <br>
             <p>“I shouldn't feel unsafe on campus,” Bear said.</p>
-        </div>
-        <div class="story">
-          <h2>In the News </h2>
-            <p>Two UC Berkeley students robbed, threatened with taser near northwest corner of campus. </p>
-            <p>House fire on Kains Avenue, no injuries reported</p>
-            <p>Woman robbed at gunpoint at Alcatraz Avenue residence</p>
         </div>
       </div>
     </section>
@@ -113,7 +149,10 @@
     </section>
 
     <section id="inspoSection">
-        <i><h2> Why we made Campus CrimeWatch </h2>
+        <h2> Why we made Campus Crimewatch </h2>
+        <p>
+          Campus Crimewatch was developed at Stanford University by Isabel Raz Reyes Sieh, Özge Terzioğlu, and Tracy Zhang in Serdar Tumgoren’s Spring 2023 Building News Appplications class. 
+        </p>
         <p>
             As students, faculty, or staff of a college campus, we are bombarded with email or text notifications 
           about the latest crimes near or on campus, as mandated by the Clery Act.
@@ -123,18 +162,19 @@
           A constant influx of texts and emails is a disorganized, ineffective way of getting a true idea of campus safety. 
         </p>
         <p> 
-          Some universities post their crime statistics buried in a 100-page yearly campus safety report, 
-          which not many people read. Other universities post recent crimes on a non-user friendly map on their school website. 
+          Some universities bury their annual crime statistics in a 100-page yearly campus safety report, which not many people read.
+          Other universities post a daily crime log on a non user-friendly map on their school website. 
+          It is likely that if you want a daily log of campus crimes, which universities are mandated to maintain, you will have to ask for it and it will be counted as a public records request. 
         </p>
         <p>
           We wanted to create a centralized, accessible picture of crime and safety on the college campuses where we live and work. 
         </p>
-        <p class="centered">Want to create this site for your college campus? Click on “How we did it” to get started.</p>
+        <p class="centered">Want to create this site for your college campus? Click on the <a href="about_page.html">Recreate this site</a> tab to get started.</p>
         </i>
     </section>
   </body>
   <footer> 
-    <p> Copyright © 2023 Team NoName. All Rights Reserved (woah I feel cool) </p>
+    <p> Copyright © 2023 Team NoName. All Rights Reserved. </p>
   </footer>
 
 </html>

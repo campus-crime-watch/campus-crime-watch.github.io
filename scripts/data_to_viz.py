@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import altair as alt
 from pathlib import Path
+from altair_saver import save
 
 def vizualize():
     base_dir = Path(__file__).parents[1]
@@ -23,6 +24,8 @@ def vizualize():
         ).configure_axisX(
             labelAngle = 0
     )
+    output_file = os.path.join(base_dir, "data/docs/histogram.png")
+    chart.save(output_file, format = "png")
 
 if __name__ == "__main__":
     vizualize()

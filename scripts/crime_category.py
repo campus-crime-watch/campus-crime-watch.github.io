@@ -3,6 +3,7 @@ import pandas as pd
 import os
 from datetime import datetime 
 from pathlib import Path
+import json
 
 def standardize_crimes():
     base_dir = Path(__file__).parents[1]
@@ -101,6 +102,10 @@ def create_sentences():
             
         prev_year = year
         prev_data = data
+
+    output_file = os.path.join(base_dir, "docs/data/stat_sentences.json")
+    with open(output_file, "a") as f:
+        json.dump(sentences, f)
 
 if __name__ == "__main__":
     standardize_crimes()
