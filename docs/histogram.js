@@ -11,7 +11,12 @@ const data1 = [
     {group: "C", value: 20},
     {group: "D", value: 10}
  ];
- 
+
+ /*
+ {
+   A: count,
+   B: count}
+ */
  // set the dimensions and margins of the graph
  const margin = {top: 30, right: 30, bottom: 70, left: 60},
      width = 460 - margin.left - margin.right,
@@ -43,26 +48,64 @@ options.on('change', function() {
     const selectedOption = d3.select(this).property('value');
     console.log('Option changed:', selectedOption);
     updateOption(selectedOption)
-    console.log("done caling update")
 });
 
-function updateOption(selectedOption) {
-    if (selectedOption == "year") {
+function objToArray(histogram_data) {
+  histogram_array = []
+  for (key in histogram_data) {
+    histogram_array.push({group: key, value: histogram_data[key]})
+  }
+  return histogram_array
+}
 
-    } else if (selectedOption == "month") {
+function buildHistogramData (features, category) {
+  histogram_data = {}
 
-    } else if (selectedOption == "week") {
+  for (let i  = 0; i < features.length; i++) {
+    feature = features[i]
+    year = feature["properties"]["year"]
+    month = feature["properties"]["month"]
+    week = feature["properties"]["week"]
+    day = feature["properties"]["day"]
 
-    } else if (selectedOption == "day") {
+    text = ""
 
+    if (category == "year") {
+      text = year.toString()
+    } else if (category == "month") {
+      text = month + " " + year.toString()
+    } else if (category == "week") {
+      text = "Week " + week + " " + year.toString()
+    } else if (category == "day") {
+      text = month + " " + day + " " + year.toString()
     }
 
-    updateHistogram(data2)
+    if (!(text in histogram_data)) {
+      histogram_data[text] = 0;
+    }
+
+    histogram_data[text] = histogram_data[text] + 1
+  }
+
+  return histogram_data
+}
+
+async function updateOption(selectedOption) {
+    const res = await fetch('data/stanford_crime.geojson')
+    data = await res.json();
+    features = data["features"]
+    console.log(features)
+
+    // histogram_data = {}
+
+    hisogram_data = buildHistogramData(features, selectedOption)
+
+    // turn histogram data into preffered format
+    updateHistogram(objToArray(histogram_data))
 }
 
  // A function that create / update the plot for a given variable:
 function updateHistogram(data) {
-    console.log("entered update function")
    // Update the X axis
    x.domain(data.map(d => d.group))
    xAxis.call(d3.axisBottom(x))
@@ -85,4 +128,4 @@ function updateHistogram(data) {
  }
  
  // Initialize the plot with the first dataset
- updateHistogram(data1)
+ updateOption("year")
