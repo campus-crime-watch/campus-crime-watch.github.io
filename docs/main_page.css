@@ -529,8 +529,9 @@ nav {
       flex-direction: column;
     }
   }
+
   /* scroll reveal stylings */ 
-  img {
+img {
     max-width: 100%;
     height: auto;
 }
@@ -593,11 +594,12 @@ html.sr .load-hidden{
   }
 
   .story p {
-    color:#424A4C;
+    color:#777;
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 700px;
+    margin:20px auto;
     text-align: left;
-    font-size: 18px;
-    font-weight: 200;
+    line-height: 1.5em;
   }
 
   #inspoSection {
@@ -605,7 +607,7 @@ html.sr .load-hidden{
   }
   #inspoSection h2 {
     color: #7DB581;
-    font-size: 20px;
+    font-size: 35px;
   }
 
   #inspoSection p {
