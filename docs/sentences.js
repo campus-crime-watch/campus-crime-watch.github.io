@@ -16,7 +16,7 @@ const config = {
     }
 };
 
-fetch('stat_sentences.json')
+fetch('data/stat_sentences.json')
     .then(response => response.json())
     .then(data => {
         const jsonContent = document.getElementById('json-content');
@@ -49,12 +49,11 @@ fetch('stat_sentences.json')
 const scroll = ScrollReveal(config);
 const left = document.querySelectorAll(".text-holder.left");
 const right = document.querySelectorAll(".text-holder.right");
-const emphasis = document.getElementsByClassName("emphasis");
 const bar = document.getElementById("histogram");
 
 scroll.reveal(left);
-scroll.reveal(emphasis, {delay: 1000});
+scroll.reveal(yearElement, {delay: 1000});
+scroll.reveal(percentageElement, {delay: 1000});
 scroll.reveal(restOfSentenceElement, {delay: 2000});
 scroll.reveal(right);
 scroll.reveal(bar, {delay: 3000});
-scroll.reveal(line, {delay: 4000});
