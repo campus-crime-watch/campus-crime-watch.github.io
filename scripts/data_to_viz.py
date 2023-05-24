@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import altair as alt
 from pathlib import Path
+from altair_saver import save
 
 def vizualize():
     base_dir = Path(__file__).parents[1]
