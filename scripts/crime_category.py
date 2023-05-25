@@ -11,11 +11,20 @@ def standardize_crimes():
     df = pd.read_csv(path)
 
     df.insert(5, "year", None, allow_duplicates = True)
+    df.insert(6, "month", None, allow_duplicates = True)
+    df.insert(7, "week", None, allow_duplicates = True)
+    df.insert(8, "day", None, allow_duplicates = True)
 
     for iterate, date in df["date"].items():
         date_object = datetime.strptime(date, "%m/%d/%Y")
-        clean_year = date_object.strftime("%Y")
+        clean_year = int(date_object.strftime("%Y"))
+        clean_month = date_object.strftime("%b")
+        clean_week = int(date_object.strftime("%U"))
+        clean_day = int(date_object.strftime("%-d"))
         df.loc[iterate, "year"] = clean_year
+        df.loc[iterate, "month"] = clean_month
+        df.loc[iterate, "week"] = clean_week
+        df.loc[iterate, "day"] = clean_day
 
     df["nature"] = df["nature"].str.replace(r'[/\:]',' ').str.lower()
 

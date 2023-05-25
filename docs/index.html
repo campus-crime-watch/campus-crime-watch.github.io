@@ -7,6 +7,8 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="histogram.js" defer></script>
   </head>
 
 
@@ -36,6 +38,11 @@
             <a href="#inspoSection"><li>About Us</li></a>
           </ul>
       </div>
+    </div>
+
+    <div class="news-ticker">
+      <ul id="ticker"></ul>
+      <script src="news_ticker.js" defer></script>
     </div>
 
     <div class="scroll-indicator"></div>
@@ -110,6 +117,20 @@
             <div class = "text-holder right">
                   <img src = "histogram.png" alt = "This is a histogram of crime categories" id = "histogram">
           </div>
+        </div>
+      </div>
+      <!-- Create a div where the graph will take place -->
+      <div id="my_dataviz"></div>
+      <div class="input-wrapper">
+        <div class="options">
+          <input type="radio" id="year" name="option" value="year" checked>
+          <label for="year">Year</label>
+          <input type="radio" id="month" name="option" value="month">
+          <label for="month">Month</label>
+          <input type="radio" id="week" name="option" value="week">
+          <label for="week">Week</label>
+          <input type="radio" id="day" name="option" value="day">
+          <label for="day">Day</label>
         </div>
       </div>
     </section>

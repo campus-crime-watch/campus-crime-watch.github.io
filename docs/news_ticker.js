@@ -1,6 +1,6 @@
 const ticker = document.getElementById("ticker");
 
-async function update() {
+async function updateNews() {
     
     const res = await fetch('data/news_feed.json')
     data = await res.json();
@@ -20,4 +20,4 @@ async function update() {
     }
 }
 
-update()
+updateNews()
