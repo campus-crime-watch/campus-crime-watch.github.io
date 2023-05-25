@@ -1,4 +1,3 @@
-import "/node_modules/scrollreveal/dist/scrollreveal.js";
 
 const config = {
     delay: 500,

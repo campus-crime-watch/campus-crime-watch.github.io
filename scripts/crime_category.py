@@ -104,7 +104,7 @@ def create_sentences():
         prev_data = data
 
     output_file = os.path.join(base_dir, "docs/data/stat_sentences.json")
-    with open(output_file, "a") as f:
+    with open(output_file, "w") as f:
         json.dump(sentences, f)
 
 if __name__ == "__main__":
