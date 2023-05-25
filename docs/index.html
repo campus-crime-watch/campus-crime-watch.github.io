@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap" rel="stylesheet">  
     <script src="scroll.js" defer ></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
   </head>
 
@@ -53,20 +54,49 @@
 
 
     <section class="map" id="mapSection">
-      <div id='mapbox1' class="mapbox active"></div>
-      <div id='mapbox2' class="mapbox">
+      <div id='mapbox1' class="mapbox"></div>
+      <div id='mapbox2' class="mapbox active">
+        <div class="dropdown-container">
+          <div class="dropdown" style="position:relative">
+            <button class="select" id="display-button">Last 60 Days</button>
+            <div class="options" style="display:none;">
+              <div class="option" data-value="60">Last 60 Days</div>
+              <div class="option" data-value="90">Last 90 Days</div>
+              <div class="option" data-value="365">Current Year</div>
+              <div class="option" data-value="all">All</div>
+            </div>
+          </div>
+        </div>
         <nav id="filter-group" class="filter-group"></nav>
       </div>
-      <div id="tabs">
-        <button class="tab active" data-map="mapbox1">Map with Clusters</button>
-        <button class="tab" data-map="mapbox2">Map with Filters</button>
-      </div>
+
+        <!-- <div class = 'dropdown' id="time-period" onchange="updateMap()">
+              <div class="option" data-value="730">Two Years</div>
+              <div class="option" data-value="1095">Three Years</div>
+              <div class="option" data-value="custom">Custom</div>
+          <div class = 'options'>
+            <option value="30">Last 30 Days</option>
+            <option value="90">Last 90 Days</option>
+            <option value="365">Current Year</option>
+            <option value="730">Two Years</option>
+            <option value="1095">Three Years</option>
+            <option value="custom">Custom</option>
+            <option value="all">All</option>
+          </div>
+        </div> -->
     </section>
 
     <script src="map1.js" defer></script>
     <script src="map2.js" defer></script>
-    
-    <script>
+
+
+    <!-- <script> THE TAB CONTROLS
+
+      <div id="tabs">
+        <button class="tab active" data-map="mapbox1">Map with Clusters</button>
+        <button class="tab" data-map="mapbox2">Map with Filters</button>
+      </div>
+
       document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.tab').forEach((tab) => {
             tab.addEventListener('click', (event) => {
@@ -97,7 +127,7 @@
               });
           });
         });
-      </script>
+      </script> -->
   
     <section id="dataSection">
       <div class="data-background">

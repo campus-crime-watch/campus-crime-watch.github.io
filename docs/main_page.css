@@ -332,13 +332,15 @@ nav {
 
 /* MAP */ 
 .map {
-  position:relative;
+  position: relative;
   margin: 200px 0 100px;
   text-align: center;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
+/*
 .mapbox {
   display: none;
 }
@@ -346,8 +348,8 @@ nav {
 .mapbox.active {
   display: block;
 }
+*/
 
-#mapbox1,
 #mapbox2 {
   position: relative;
   width:100%;
@@ -388,6 +390,90 @@ nav {
 .tab.active {
   background: #7DB581;
   color: #FAF8F0;
+}
+
+/* hiding cluster map and switch tabs */
+
+#mapbox1,
+#mapSection #tabs .tab {
+  display:none;
+}
+
+/* dropdown menu */
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 80px; 
+  top: 50px; 
+  width: 200px;
+}
+
+.dropdown {
+  width: 100%;
+  background-color: rgba(219, 253, 196, 0.9);
+  padding: 5px 10px;
+  font-size: 16px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 200;
+  z-index: 5;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 15px;
+  border: 6px solid transparent;
+  border-top-color: #666; /* Adjust color as needed */
+  transform: translateY(-50%);
+}
+
+#display-button {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: none;
+  border: none;
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background-color: rgba(219, 253, 196, 0.9);
+  width: 100%; 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.option {
+  color: #444;
+  padding: 12px 16px;
+  height: 24px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Helvetica',sans-serif;
+  font-weight: 200;
+  text-align: center;
+}
+
+.dropdown:hover {
+  background-color: #bed9ac;
+}
+
+.option:hover {
+  background-color: #bed9ac;
 }
 
 
@@ -431,6 +517,10 @@ nav {
       
     #filter-group input[type='checkbox']:checked + label:before {
     content: '✔';
+    }
+
+    #filter-group {
+      display:none;
     }
 
 /* .map-overlay .map-overlay-inner {
