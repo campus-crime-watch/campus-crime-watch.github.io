@@ -16,17 +16,35 @@ function initializeMap2() {
     pastDate.setDate(pastDate.getDate() - 60); 
     let startDate = null;
     let endDate = null;
+    let isCustomSelected = false;
     
-    // initialize date picker
+    // CUSTOM initialize date picker
     let datePicker = flatpickr("#dateRangePicker", {
       mode: "range",
-      onClose: function(selectedDates) {
+      minDate: "2019-01",
+      maxDate: "today"
+    });
+
+    // CUSTOM Hide the date picker and "Apply" button after selection
+    document.querySelector('#applyCustomDate').addEventListener('click', function() {
+      const selectedDates = datePicker.selectedDates;
         if (selectedDates.length === 2) {
-          let startDate = selectedDates[0];
-          let endDate = selectedDates[1];
+          const startDate = selectedDates[0];
+          const endDate = selectedDates[1];
+      
           updateMapWithCustomDateRange(startDate, endDate);
+          $('.options').hide();
+          document.querySelector('#dateRangePicker').style.display = 'none';
+          document.querySelector('#applyCustomDate').style.display = 'none';
         }
-      }
+      // Format the start and end dates to a more readable format
+      let formattedStartDate = startDate.toLocaleDateString("en-US");
+      let formattedEndDate = endDate.toLocaleDateString("en-US");
+    
+      // Update button text
+      $('#display-button').text(formattedStartDate + ' - ' + formattedEndDate);
+      
+      !isCustomSelected == false;
     });
 
 
@@ -39,7 +57,9 @@ function initializeMap2() {
       }, 
       function() {
         // on mouseleave
-        $('.options').hide();
+          if (!isCustomSelected) {
+          $('.options').hide();
+          }
       }
     );
     
@@ -121,40 +141,6 @@ function initializeMap2() {
             });
             console.log('layer added');
           });
-            // an event listener that runs when a user clicks on the map element. */
-          map2.on('click', 'unclustered-point', (event) => {
-            //  console.log('unclustered-point clicked');
-            // If the user clicked on one of your markers, get its information.
-              const features = map2.queryRenderedFeatures(event.point, {
-                  layers: ['unclustered-point'] // replace with your layer name
-              });
-                  if (!features.length) {
-                      return;
-              }
-              const feature = features[0];
-              
-            // a popup 
-              new mapboxgl.Popup({ offset: [0, -15],className: 'custom-popup' })
-              .setLngLat(feature.geometry.coordinates)
-              .setHTML(
-                `<p> 
-                  <b>Crime Type</b>: ${feature.properties.category.replace(/["\[\]]/g, '')}<br> 
-                  <b>Description</b>: ${feature.properties.nature.charAt(0).toUpperCase() + feature.properties.nature.slice(1)}<br> 
-                  <b>On Campus?</b>: ${feature.properties['on_campus?']}<br>
-                  <b>Date</b>: ${feature.properties.date}<br>
-                  <b>Status</b>: ${feature.properties.disposition}</p>`
-              )
-          .addTo(map2);});
-            
-              /* cursor change when hover */
-          map2.on('mouseenter', 'unclustered-point', () => {
-            console.log('Mouse entered unclustered-point');
-            map2.getCanvas().style.cursor = 'pointer';
-          });
-          
-          map2.on('mouseleave', 'unclustered-point', () => {
-            map2.getCanvas().style.cursor = '';
-          });
         }
 
     function updateMap(value, text) {
@@ -168,11 +154,13 @@ function initializeMap2() {
       if (value !== "custom") {
         startDate = null;
         endDate = null;
+        isCustomSelected = false;
     }
 
       if (value === "all") {
         pastDate = null;
       } else if (value === "custom") {
+          isCustomSelected = true;
           // Show the date picker and "Apply" button
           document.querySelector('#dateRangePicker').style.display = 'block';
           document.querySelector('#applyCustomDate').style.display = 'block';
@@ -192,13 +180,14 @@ function initializeMap2() {
       $('#display-button').text(text);
     
       // Hide options
-      $('.options').hide();
+      if (!isCustomSelected) {
+        $('.options').hide();
+      }
       
       fetchDataAndRenderMap();
     }  
-    // OLD FILTER
-    // const filterGroup = document.getElementById('filter-group');
 
+    // CUSTOM
     function updateMapWithCustomDateRange(start, end) {
       // set global variables
       startDate = start;
@@ -208,75 +197,92 @@ function initializeMap2() {
           map2.removeLayer('unclustered-point');
           map2.removeSource('su-crimes');
       }
-      
+
       fetchDataAndRenderMap();
     }
 
 
-    map2.on('load', fetchDataAndRenderMap)   
-    }
+    map2.on('load', () => {
+      fetchDataAndRenderMap();
+      const layers =[
+        'Theft',
+        'Burglary',
+        'Sexual assault',
+        'Drug abuse violations',
+        'Assault',
+        'Destruction of property',
+        'Others',
+      ];
+
+      const colors = [
+        '#fbb03b', //theft
+        '#8DB600', //Burglary
+        '#e55e5e', //Sexual assault
+        '#4B0082', //Drug abuse violations
+        '#223b53', //Assault
+        '#3bb2d0', //Destruction of property
+        '#fee2e2', //others
+      ];
 
 
-        // OLD YEAR FILTER VER.1
-        //   // this function will be called whenever a checkbox is toggled
-        //     const updateLayerFilter = () => {
-        //       const checkedSymbols = [...document.getElementsByTagName('input')]
-        //           .filter((el) => el.checked)
-        //           .map((el) => el.id);
-              
-        //       // use an 'in' expression to filter the layer
-        //       if (checkedSymbols.length > 0) {
-        //         map2.setFilter('unclustered-point', ['in', ['to-string',['get','year']], ['literal', checkedSymbols]]);
-        //       } else {
-        //         map2.setFilter('unclustered-point', ['in', ['to-string', ['get', 'year']], ['literal', []]]);
-        //     }
-        //     }
-            
-        //     // get an array of all unique `year` properties
-        //     const symbols = [];
-   
-        //     while (filterGroup.firstChild) {
-        //         filterGroup.firstChild.remove();
-        //     }
+      // Legend
+      const legend = document.getElementById('legend');
 
-        //     for (const feature of data.features) {
-        //         const symbol = String(feature.properties.year);
-        //         if (!symbols.includes(symbol)) symbols.push(symbol);
-        //     }
-            
-        //     // for each `year` value, create a checkbox and label
-        //     for (const symbol of symbols) {
-        //         const input = document.createElement('input');
-        //         input.type = 'checkbox';
-        //         input.id = symbol;
-        //         input.checked = true;
-        //         filterGroup.appendChild(input);
-               
-        //         const label = document.createElement('label');
-        //         label.setAttribute('for', symbol);
-        //         label.textContent = symbol;
-        //         filterGroup.appendChild(label);
-  
-        //         // When any checkbox changes, update the filter.
-        //         input.addEventListener('change', updateLayerFilter);
-        //     }
-        // });
+      layers.forEach((layer,i) => {
+        const color = colors[i];
+        const item = document.createElement('div');
+        const key = document.createElement('span');
+        key.className = 'legend-key';
+        key.style.backgroundColor = color;
+        
 
-        /* OLD MAPLAYER W/O CLUSTERING
-  
-        map.addLayer({
-          'id': 'su-crimes-layer',
-          'type': 'circle',
-          'source': 'su-crimes',
-          'paint': {
-          'circle-radius': 4,
-          'circle-stroke-width': 1,
-          'circle-color': '#fee2e2',
-          'circle-opacity':0.7,
-          'circle-stroke-color': 'white'
-          }
+        const value = document.createElement('span');
+        value.innerHTML = `${layer}`;
+        item.appendChild(key);
+        item.appendChild(value);
+        legend.appendChild(item);
+      });
+    });   
+
+
+    //POP-UP
+    // an event listener that runs when a user clicks on the map element. */
+    const popup = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false,
+      offset: [0, -15],
+      className: 'custom-popup'
+    })
+
+    map2.on('mouseenter', 'unclustered-point', (event) => {
+        map2.getCanvas().style.cursor = 'pointer';
+      // If the user clicked on one of your markers, get its information.
+        const features = map2.queryRenderedFeatures(event.point, {
+            layers: ['unclustered-point']
         });
-        */
+            if (!features.length) {
+                return;
+        }
+        const feature = features[0];
+        
+        popup.setLngLat(feature.geometry.coordinates)
+        .setHTML(
+          `<p> 
+            <b>Crime Type</b>: ${feature.properties.category.replace(/["\[\]]/g, '')}<br> 
+            <b>Description</b>: ${feature.properties.nature.charAt(0).toUpperCase() + feature.properties.nature.slice(1)}<br> 
+            <b>On Campus?</b>: ${feature.properties['on_campus?']}<br>
+            <b>Date</b>: ${feature.properties.date}<br>
+            <b>Status</b>: ${feature.properties.disposition}</p>`
+        ).addTo(map2);
+  });
+  
+    map2.on('mouseleave', 'unclustered-point', () => {
+      map2.getCanvas().style.cursor = '';
+      popup.remove();
+      });
+
+  };
+
   
 
   
