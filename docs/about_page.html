@@ -7,29 +7,84 @@
 
   <body>
     <nav>
-      <div class="title"><a href="index.html">Campus CrimeWatch</a></div>
+      <div class="title"><a href="index.html">Campus Crimewatch</a></div>
       <ul>
         <li><a href="clery_act.html">Clery Act</a></li>
-        <li><a class="selected" href="about_page.html">How We Did It</a></li>
-        <li><a href="other_campus.html">Other Campuses</a></li>
+        <li><a class="selected" href="about_page.html">Recreate this site</a></li>
+        <!-- <li><a href="other_campus.html">Other Campuses</a></li> -->
       </ul>
     </nav>
-    
-    <main id="about">
-        <h2>How we got the data</h2>
-        <p> 
-            Every university in the United States, public or private, 
-            is mandated by the Clery Act to report crime that occurs near or on its campus. 
-            You need to call either the campus police's records office, the public safety office, 
-            or the campus records-keeper to receive access to the data. 
-            They'll probably ask you to email your request, but call first. Here's an example email: 
-        </p>
-        <h2>
-            How we created this site</h2>
-        <p>
-            Check out our <a href="https://github.com/campus-crime-watch/campus-crimewatch">Github</a> 
-            to see how we created Campus Crimewatch. <br>
-            Use our code and reporting strategy to create a Campus Crimewatch for your own university!
-        </p>
-    </main>
+
+    <div id="main-container">
+      <main id="about">
+          <h2>How we got the data</h2>
+          <p> 
+              Every university in the United States, public or private, 
+              is mandated by the <a href="clery_act.html">Clery Act</a> to report crime that occurs near or on its campus.
+          </p>
+          <p>
+            To obtain the daily crime log for your university, you need to call the campus police's records office, the school’s public safety office, or the campus records-keeper and ask for this data.
+            They'll likely ask you to put your request in writing via email, but it’s good to call first.
+          </p>
+          <p>
+            Here's an example email:
+          </p>
+          <p>
+            Dear <em>Record Keeper’s name,</em>
+          </p>
+          <p>
+          My name is <em>Your Name</em>, and I'm a student at <em>Your University</em>.
+          I'm doing a data project about college crime. I am wondering if you can help me get access to the daily campus crime log from the past 5 years at <em>Your University</em>.
+          I’m hoping to receive this data as soon as possible.
+          </p>
+          <p>
+            I’m specifically looking for:
+            <ul>
+              <li><em>Your University's</em> daily crime log from the past 5 years </li>
+              <li>sent electronically in the form of a spreadsheet, CSV file, or an accessible API</li>
+              <li>with the nature of the crime, location, time, and status of the incident</li>
+            </ul>
+            If the past 5 years are not possible, I would like whatever you can give me from the past 2 to 5 years.
+          </p>
+          <p>
+            I'd also like to be CC’d on any messages that you forward on this matter. Please let me know if I can clarify any aspects of my request for you.
+            Thank you again for helping me access this data and for your timely response.
+          </p>
+          <p>
+            Sincerely,
+          </p>
+          <p>
+            <em>Your Name</em>
+          </p>
+          <p>
+            Technically, this counts as a public records request, and the state rules regarding these types of requests will apply. 
+          </p>
+          <p>
+            Before sending your email, research the public records rules in your state and make sure to mention them in the beginning of your email.
+            For example, pursuant to <em>government code</em> I am requesting daily crime logs from <em>university</em>.
+            Please respond within <em>mandated time</em>, as required by <em>government code</em>.
+            If the cost of this request exceeds $50, please notify me. 
+          </p>
+          <p>
+            If they don’t respond or give you incomplete data, keep pushing.
+            They are required by law to make this data accessible to anyone who requests it—you don’t have to be a journalist or a professional. 
+          </p>
+          <p>
+            If they give you everything you asked for right away–congratulations!
+            Now you can get started on creating this web app for your college campus. 
+          </p>
+          <h2>
+              How we created this site</h2>
+          <p>
+              Check out our <a href="https://github.com/campus-crime-watch/campus-crimewatch">Github</a> 
+              to see how we created Campus Crimewatch. <br>
+              Use our code and reporting strategy to create a Campus Crimewatch for your own university!
+          </p>
+      </main>
+    </div>
+
+    <footer> 
+      <p> Copyright © 2023 Team NoName. All Rights Reserved. </p>
+    </footer>
+  </body>
 </html>
