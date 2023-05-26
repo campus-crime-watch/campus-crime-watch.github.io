@@ -7,6 +7,9 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet" />
+
   </head>
 
 
@@ -55,7 +58,6 @@
 
     <section class="map" id="mapSection">
       <div id='mapbox1' class="mapbox"></div>
-      <div id='mapbox2' class="mapbox active">
         <div class="dropdown-container">
           <div class="dropdown" style="position:relative">
             <button class="select" id="display-button">Last 60 Days</button>
@@ -63,10 +65,14 @@
               <div class="option" data-value="60">Last 60 Days</div>
               <div class="option" data-value="90">Last 90 Days</div>
               <div class="option" data-value="365">Current Year</div>
+              <div class="option" data-value="custom">Custom...</div>        
+              <input type="text" id="dateRangePicker" placeholder="Select Date Range" style="display:none">
+              <button id="applyCustomDate" style="display:none">Apply</button>
               <div class="option" data-value="all">All</div>
             </div>
           </div>
         </div>
+        <div id='mapbox2' class="mapbox active"></div>
         <nav id="filter-group" class="filter-group"></nav>
       </div>
 

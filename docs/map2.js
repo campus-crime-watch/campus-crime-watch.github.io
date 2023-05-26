@@ -10,8 +10,25 @@ function initializeMap2() {
     });
      
     const dataSource = 'https://campus-crime-watch.github.io/data/stanford_crime.geojson'
+    
+    // a start date 
     let pastDate = new Date();
     pastDate.setDate(pastDate.getDate() - 60); 
+    let startDate = null;
+    let endDate = null;
+    
+    // initialize date picker
+    let datePicker = flatpickr("#dateRangePicker", {
+      mode: "range",
+      onClose: function(selectedDates) {
+        if (selectedDates.length === 2) {
+          let startDate = selectedDates[0];
+          let endDate = selectedDates[1];
+          updateMapWithCustomDateRange(startDate, endDate);
+        }
+      }
+    });
+
 
     // filter functions 
         /* map functions - time filter */
@@ -31,6 +48,7 @@ function initializeMap2() {
       const text = $(this).text();
       updateMap(value, text);
     });
+    
 
     function fetchDataAndRenderMap() {
       // map2.on('load', () => {
@@ -54,7 +72,12 @@ function initializeMap2() {
               return feature;
             });
 
-            if (pastDate !== null) {
+            if (startDate !== null && endDate !== null) {
+              data.features = data.features.filter(feature => {
+                  var featureDate = new Date(feature.properties.date);
+                  return featureDate >= startDate && featureDate <= endDate;
+              });
+          } else if (pastDate !== null) {
               data.features = data.features.filter(feature => {
                 var featureDate = new Date(feature.properties.date);
                 return featureDate >= pastDate;
@@ -66,19 +89,71 @@ function initializeMap2() {
               // Use a URL for the value for the `data` property.
               data: data
             });
+
+            console.log('su-crimes source added');
     
             map2.addLayer({
               id: 'unclustered-point',
               type: 'circle',
               source: 'su-crimes',
               paint: {
-              'circle-color': '#fee2e2',
               'circle-radius': 5,
               'circle-stroke-width': 1,
               'circle-opacity': 0.7,
-              'circle-stroke-color': '#fff'
+              'circle-stroke-color': '#fff',
+              'circle-color': [
+                'case',
+                ['in', 'Theft', ['get', 'category']],
+                '#fbb03b',
+                ['in', 'Burglary', ['get', 'category']],
+                '#8DB600',
+                ['in', 'Sexual assault', ['get', 'category']],
+                '#e55e5e',
+                ['in', 'Drug abuse violations', ['get', 'category']],
+                '#4B0082',
+                ['in', 'Assault', ['get', 'category']],
+                '#223b53',
+                ['in', 'Destruction of property', ['get', 'category']],
+                '#3bb2d0',
+                /* other */ '#fee2e2'
+              ]
               }
             });
+            console.log('layer added');
+          });
+            // an event listener that runs when a user clicks on the map element. */
+          map2.on('click', 'unclustered-point', (event) => {
+            //  console.log('unclustered-point clicked');
+            // If the user clicked on one of your markers, get its information.
+              const features = map2.queryRenderedFeatures(event.point, {
+                  layers: ['unclustered-point'] // replace with your layer name
+              });
+                  if (!features.length) {
+                      return;
+              }
+              const feature = features[0];
+              
+            // a popup 
+              new mapboxgl.Popup({ offset: [0, -15],className: 'custom-popup' })
+              .setLngLat(feature.geometry.coordinates)
+              .setHTML(
+                `<p> 
+                  <b>Crime Type</b>: ${feature.properties.category.replace(/["\[\]]/g, '')}<br> 
+                  <b>Description</b>: ${feature.properties.nature.charAt(0).toUpperCase() + feature.properties.nature.slice(1)}<br> 
+                  <b>On Campus?</b>: ${feature.properties['on_campus?']}<br>
+                  <b>Date</b>: ${feature.properties.date}<br>
+                  <b>Status</b>: ${feature.properties.disposition}</p>`
+              )
+          .addTo(map2);});
+            
+              /* cursor change when hover */
+          map2.on('mouseenter', 'unclustered-point', () => {
+            console.log('Mouse entered unclustered-point');
+            map2.getCanvas().style.cursor = 'pointer';
+          });
+          
+          map2.on('mouseleave', 'unclustered-point', () => {
+            map2.getCanvas().style.cursor = '';
           });
         }
 
@@ -90,10 +165,19 @@ function initializeMap2() {
         map2.removeSource('su-crimes');
       }
 
+      if (value !== "custom") {
+        startDate = null;
+        endDate = null;
+    }
+
       if (value === "all") {
         pastDate = null;
       } else if (value === "custom") {
-        // Handle custom date logic here.
+          // Show the date picker and "Apply" button
+          document.querySelector('#dateRangePicker').style.display = 'block';
+          document.querySelector('#applyCustomDate').style.display = 'block';
+          datePicker.open();
+          return;
       } else if (value === "365") {
         pastDate = new Date(new Date().getFullYear(), 0, 1); 
       } else {
@@ -115,43 +199,23 @@ function initializeMap2() {
     // OLD FILTER
     // const filterGroup = document.getElementById('filter-group');
 
-  
-  
-  map2.on('load', fetchDataAndRenderMap) ;
-
-            // an event listener that runs when a user clicks on the map element. */
-            map2.on('click', 'unclustered-point', (event) => {
-              // If the user clicked on one of your markers, get its information.
-                const features = map2.queryRenderedFeatures(event.point, {
-                    layers: ['unclustered-point'] // replace with your layer name
-                });
-                    if (!features.length) {
-                        return;
-                }
-                const feature = features[0];
-                
-              // a popup 
-                new mapboxgl.Popup({ offset: [0, -15],className: 'custom-popup' })
-                .setLngLat(feature.geometry.coordinates)
-                .setHTML(
-                  `<p> 
-                    <b>Crime Type</b>: ${feature.properties.category.replace(/["\[\]]/g, '')}<br> 
-                    <b>Description</b>: ${feature.properties.nature.charAt(0).toUpperCase() + feature.properties.nature.slice(1)}<br> 
-                    <b>On Campus?</b>: ${feature.properties['on_campus?']}<br>
-                    <b>Date</b>: ${feature.properties.date}<br>
-                    <b>Status</b>: ${feature.properties.disposition}</p>`
-                )
-            .addTo(map2);});
-              
-                /* cursor change when hover */
-            map2.on('mouseenter', ['clusters','unclustered-point'], () => {
-              map2.getCanvas().style.cursor = 'pointer';
-            });
-            
-            map2.on('mouseleave', ['clusters','unclustered-point'], () => {
-              map2.getCanvas().style.cursor = '';
-            });
+    function updateMapWithCustomDateRange(start, end) {
+      // set global variables
+      startDate = start;
+      endDate = end;
+      
+      if (map2.getSource('su-crimes')) {
+          map2.removeLayer('unclustered-point');
+          map2.removeSource('su-crimes');
+      }
+      
+      fetchDataAndRenderMap();
     }
+
+
+    map2.on('load', fetchDataAndRenderMap)   
+    }
+
 
         // OLD YEAR FILTER VER.1
         //   // this function will be called whenever a checkbox is toggled

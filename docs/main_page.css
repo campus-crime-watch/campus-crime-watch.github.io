@@ -40,7 +40,7 @@ nav {
     width: 100%;
     position:fixed;
     top:0;
-    z-index: 1;
+    z-index: 5;
   }
   
   .title {
@@ -357,7 +357,7 @@ nav {
   margin: 0 auto;
 }
 
-#tabs {
+/* #tabs {
   position: absolute;
   top: 0;
   left: 50%; 
@@ -390,7 +390,7 @@ nav {
 .tab.active {
   background: #7DB581;
   color: #FAF8F0;
-}
+} */
 
 /* hiding cluster map and switch tabs */
 
@@ -405,7 +405,7 @@ nav {
   align-items: center;
   position: relative;
   left: 80px; 
-  top: 50px; 
+  top: 100px; 
   width: 200px;
 }
 
