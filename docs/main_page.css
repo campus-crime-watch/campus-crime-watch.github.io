@@ -25,6 +25,7 @@ body {
   background-color: #FAF8F0;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 nav {
@@ -597,6 +598,7 @@ nav {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
   .data {

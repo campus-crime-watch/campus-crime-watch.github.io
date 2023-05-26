@@ -1,4 +1,3 @@
-
 const config = {
     delay: 500,
     duration: 500,
@@ -48,7 +47,7 @@ fetch('data/stat_sentences.json')
 const scroll = ScrollReveal(config);
 const left = document.querySelectorAll(".text-holder.left");
 const right = document.querySelectorAll(".text-holder.right");
-const bar = document.getElementById("histogram");
+const bar = document.getElementById("my_dataviz");
 
 scroll.reveal(left);
 scroll.reveal(yearElement, {delay: 1000});
