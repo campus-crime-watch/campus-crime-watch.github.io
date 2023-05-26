@@ -15,34 +15,42 @@ const config = {
 };
 
 fetch('data/stat_sentences.json')
-    .then(response => response.json())
-    .then(data => {
-        const jsonContent = document.getElementById('json-content');
-
-        data.forEach(sentence => {
-            const parts = sentence.split(':');
-            const year = parts[0].trim();
-            const details = parts[1].trim();
-            const [percentage, restOfSentence] = details.split('%');
-
-            const sentenceElement = document.createElement('p');
-            const yearElement = document.createElement('span');
-            const percentageElement = document.createElement('span');
-            const restOfSentenceElement = document.createElement('span');
-
-            yearElement.textContent = year + ': ';
-            percentageElement.textContent = percentage.trim() + '% ';
-            restOfSentenceElement.textContent = restOfSentence.trim();
-
-            percentageElement.classList.add('emphasis');
-
-            sentenceElement.appendChild(yearElement);
-            sentenceElement.appendChild(percentageElement);
-            sentenceElement.appendChild(restOfSentenceElement);
-
-            jsonContent.appendChild(sentenceElement);
-        });
+  .then(response => response.json())
+  .then(data => {
+    // Sort the data in descending order based on percentage (parsed as numbers)
+    data.sort((a, b) => {
+      const percentageA = parseFloat(a.split(':')[1].trim().split('%')[0]);
+      const percentageB = parseFloat(b.split(':')[1].trim().split('%')[0]);
+      return percentageB - percentageA;
     });
+
+    const jsonContent = document.getElementById('json-content');
+
+    // Loop through the top 6 sentences
+    data.slice(0, 6).forEach(sentence => {
+      const parts = sentence.split(':');
+      const year = parts[0].trim();
+      const details = parts[1].trim();
+      const [percentage, restOfSentence] = details.split('%');
+
+      const sentenceElement = document.createElement('p');
+      const yearElement = document.createElement('span');
+      const percentageElement = document.createElement('span');
+      const restOfSentenceElement = document.createElement('span');
+
+      yearElement.textContent = year + ': ';
+      percentageElement.textContent = percentage.trim() + '% ';
+      restOfSentenceElement.textContent = restOfSentence.trim();
+
+      percentageElement.classList.add('emphasis');
+
+      sentenceElement.appendChild(yearElement);
+      sentenceElement.appendChild(percentageElement);
+      sentenceElement.appendChild(restOfSentenceElement);
+
+      jsonContent.appendChild(sentenceElement);
+    });
+  });
 
 const scroll = ScrollReveal(config);
 const left = document.querySelectorAll(".text-holder.left");

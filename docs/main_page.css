@@ -739,6 +739,7 @@ img {
 
 .left{
   float: left;
+  text-align: left;
 }
 
 .right{
@@ -750,10 +751,9 @@ html.sr .load-hidden{
 }
 
 .emphasis {
-font-size: 1.2em;
 font-weight: bold;
 color:maroon;
-font-size: 4em;
+font-size: 2em;
 position: relative;
 }
 
