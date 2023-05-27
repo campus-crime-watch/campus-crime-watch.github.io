@@ -645,7 +645,7 @@ nav {
   }
 
 .data-background {
-  background-color: #4C5357;
+  background-color: #b4b1b1;
 }
   .data-container{
   color: white;
@@ -679,11 +679,17 @@ nav {
 /* Year, Month, Week, Day buttons */
 .input-wrapper {
   display: flex;
-  justify-content: center; /* Add this line to center the items */
+  justify-content: flex-end; /* Add this line to center the items */
+  margin-top: 10px;
+}
+
+#my_dataviz {
+  position: relative;
 }
 
 .input-wrapper .options {
   display: flex;
+  align-items: right;
 }
 
 .input-wrapper .options input[type="radio"] {
@@ -784,22 +790,30 @@ nav {
 }
 
 /* scroll reveal stylings */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .text-holder{
   width: 50%;
 }
 
-.left{
-  float: left;
-  text-align: left;
+#json-content{
+  width: 45%;
 }
 
-.right{
+.json-sentence:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.text-holder.left{
+  float: left;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.text-holder.right{
   float: right;
+  text-align: right;
+  justify-content: flex-end;
+  align-items: right;
 }
 
 html.sr .load-hidden{
@@ -808,23 +822,9 @@ html.sr .load-hidden{
 
 .emphasis {
 font-weight: bold;
-color:maroon;
+color: rgb(187 71 71);
 font-size: 2em;
 position: relative;
-}
-
-.num{
-  text-align: left;
-  color:maroon;
-  font-size: 4em;
-  position: relative;
-}
-
-.crime{
-  text-align: left;
-  color:rgb(145, 133, 133);
-  font-size: 2em;
-  position: relative;
 }
 
 footer {

@@ -26,7 +26,6 @@ fetch('data/stat_sentences.json')
 
     const jsonContent = document.getElementById('json-content');
 
-    // Loop through the top 6 sentences
     data.slice(0, 6).forEach(sentence => {
       const parts = sentence.split(':');
       const year = parts[0].trim();
@@ -34,9 +33,10 @@ fetch('data/stat_sentences.json')
       const [percentage, restOfSentence] = details.split('%');
 
       const sentenceElement = document.createElement('p');
-      const yearElement = document.createElement('span');
-      const percentageElement = document.createElement('span');
-      const restOfSentenceElement = document.createElement('span');
+      sentenceElement.classList.add('json-sentence');
+      const yearElement = document.createElement('span'); 
+      const percentageElement = document.createElement('span'); 
+      const restOfSentenceElement = document.createElement('span'); 
 
       yearElement.textContent = year + ': ';
       percentageElement.textContent = percentage.trim() + '% ';
@@ -49,6 +49,7 @@ fetch('data/stat_sentences.json')
       sentenceElement.appendChild(restOfSentenceElement);
 
       jsonContent.appendChild(sentenceElement);
+      jsonContent.appendChild(document.createElement('br'));
     });
   });
 
@@ -58,8 +59,5 @@ const right = document.querySelectorAll(".text-holder.right");
 const bar = document.getElementById("my_dataviz");
 
 scroll.reveal(left);
-scroll.reveal(yearElement, {delay: 1000});
-scroll.reveal(percentageElement, {delay: 1000});
-scroll.reveal(restOfSentenceElement, {delay: 2000});
 scroll.reveal(right);
 scroll.reveal(bar, {delay: 3000});
