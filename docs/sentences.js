@@ -6,7 +6,7 @@ const config = {
     origin: "right",
     distance: "150%",
     easing: "ease-out",
-    reset: true,
+    reset: false,
     afterReveal: (domEl) => {
         setTimeout(() => {
             domEl.style.transitionDelay = "500ms"; 
@@ -17,7 +17,7 @@ const config = {
 fetch('data/stat_sentences.json')
   .then(response => response.json())
   .then(data => {
-    // Sort the data in descending order based on percentage (parsed as numbers)
+    // Sort the data in descending order based on percentage (parsed as numbers 1st)
     data.sort((a, b) => {
       const percentageA = parseFloat(a.split(':')[1].trim().split('%')[0]);
       const percentageB = parseFloat(b.split(':')[1].trim().split('%')[0]);
