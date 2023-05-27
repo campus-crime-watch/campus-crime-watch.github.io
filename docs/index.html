@@ -30,6 +30,21 @@
       </ul>
     </nav>
 
+    <!-- scroll indicator bar-->
+    <div class="progress-container">
+      <div class="progress-bar" id="scrollBar"></div>
+    </div>
+    <script>
+      window.onscroll = function() {progressBar()};
+
+      function progressBar() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("scrollBar").style.width = scrolled + "%";
+      }
+    </script>
+
     <!--hamburger bar side -->
     <div role="navigation">
       <div id="menuToggle">
@@ -85,7 +100,7 @@
         </div>
 
         <div id='mapbox2' class="mapbox active"></div>
-        
+
         <div class='map-overlay' id='legend'></div>
         <nav id="filter-group" class="filter-group"></nav>
       </div>
