@@ -700,17 +700,28 @@ nav {
 /* Year, Month, Week, Day buttons */
 .input-wrapper {
   display: flex;
-  justify-content: flex-end; /* Add this line to center the items */
-  margin-top: 10px;
+  justify-content: center; /* Add this line to center the items */
 }
 
 #my_dataviz {
+  margin-top: 10px;
   position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .input-wrapper .options {
   display: flex;
-  align-items: right;
+  justify-content: center; /* Add this line to center the items */
 }
 
 .input-wrapper .options input[type="radio"] {
