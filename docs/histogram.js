@@ -1,16 +1,10 @@
-// create 2 data_set
+// create data_set
 const data1 = [
     {group: "A", value: 4},
     {group: "B", value: 16},
     {group: "C", value: 8}
  ];
- 
- const data2 = [
-    {group: "A", value: 7},
-    {group: "B", value: 1},
-    {group: "C", value: 20},
-    {group: "D", value: 10}
- ];
+
 
  /*
  {
@@ -46,7 +40,6 @@ const data1 = [
 const options = d3.selectAll('input[name="option"]');
 options.on('change', function() {
     const selectedOption = d3.select(this).property('value');
-    console.log('Option changed:', selectedOption);
     updateOption(selectedOption)
 });
 
@@ -65,8 +58,8 @@ function buildHistogramData (features, category) {
     feature = features[i]
     year = feature["properties"]["year"]
     month = feature["properties"]["month"]
-    week = feature["properties"]["week"]
-    day = feature["properties"]["day"]
+    // week = feature["properties"]["week"]
+    // day = feature["properties"]["day"]
 
     text = ""
 
@@ -74,11 +67,12 @@ function buildHistogramData (features, category) {
       text = year.toString()
     } else if (category == "month") {
       text = month + " " + year.toString()
-    } else if (category == "week") {
-      text = "Week " + week + " " + year.toString()
-    } else if (category == "day") {
-      text = month + " " + day + " " + year.toString()
     }
+    // else if (category == "week") {
+    //   text = "Week " + week + " " + year.toString()
+    // } else if (category == "day") {
+    //   text = month + " " + day + " " + year.toString()
+    // }
 
     if (!(text in histogram_data)) {
       histogram_data[text] = 0;
@@ -101,30 +95,72 @@ async function updateOption(selectedOption) {
     hisogram_data = buildHistogramData(features, selectedOption)
 
     // turn histogram data into preffered format
-    updateHistogram(objToArray(histogram_data))
+    updateHistogram(objToArray(histogram_data), selectedOption)
 }
 
  // A function that create / update the plot for a given variable:
-function updateHistogram(data) {
+function updateHistogram(data, selectedOption) {
    // Update the X axis
    x.domain(data.map(d => d.group))
-   xAxis.call(d3.axisBottom(x))
- 
+   if (selectedOption == "month") {
+    xAxis.call(d3.axisBottom(x).tickFormat(d => d.startsWith("Jan") ? d : console.log(d)))
+   } else {
+    xAxis.call(d3.axisBottom(x))
+   }
+
    // Update the Y axis
    y.domain([0, d3.max(data, d => d.value) ]);
    yAxis.transition().duration(1000).call(d3.axisLeft(y));
+
+   svg.append("text")
+        .attr("x", (width / 2))             
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "16px") 
+        .style("text-decoration", "underline")  
+        .style("fill", "white")  
+        .text("Crime Count");
+
+   svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "middle")
+    .attr("dy", "-3em")
+    .attr("dx", "-6em")
+    .attr("transform", "rotate(-90)")
+    .text("count")
+    .style("fill", "white")  ;
+    
  
    // Create the u variable
    var u = svg.selectAll("rect")
      .data(data)
      .join("rect") // Add a new rect for each new elements
      .transition()
-     .duration(1000)
+     .duration(800)
        .attr("x", d => x(d.group))
        .attr("y", d => y(d.value))
        .attr("width", x.bandwidth())
        .attr("height", d => height - y(d.value))
        .attr("fill", "#69b3a2")
+
+  var tooltip = d3.select(".tooltip");
+
+  // Add event listeners to the bars
+  svg.selectAll("rect")
+    .on("mousemove", function(event, d) {
+      // Show the tooltip and update its position on mousemove
+      var [x, y] = d3.pointer(event);
+
+      tooltip.style("opacity", 1)
+        .html(d.group + ": " + d.value + " crimes")
+        .style("left", (x+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+        .style("top", (y) + "px");
+    })
+    .on("mouseout", function() {
+      // Hide the tooltip on mouseout
+      tooltip.style("opacity", 0);
+    });
+
  }
  
  // Initialize the plot with the first dataset
