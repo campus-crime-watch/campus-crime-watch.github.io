@@ -53,12 +53,12 @@ function initializeMap2() {
     $('.dropdown').hover(
       function() {
         // on mouseenter
-        $('.options').slideDown(150);
+        $(this).find('.options').slideDown(150);
       }, 
       function() {
         // on mouseleave
           if (!isCustomSelected) {
-          $('.options').hide();
+            $(this).find('.options').hide();
           }
       }
     );
