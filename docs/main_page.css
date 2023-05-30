@@ -190,33 +190,32 @@ nav {
 
 
   #menu {
-  position: fixed;
-  width: 200px;
-  height: 100%;
-  margin: -81px 0 0 -50px;
-  padding: 30px;
-  padding-top: 100px;
-  
-  background: transparent;
-  list-style-type: none;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    margin: -81px 0 0 -50px;
+    padding: 30px;
+    padding-top: 100px;
+    
+    background: transparent;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
 
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  z-index: 0;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    z-index: 0;
   }
 
   #menu li {
-    padding: 15px 30px;
+    padding: 25px 30px;
+    margin: 0;
     font-size: 17px;
     text-align: left;
-    opacity:0.8;
+    opacity: 0.8;
     font-weight: 300;
     line-height: 3em;
     background-color: #F5F1E0;
-
   }
-
 
   #menuToggle input:checked ~ ul {
   transform: none;
