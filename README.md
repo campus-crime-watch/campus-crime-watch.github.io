@@ -1,6 +1,6 @@
-# campus crimewatch
+# How we created Campus Crimewatch
 
-This is our code repo for extracting the text from the pdf files.
+Below, we'll walk you through how we developed the different components of Campus Crimewatch and its web page. You can use our guide to create this web app for your college campus, too! 
 
 ## Setup
 
@@ -12,21 +12,6 @@ After creating this project:
 
 * `cd campus-crimewatch`
 * `pipenv install`
-
-## Save and push your work
-
-This project includes a few command-line tasks that help
-with the daily workflow of our course. The tasks were created using [invoke][], a task execution library.
-
-Below are the most import commands:
-
-```
-invoke --list
-Available tasks:
-
-  code.push   Saves local work and pushes changes to GitHub
-  code.save   Saves changes locally (in git)
-```
 
 After creating or modifying files in your text editor of choice,
 you should use these tasks to save your changes locally and push them to GitHub.
@@ -46,19 +31,13 @@ invoke code.push
 
 ## Installing Python libraries
 
-Depending on the type of project you're working on,
-you may want to install additional Python packages.
-Below are some useful libraries for common tasks
-such as interacting with APIs, scraping web pages,
-and data analysis:
-
-* APIs and web scraping - [requests][], [BeautifulSoup][], [selenium][]
 * data analysis and viz - [jupyter][], [pandas][], [altair][]
 
 The standard workflow is:
 
 ```
 cd campus-crimewatch
+# make a note of the libraries to be installed before starting
 # Install one or libraries, e.g. requests and BeautifulSoup
 pipenv install requests beautifulsoup4
 ```
