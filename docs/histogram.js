@@ -4,8 +4,6 @@ const data1 = [
     {group: "B", value: 16},
     {group: "C", value: 8}
  ];
-
-
  /*
  {
    A: count,
