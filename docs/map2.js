@@ -33,7 +33,7 @@ function initializeMap2() {
           const endDate = selectedDates[1];
       
           updateMapWithCustomDateRange(startDate, endDate);
-          $('.options').hide();
+          $('.drop-options').hide();
           document.querySelector('#dateRangePicker').style.display = 'none';
           document.querySelector('#applyCustomDate').style.display = 'none';
         }
@@ -53,17 +53,17 @@ function initializeMap2() {
     $('.dropdown').hover(
       function() {
         // on mouseenter
-        $(this).find('.options').slideDown(150);
+        $(this).find('.drop-options').slideDown(150);
       }, 
       function() {
         // on mouseleave
           if (!isCustomSelected) {
-            $(this).find('.options').hide();
+            $(this).find('.drop-options').hide();
           }
       }
     );
     
-    $('.option').on('click', function () {
+    $('.drop-option').on('click', function () {
       const value = $(this).attr('data-value');
       const text = $(this).text();
       updateMap(value, text);
@@ -181,7 +181,7 @@ function initializeMap2() {
     
       // Hide options
       if (!isCustomSelected) {
-        $('.options').hide();
+        $('.drop-options').hide();
       }
       
       fetchDataAndRenderMap();
