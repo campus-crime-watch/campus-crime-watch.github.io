@@ -55,9 +55,9 @@ fetch('data/stat_sentences.json')
 
 const scroll = ScrollReveal(config);
 const left = document.querySelectorAll(".text-holder.left");
-const right = document.querySelectorAll(".text-holder.right");
-const bar = document.getElementById("my_dataviz");
+const filter = document.querySelectorAll(".input-wrapper");
+const graph = document.getElementById("my_dataviz");
 
-scroll.reveal(left);
-scroll.reveal(right);
-scroll.reveal(bar, {delay: 3000});
+scroll.reveal(left, {delay: 1000});
+scroll.reveal(graph, {delay: 1500});
+scroll.reveal(filter, {delay: 2000});
