@@ -703,7 +703,7 @@ nav {
   justify-content: center; /* Add this line to center the items */
 }
 
-#my_dataviz {
+#histogram {
   margin-top: 10px;
   position: relative;
 }

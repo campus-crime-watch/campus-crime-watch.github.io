@@ -1,23 +1,10 @@
-// create data_set
-const data1 = [
-    {group: "A", value: 4},
-    {group: "B", value: 16},
-    {group: "C", value: 8}
- ];
-
-
- /*
- {
-   A: count,
-   B: count}
- */
  // set the dimensions and margins of the graph
  const margin = {top: 30, right: 30, bottom: 70, left: 60},
      width = 460 - margin.left - margin.right,
      height = 400 - margin.top - margin.bottom;
  
  // append the svg object to the body of the page
- const svg = d3.select("#my_dataviz")
+ const svgHist = d3.select("#histogram")
    .append("svg")
      .attr("width", width + margin.left + margin.right)
      .attr("height", height + margin.top + margin.bottom)
@@ -28,13 +15,13 @@ const data1 = [
  const x = d3.scaleBand()
    .range([ 0, width ])
    .padding(0.2);
- const xAxis = svg.append("g")
+ const xAxisHist = svgHist.append("g")
    .attr("transform", `translate(0,${height})`)
  
  // Initialize the Y axis
  const y = d3.scaleLinear()
    .range([ height, 0]);
- const yAxis = svg.append("g")
+ const yAxisHist = svgHist.append("g")
    .attr("class", "myYaxis")
  
 const options = d3.selectAll('input[name="option"]');
@@ -103,16 +90,16 @@ function updateHistogram(data, selectedOption) {
    // Update the X axis
    x.domain(data.map(d => d.group))
    if (selectedOption == "month") {
-    xAxis.call(d3.axisBottom(x).tickFormat(d => d.startsWith("Jan") ? d : console.log(d)))
+    xAxisHist.call(d3.axisBottom(x).tickFormat(d => d.startsWith("Jan") ? d : console.log(d)))
    } else {
-    xAxis.call(d3.axisBottom(x))
+    xAxisHist.call(d3.axisBottom(x))
    }
 
    // Update the Y axis
    y.domain([0, d3.max(data, d => d.value) ]);
-   yAxis.transition().duration(1000).call(d3.axisLeft(y));
+   yAxisHist.transition().duration(1000).call(d3.axisLeft(y));
 
-   svg.append("text")
+   svgHist.append("text")
         .attr("x", (width / 2))             
         .attr("y", 0 - (margin.top / 2))
         .attr("text-anchor", "middle")  
@@ -121,7 +108,7 @@ function updateHistogram(data, selectedOption) {
         .style("fill", "white")  
         .text("Crime Count");
 
-   svg.append("text")
+   svgHist.append("text")
     .attr("class", "y label")
     .attr("text-anchor", "middle")
     .attr("dy", "-3em")
@@ -132,7 +119,7 @@ function updateHistogram(data, selectedOption) {
     
  
    // Create the u variable
-   var u = svg.selectAll("rect")
+   var u = svgHist.selectAll("rect")
      .data(data)
      .join("rect") // Add a new rect for each new elements
      .transition()
@@ -146,7 +133,7 @@ function updateHistogram(data, selectedOption) {
   var tooltip = d3.select(".tooltip");
 
   // Add event listeners to the bars
-  svg.selectAll("rect")
+  svgHist.selectAll("rect")
     .on("mousemove", function(event, d) {
       // Show the tooltip and update its position on mousemove
       var [x, y] = d3.pointer(event);
