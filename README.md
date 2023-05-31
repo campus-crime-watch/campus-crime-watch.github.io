@@ -1,67 +1,57 @@
-# campus crimewatch
+# How We Created Campus Crimewatch
 
-This is our code repo for extracting the text from the pdf files.
+The data on Campus Crimewatch consists of daily crime incident reports from from January 1, 2019 to April 18, 2023 at Stanford University. 
 
-## Setup
-
-> Before using this project, please ensure all dependencies are installed. See the [project home page][] for details.
-
-[project home page]: https://github.com/stanfordjournalism/cookiecutter-stanford-progj#requirements--setup
-
-After creating this project:
-
-* `cd campus-crimewatch`
-* `pipenv install`
-
-## Save and push your work
-
-This project includes a few command-line tasks that help
-with the daily workflow of our course. The tasks were created using [invoke][], a task execution library.
-
-Below are the most import commands:
-
-```
-invoke --list
-Available tasks:
-
-  code.push   Saves local work and pushes changes to GitHub
-  code.save   Saves changes locally (in git)
-```
-
-After creating or modifying files in your text editor of choice,
-you should use these tasks to save your changes locally and push them to GitHub.
-
-> It's good to get in the habit of running these commands whenever you wrap up a coding session.
-
-```
-cd campus-crimewatch
-
-# Activate the virtual environment
-pipenv shell
-
-# Save the work and push to GitHub
-invoke code.save
-invoke code.push
-```
+Below, we'll walk you through how we developed the different components of Campus Crimewatch and its web page. You can use our guide to create this web app for your college campus, too! 
 
 ## Installing Python libraries
 
-Depending on the type of project you're working on,
-you may want to install additional Python packages.
-Below are some useful libraries for common tasks
-such as interacting with APIs, scraping web pages,
-and data analysis:
+Campus Crimewatch was created using Python, HTML, CSS, and JavaScript. If you're new to Python, here's some helpful guides that will help you nail the basics needed to execute this project. 
+* [Hitchhiker's Guide to Python](https://docs.python-guide.org/)
+* [Python Standard Library](https://docs.python.org/3.7/library/index.html). 
 
-* APIs and web scraping - [requests][], [BeautifulSoup][], [selenium][]
-* data analysis and viz - [jupyter][], [pandas][], [altair][]
+Libraries that we use in this project:
+  * [pdfplumber](https://pypi.org/project/pdfplumber/#visual-debugging) - extracting data from pdf files 
+  * csv - reading/writing CSV files
+  * json - reading/writing JSON
+  * os - working with OS, e.g. getting environment variables and walking directory/file trees
+  * data analysis and viz - [jupyter](https://jupyter-notebook.readthedocs.io/en/stable/), [pandas](https://pandas.pydata.org/pandas-docs/stable/), [altair](https://altair-viz.github.io/)
+  * geopandas
+  * [shapely](https://pypi.org/project/shapely/) - manipulating geometric objects
+  * [geopandas](https://geopandas.org/en/stable/) -  working with geospatial data in Python
 
-The standard workflow is:
+## Getting Started
 
-```
-cd campus-crimewatch
-# Install one or libraries, e.g. requests and BeautifulSoup
-pipenv install requests beautifulsoup4
-```
+We will assume that you know how to create a Github project and repository. Once you've created one for this project and cloned it to your local machine, make sure that you create the directories listed in the Files & Directories section below. 
+
+Spend some time reading through our files/scripts which have comments describing the purpose of each code block and how you can personalize our code for your specific dataset. 
+
+After you've obtained the daily crime log dataset from your university, make sure to drop it in the data/raw folder to get started. 
+
+## Data Cleaning & Analysis
+
+Cleaning your dataset will be the step you should spend the most time and headaches on. We recommend using a Jupyter Notebook to play with the data and see the gaps or inconsistencies that you would need to solve. 
+
+This is a good time to check and possibly fix the data types. You want your date values and crime/incident descriptions to be strings for ease of display on the website. Column headers should be all lowercase and snakecase. 
+
+You can create a data pipeline that will:
+  1: grab crime data
+  2: clean the data for inconsistencies & standardize the date column
+  3. geocode the locations so you can display exact locations on the map
+  4. standardize the crime categories so that you can show summary statistics for each type of crime
+  5. create sentences for these summary statistics
+  6. export all this data to a geojson file for the interactive map
+
+**How the data pipeline works**
+* [`extract.py`] extracts the crime data from the pdf file using a Python module called pdfplumber. If your school gave you data in another format, like a csv file or an API, you will have to grab the data another way. Regardless, this is a step and script that you must have in the pipeline. 
+
+* [`pre_process.py`] cleans the extracted data. Column headers will be edited to snakecase. We will seperate the date and time from the reported date column into their own seperate columns. 
+
+* [`clean_geocode.py`] creates exact, standardized addresses that can be used in the map.
+
+* [`crime_category.py`] uses the geocoded crime dataset to create counts of the general categories of crime from the Clery Act. This is our way of standardizing the incident names to get general counts of each crime without going through the massive pain and headache of editing each incident name. Then, sentences are created that describe the percent change in each crime category from year to year. These sentences are written to a json file to be displayed on the web app. 
+
+* [`csv_to_geojson.py`] takes the crime categories created above and the geo locations and writes them to a json file in the docs/data folder to be used in the map. 
 
 ## Files & Directories
 
@@ -73,33 +63,59 @@ Below is an overview of the project structure:
 ├── README.md
 ├── data
 │   ├── processed (Raw data that has been transformed)
+        ├── e.g. daily_crime_clean.csv
+        └── ready_for_json.csv
 │   └── raw  (Copy of original source data)
-├── lib (Re-usable Python code in .py files)
-│   ├── __init__.py
-│   └── utils.py
-├── notebooks (Jupyter notebooks)
+        └── e.g. daily_crime_raw.pdf
+├── docs (All the files that generate the web app - HTML, CSS, JavaScript)
+    └── data (json files full of data used by JavaScript files)
+        ├── news_feed.json
+        ├── stat_sentences.json
+        └── crime.geojson
+    ├── index.html
+    ├── about_page.html
+    ├── clery_act.html
+    ├── main_page.css
+    ├── data_viz.js
+    ├── histogram.js
+    ├── map1.js
+    ├── map2.js
+    ├── news_ticker.js
+    ├── scroll.js
+    └── sentences.js
+├── notebooks (Jupyter notebooks checking the quality of our dataset)
+    └── data_quality.ipynb
 ├── scripts (Number-prefixed data processing scripts)
-│   └── 1-etl.py
-└── tasks (invoke task definitions)
-    ├── __init__.py
-    └── code.py
-        
+│   ├── extract.py
+    ├── pre_process.py
+    ├── clean_geocode.py
+    ├── crime_category.py
+    ├── csv_to_geojson.py
+    ├── feed.py
+    └── run_pipeline.py
 ```
 
-## Reference
+## Making The Web App Go Live
 
-* [Hitchhiker's Guide to Python](https://docs.python-guide.org/)
-* [Python Standard Library](https://docs.python.org/3.7/library/index.html). A few especially useful libraries:
-  * csv - reading/writing CSV files
-  * json - reading/writing JSON
-  * os - working with OS, e.g. getting environment variables and walking directory/file trees
+## Building The Map
 
+## Creating The News Ticker
 
-[BeautifulSoup]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
-[invoke]: https://www.pyinvoke.org/
-[jupyter]: https://jupyter.org/
-[altair]: https://altair-viz.github.io/
-[pandas]: https://pandas.pydata.org/pandas-docs/stable/
+This feature is only possible if your university or the university's newspaper reports on crime on and near the university. Stanford has a daily police blotter, but if your school has reports every other week or so, you will have to adjust your code for that. 
+
+## Building The Histogram
+
+## Creating The Summary Statistic Sentences 
+
+## Disclaimers
+I think here we'll talk about roadblocks (features that cannot be implemented if data is or isn't a certain way, that they'll need to heavily customize based on what their dataset looks like)
+
+We are journalists first and programmers second —— so our code might not be the most efficient or concise. We hope that collaboration from people with more coding skills and experience can bring Campus Crimewatch to its fullest potential. 
+
+## Useful Libraries
+
+[Jupyter notebooks are useful for seeing your altair charts before inserting them into your script.]: https://jupyter.org/
+[Altair is a useful for creating data viz.]: https://altair-viz.github.io/
+[Pandas is a powerful Python module that we used for data cleaning and analysis.]: https://pandas.pydata.org/pandas-docs/stable/
 [pipenv]: https://pipenv.readthedocs.io/en/latest/
 [requests]: https://2.python-requests.org/en/master/
-[selenium]: https://selenium-python.readthedocs.io/
