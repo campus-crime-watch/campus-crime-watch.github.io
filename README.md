@@ -101,7 +101,7 @@ We found it the easiest to host the web app through [GitHub Pages](https://pages
 
 For a step-by-step guide and more information, please consult the [official documentation](https://docs.github.com/en/pages). The following are some crucial points for the app to go live:
 * Make sure the name of the repository from which the web app is gping to be deployed is ***organization_name.github.io*** where ***organization_name*** matches the name of your organization precisely. In our case, since our organization name is `campus-crime-watch`, we named the repo `campus-crime-watch.github.io`. This way, you'll have a nice and clean URL. 
-* To keep it clean, our web app is deployed from a folder in the main branch of the repo called [`docs`](https://github.com/campus-crime-watch/campus-crime-watch.github.io/tree/main/docs).
+* To keep it clean, our web app is deployed from a folder in the main branch of the repo called [`docs`](https://github.com/campus-crime-watch/campus-crime-watch.github.io/tree/main/docs), which holds all the HTML, CSS and JS files, as well as the finalized geojson data (product from the data pipeline) that would be later added as the underlying data source for the map.  
 
 
 ## Building The Map
