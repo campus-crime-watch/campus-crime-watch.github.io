@@ -112,10 +112,10 @@ This feature is only possible if your university or the university's newspaper r
 
 How it works: takes from feed, makes a json, js file takes from json file and shows on the ticker
 
-How to makea news ticker:
+How to make a news ticker:
 * find your universities RSS feed
 * in code that scrapes from the RSS feed, formats crime and safety data into json data
-* turn into a github action
+* turn into a Github action
 
 ## Building The Histogram
 
