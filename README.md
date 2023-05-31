@@ -97,6 +97,9 @@ Below is an overview of the project structure:
 
 ## Making The Web App Go Live
 
+We found it the easiest to host the web app through [GitHub Pages](https://pages.github.com/) so that the app is hosted directly from the existing GitHub repository, reflecting the latest changes and commits.
+
+For more information and a step-by-step guide, please consult the [official documentation](https://docs.github.com/en/pages). 
 ## Building The Map
 
 ## Creating The News Ticker
