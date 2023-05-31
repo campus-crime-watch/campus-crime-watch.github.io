@@ -10,6 +10,7 @@ def standardize_crimes():
     path = os.path.join(base_dir, "data/processed/stanford_crime_clean_geocoded.csv")
     df = pd.read_csv(path)
 
+    # use datetime module to split the date into month, week, day for the histogram & add to their own columns
     df.insert(5, "year", None, allow_duplicates = True)
     df.insert(6, "month", None, allow_duplicates = True)
     df.insert(7, "week", None, allow_duplicates = True)
@@ -25,9 +26,14 @@ def standardize_crimes():
         df.loc[iterate, "month"] = clean_month
         df.loc[iterate, "week"] = clean_week
         df.loc[iterate, "day"] = clean_day
-
+   
+    # clean the nature column, which describes the incident. replace colons and slashes 
+    # with space so we can iterate through the text
+   
     df["nature"] = df["nature"].str.replace(r'[/\:]',' ').str.lower()
 
+    # These flags were created by going through the entire dataset & seeing which words, phrases, or abbreviations were associated to which crime. 
+    # This is intensive manual work that cannot be skipped if you want a general overview of each type of crime. 
     crime_flags = {"Homicide": ["homicide", "manslaughter"],
                 "Sexual assault": ["lewd", "child", "peek in hole", "indecent exposure", 
                                     "peek", "sodomy", "oral", "sexual", "rape", "underwear", "sex"], 
@@ -56,7 +62,8 @@ def standardize_crimes():
     crime_count = {}
     category_column = []
 
-
+    # Go through each row and increase the count in the crime category if a flag word is 
+    # detected in the nature columnn. Also accounts & organizes these counts by each year. 
     for index, row in df.iterrows():
         year = row["year"]
         nature = row["nature"]
@@ -72,17 +79,15 @@ def standardize_crimes():
         
         category_column.append(categories)
 
-    # Counts
+    # Create a dataframe from the dictionary of crime counts and flags & write it to a csv file
     count_df = pd.DataFrame.from_dict(crime_count, orient = "index")
     count_df = count_df.rename_axis("Year")
     count_df.columns = crime_flags.keys()
-
     count_df.to_csv("data/processed/crime_categories.csv") 
 
-    # Category column
+    # Add the standardized crime category data to the geocoded dataset for the map
     df["category"] = category_column
     df.to_csv("data/processed/stanford_crime_clean_geocoded_categorized.csv")
-
 
 def create_sentences():
     base_dir = Path(__file__).parents[1]
@@ -93,6 +98,8 @@ def create_sentences():
     prev_data = None
     sentences = []
 
+    # Iterate through our crime_categories.csv file and calculate a percentage 
+    # increase or decrease in each crime type from year to year. 
     for index, row in df.iterrows():
         year = row["Year"]
         data = {category: int(row[category]) for category in df.columns if category != "Year"}
@@ -105,13 +112,17 @@ def create_sentences():
                         pct_change = ((value - prev_value) / prev_value) * 100
                     else:
                         pct_change = 0
+                    # detects if percentage is an increase or decrease in that type of crime
                     change_type = "increase" if pct_change > 0 else "decrease"
+
+                    # crafts a sentence like this: "2022: 55% increase in theft." and saves it to the list of sentences. 
                     stat_sentence = f"{year}: {pct_change: .2f}% {change_type} in {category}"  
                     sentences.append(stat_sentence)  
             
         prev_year = year
         prev_data = data
 
+    # Write the sentences to the docs/data folder as a json file to be displayed on the web app. 
     output_file = os.path.join(base_dir, "docs/data/stat_sentences.json")
     with open(output_file, "w") as f:
         json.dump(sentences, f)

@@ -1,7 +1,12 @@
 import csv
 import pandas as pd
 import os
-
+"""
+This merge() function is very specific to our dataset.  
+After extracting the data from the pdf, there were empty cells 
+because there were multiple offenses listed for one incident. This is our way of fixing it. 
+If this is not a problem for your dataset, then do not add this function to your pipeline.
+"""
 def merge():
     all_data = []
     reader = csv.DictReader(open('data/raw/stanford_crime.csv'))
@@ -38,7 +43,7 @@ def clean_date():
     from datetime import datetime
     for iterate, row in df.iterrows():
         entry = row["reported"]
-    # for iterate, entry in df["reported"].iteritems():
+        # the try except statement was added because some data points were incomplete
         try: 
             date_object = datetime.strptime(entry, "%m/%d/%Y %H:%M")
             df.loc[iterate, "date"] = date_object.strftime("%m/%d/%Y")

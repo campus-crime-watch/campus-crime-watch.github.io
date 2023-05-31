@@ -9,6 +9,8 @@ from csv_to_geojson import to_geojson
 2: merge empty rows where nature is related to an entry above
 3: clean the date and time (split date & time into different columns)
 4: geocode the locations
+5: create crime categories, crime counts, and summary statistic sentences
+6: write all this data to a json file to be used on the map / web app
 """
 
 def main():

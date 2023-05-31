@@ -1,7 +1,6 @@
 import csv
 import json
 import time
-
 import requests
 
 # old function that cleaned up results from manual. storing here in case of future use.
