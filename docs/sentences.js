@@ -17,47 +17,45 @@ const config = {
 fetch('data/stat_sentences.json')
   .then(response => response.json())
   .then(data => {
-    // Sort the data in descending order based on percentage (parsed as numbers 1st)
-    data.sort((a, b) => {
-      const percentageA = parseFloat(a.split(':')[1].trim().split('%')[0]);
-      const percentageB = parseFloat(b.split(':')[1].trim().split('%')[0]);
-      return percentageB - percentageA;
-    });
-
     const jsonContent = document.getElementById('json-content');
 
-    data.slice(0, 6).forEach(sentence => {
-      const parts = sentence.split(':');
-      const year = parts[0].trim();
-      const details = parts[1].trim();
-      const [percentage, restOfSentence] = details.split('%');
+    data.forEach(sentence => {
+      const parts = sentence.split(' ');
+      const count = parts[2];
+      const category = parts.slice(3, parts.length - 2).join(' ');
 
       const sentenceElement = document.createElement('p');
       sentenceElement.classList.add('json-sentence');
-      const yearElement = document.createElement('span'); 
-      const percentageElement = document.createElement('span'); 
-      const restOfSentenceElement = document.createElement('span'); 
+      const countElement = document.createElement('span');
+      const categoryElement = document.createElement('span');
 
-      yearElement.textContent = year + ': ';
-      percentageElement.textContent = percentage.trim() + '% ';
-      restOfSentenceElement.textContent = restOfSentence.trim();
+      countElement.textContent = count;
+      categoryElement.textContent = category;
 
-      percentageElement.classList.add('emphasis');
+      countElement.classList.add('emphasis');
+      categoryElement.classList.add('emphasis');
 
-      sentenceElement.appendChild(yearElement);
-      sentenceElement.appendChild(percentageElement);
-      sentenceElement.appendChild(restOfSentenceElement);
+      sentenceElement.appendChild(document.createTextNode('There were '));
+      sentenceElement.appendChild(countElement);
+      sentenceElement.appendChild(document.createTextNode(' reported '));
+      sentenceElement.appendChild(categoryElement);
+      sentenceElement.appendChild(document.createTextNode(' in ' + parts[parts.length - 1] + '.'));
 
       jsonContent.appendChild(sentenceElement);
       jsonContent.appendChild(document.createElement('br'));
     });
+  })
+  .catch(error => {
+    console.log('Error:', error);
   });
-
+   
 const scroll = ScrollReveal(config);
 const left = document.querySelectorAll(".text-holder.left");
+const sentence = document.querySelectorAll(".json-sentence");
 const filter = document.querySelectorAll(".input-wrapper");
 const graph = document.getElementById("my_dataviz");
 
 scroll.reveal(left, {delay: 1000});
+scroll.reveal(sentence, {delay: 1000});
 scroll.reveal(graph, {delay: 1500});
 scroll.reveal(filter, {delay: 2000});
