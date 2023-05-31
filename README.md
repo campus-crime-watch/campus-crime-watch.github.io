@@ -100,8 +100,10 @@ Below is an overview of the project structure:
 We found it the easiest to host the web app through [GitHub Pages](https://pages.github.com/) so that the app is hosted directly from the existing GitHub repository, reflecting the latest changes and commits.
 
 For a step-by-step guide and more information, please consult the [official documentation](https://docs.github.com/en/pages). The following are some crucial points for the app to go live:
-* Make sure the name of the repository from which the web app is gping to be deployed is `*organization_name*.github.io` where *organization_name*  matches the name of your organization precisely. In our case, since our organization name is `campus-crime-watch`, we named the repo `campus-crime-watch.github.io`. This way, you'll have a nice and clean URL. 
-*   
+* Make sure the name of the repository from which the web app is gping to be deployed is ***organization_name.github.io*** where ***organization_name*** matches the name of your organization precisely. In our case, since our organization name is `campus-crime-watch`, we named the repo `campus-crime-watch.github.io`. This way, you'll have a nice and clean URL. 
+* To keep it clean, our web app is deployed from a folder in the main branch of the repo called [`docs`]
+
+
 ## Building The Map
 
 ## Creating The News Ticker
