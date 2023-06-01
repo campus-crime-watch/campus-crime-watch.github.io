@@ -671,7 +671,7 @@ nav {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
   .data {
@@ -837,15 +837,21 @@ nav {
 }
 
 #json-content{
-  width: 45%;
+  flex-grow: 1
+}
+
+.json-sentence {
+  white-space: nowrap; 
+  overflow: visible;
 }
 
 .json-sentence:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 0;
 }
 
 .text-holder.left{
   float: left;
+  width: 70%;
   text-align: left;
   justify-content: flex-start;
   align-items: flex-start;
@@ -858,15 +864,29 @@ nav {
   align-items: right;
 }
 
+.text-container {
+  width: 100%;
+  float: left;
+  text-align: left;
+  align-items: flex-start;
+  margin-left: -6.5%;
+  margin-top: 40px;
+  position: relative;
+}
+
 html.sr .load-hidden{
   visibility: hidden;
 }
 
+.rest-of-sentence {
+  font-size: 1em; 
+}
+
 .emphasis {
-font-weight: bold;
-color: rgb(187 71 71);
-font-size: 2em;
-position: relative;
+  font-weight: bold;
+  color: rgb(187 71 71);
+  font-size: 1.1em;
+  position: relative;
 }
 
 footer {
