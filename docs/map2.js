@@ -12,7 +12,7 @@ function initializeMap2() {
     const dataSource = 'https://campus-crime-watch.github.io/data/stanford_crime.geojson'
     
     // a start date 
-    let pastDate = new Date();
+    let pastDate = new Date("April 18, 2023 00:00:00");
     pastDate.setDate(pastDate.getDate() - 60); 
     let startDate = null;
     let endDate = null;
@@ -22,7 +22,7 @@ function initializeMap2() {
     let datePicker = flatpickr("#dateRangePicker", {
       mode: "range",
       minDate: "2019-01",
-      maxDate: "today"
+      maxDate: "2023-04-30"
     });
 
     // CUSTOM Hide the date picker and "Apply" button after selection
@@ -250,13 +250,11 @@ function initializeMap2() {
     const popup = new mapboxgl.Popup({
       closeButton: false,
       closeOnClick: false,
-      offset: [0, -15],
       className: 'custom-popup'
     })
 
     map2.on('mouseenter', 'unclustered-point', (event) => {
         map2.getCanvas().style.cursor = 'pointer';
-      // If the user clicked on one of your markers, get its information.
         const features = map2.queryRenderedFeatures(event.point, {
             layers: ['unclustered-point']
         });
@@ -268,11 +266,14 @@ function initializeMap2() {
         popup.setLngLat(feature.geometry.coordinates)
         .setHTML(
           `<p> 
-            <b>Crime Type</b>: ${feature.properties.category.replace(/["\[\]]/g, '')}<br> 
+            <b>Crime Type</b>: ${feature.properties.category
+              // .filter(category => category !== "Non-Clery Act")
+              .replace(/["\[\]]/g, '')
+            }<br> 
             <b>Description</b>: ${feature.properties.nature.charAt(0).toUpperCase() + feature.properties.nature.slice(1)}<br> 
             <b>On Campus?</b>: ${feature.properties['on_campus?']}<br>
-            <b>Date</b>: ${feature.properties.date}<br>
-            <b>Status</b>: ${feature.properties.disposition}</p>`
+            <b>Date Reported</b>: ${feature.properties.date}<br>
+            <b>Case Status</b>: ${feature.properties.disposition}</p>`
         ).addTo(map2);
   });
   

@@ -47,7 +47,7 @@ nav {
   .title {
     color: #7DB587;
     font-size: 24px;
-    margin-left: 55px;
+    margin-left: 45px;
     font-weight: 600;
     display: flex;
     align-items: left;
@@ -96,7 +96,7 @@ nav {
 
 .progress-container {
   position:fixed;
-  top:55px;
+  top:59px;
   z-index: 5;
   width: 100%;
   height: 8px;
@@ -120,16 +120,6 @@ nav {
   user-select: none;
 }
   
-  #menuToggle a {
-    text-decoration:none;
-    color: #232323;
-    transition: color 0.3s ease;
-  }
-
-  #menuToggle a:hover {
-    color:#7DB587;
-    ;
-  }
 
   #menuToggle input
   {
@@ -188,7 +178,6 @@ nav {
   transform: rotate(-45deg) translate(0, -1px);
   }
 
-
   #menu {
     position: fixed;
     width: 200px;
@@ -207,7 +196,6 @@ nav {
   }
 
   #menu li {
-    padding: 25px 30px;
     margin: 0;
     font-size: 17px;
     text-align: left;
@@ -217,65 +205,25 @@ nav {
     background-color: #F5F1E0;
   }
 
+  #menu li:hover {
+    background-color:#d4cdb2;
+    cursor: pointer;
+  }
+
+  #menu a {
+    display:block;
+    padding: 10px 25px;
+    text-decoration:none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+
+
+
   #menuToggle input:checked ~ ul {
   transform: none;
   }
-/* scroller */ 
-.scroll-indicator {
-  width: 40px;
-  height: 60px;
-  border: 2px solid rgba(125, 181, 129, 0.6);
-  border-radius: 50px;
-  position: fixed;
-  bottom: 20px;
-  right:20px;
-  box-shadow: 0px 0px 35px -5px rgba(100, 181, 129, 1);
-  z-index: 1;
-}
 
-  .scroll-indicator::before {
-    content: '';
-    position: absolute;
-    top: .5em;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: rgba(125, 181, 129, 0.6);
-    border-radius: 50%;
-    transform: translate(-50%, 0);
-    animation: scrollAnim 1.8s .5s infinite ease-in;
-    box-shadow: 0px 0px 35px -5px rgba(100, 181, 129, 1);
-  }
-
-  .scroll-indicator.stop::before {
-    animation-play-state: paused; 
-  }
-
-  /* Animation */
-  @keyframes scrollAnim {
-    0% {
-      transform: translate(-50%, 0) rotateX(0);
-      opacity: 0;
-    }
-
-    5% {
-      opacity: .5;
-    }
-
-    15% {
-      opacity: 1;
-    }
-
-    90%,
-    100% {
-      opacity: 0;
-    }
-
-    100% {
-      transform: translate(-50%, 30px) rotateX(30deg);
-    }
-  }
-  /* Animation */
 
 
 #landing-page {
@@ -303,6 +251,7 @@ nav {
 /* News Ticker */
 .news-ticker {
   margin: 62px auto;
+  top:5px;
   width: 100%;
   height: 30px;
   position: relative;
