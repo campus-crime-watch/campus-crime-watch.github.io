@@ -229,24 +229,42 @@ nav {
 #landing-page {
     text-align: center;
     margin: 50px auto;
-    max-width: 800px;
+    max-width: 1200px;
     position:relative;
     top: 50px;
   }
+
+  #landing-page #titles {
+    max-width: 800px;
+    margin:auto;
+  }
  
-  #landing-page h1 {
+  #landing-page #titles h1 {
     font-size: 80px;
+    max-width: 800px;
     line-height: 1;
     margin-top: 10px;
     margin-bottom: 10px;
     color:#7DB587
   }
-  #landing-page p {
+  #landing-page #titles p {
     font-size: 20px;
     line-height: 1.5;
     color: #4C5357;
     margin-bottom: 0;
     text-align: center;
+  }
+
+  #landing-page #appInfo {
+    max-width: 1200px;
+  }
+  #landing-page #appInfo p {
+    font-size: 15px;
+    font-weight: 350;
+  }
+  #landing-page #appInfo p a{
+    font-weight: 600;
+    color: #4C5357;
   }
 
 /* News Ticker */
@@ -301,7 +319,7 @@ nav {
 /* MAP */ 
 .map {
   position: relative;
-  margin: 200px 0 100px;
+  margin: 140px 0 100px;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -324,41 +342,6 @@ nav {
   height: 700px;
   margin: 0 auto;
 }
-
-/* #tabs {
-  position: absolute;
-  top: 0;
-  left: 50%; 
-  transform: translateX(-50%);
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  width: 100%; 
-}
-
-.tab {
-  display: block;
-  background-color: #ffffff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  flex-grow: 1;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  transition: background-color 0.3s ease;
-}
-
-.tab:hover {
-  background-color: #7DB581;
-  color:#FAF8F0;
-
-}
-
-.tab.active {
-  background: #7DB581;
-  color: #FAF8F0;
-} */
 
 /* hiding cluster map and switch tabs */
 
