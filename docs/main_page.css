@@ -283,7 +283,7 @@ nav {
     margin: 50px auto;
     max-width: 800px;
     position:relative;
-    top:120px;
+    top: 50px;
   }
  
   #landing-page h1 {
@@ -298,6 +298,7 @@ nav {
     line-height: 1.5;
     color: #4C5357;
     margin-bottom: 0;
+    text-align: center;
   }
 
 /* News Ticker */
