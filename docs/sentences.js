@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
       data.forEach(sentence => {
         const parts = sentence.split(' ');
         const count = parts[2];
-        const category = parts.slice(3, parts.length - 2).join(' ');
+        const categoryParts = parts.slice(3, parts.length - 2);
+        const category = categoryParts.join(' ');
 
         const sentenceElement = document.createElement('p');
         sentenceElement.classList.add('json-sentence');
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const categoryElement = document.createElement('span');
 
         countElement.textContent = count;
-        categoryElement.textContent = category;
+        categoryElement.textContent = ' ' + category;
 
         countElement.classList.add('emphasis');
         categoryElement.classList.add('emphasis');
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         sentenceElement.appendChild(document.createTextNode('There were '));
         sentenceElement.appendChild(countElement);
-        sentenceElement.appendChild(document.createTextNode(' reported '));
+
         sentenceElement.appendChild(categoryElement);
         sentenceElement.appendChild(document.createTextNode(' in ' + parts[parts.length - 1]));
 
