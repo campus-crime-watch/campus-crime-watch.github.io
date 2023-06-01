@@ -25,6 +25,8 @@
       <ul>
         <li><a href="clery_act.html">Clery Act</a></li>
         <li><a href="about_page.html">Recreate this site</a></li>
+        <!-- the below code will be added once other students 
+           create this site for their college campus --> 
         <!-- <li><a href="other_campus.html">Other Campuses</a></li> -->
       </ul>
     </nav>
@@ -55,12 +57,15 @@
             <li><a href="#mapSection">Map Tool</a></li>
             <li><a href="#dataSection">Data</a></li>
             <li><a href="#narrativeSection">Student voices</a></li>
+            <!--the below section can be added if you want students to submit crime tips 
+              to you about incidents they see on your site-->
             <!--<a href="#tipsSection"><li>Your Story</li></a> -->
             <li><a href="#inspoSection">About Us</a></li>
           </ul>
       </div>
     </div>
 
+  <!--This is where we linked the news ticker-->
     <div class="news-ticker">
       <ul id="ticker"></ul>
       <script src="news_ticker.js" defer></script>
@@ -71,7 +76,11 @@
     <section id="landing-page">
       <p>welcome to</p>
       <h1>Campus Crimewatch</h1>
-      <p>where college campus crime is made accessible</p>
+      <p><em>where college campus crime is made accessible</em></p>
+      <br>
+      <br>
+      <p>The dataset on this web app are daily crimes reported at Stanford University from January 1, 2019 to April 18, 2023</p>
+      <p>This data was manually collected and there were only about 3 months of recorded crimes at the time. Therefore, the data for 2023 is incomplete.</p>
     </section>
 
     <section class="map" id="mapSection">
@@ -103,14 +112,17 @@
     <script src="map2.js" defer></script>
 
   
+  <!--Here is the section for the summary statistic sentences & the histogram-->
     <section id="dataSection">
       <div class="data-background">
         <div class="data-container">
+          <div class="text-container">
           <section class="data" id="data_1">
             <div class = "text-holder left">
                 <div id="json-content"></div>
                 <script type="module" src="sentences.js"></script>
             </div>
+          </div>
             <div class = "text-holder right">
               <div id="my_dataviz"></div>
               <div class="tooltip"></div>
@@ -128,24 +140,47 @@
       </div>      
     </section>
     
+    <!--Here is the section for the student quotes-->
     <section id="narrativeSection">
       <div class="story-container">
         <div class="story">
           <h2> Student voices </h2>
-            <p>“We don't feel protected by the school,” UC Berkeley sophomore Oski Bear said. 
-          Oski Bear was walking home on the southside of campus at 7 p.m. when he was robbed at gunpoint. </p>
-            <br>
-            <p>“I shouldn't feel unsafe on campus,” Bear said.</p>
+            <p>
+              “You get the emails and crime alerts [and] keep a mental note of these alerts”' Stanford sophomore 
+              Matt Villaysack said, when asked how he found out about campus crime. Villaysack isn’t the only 
+              student who resonated with the informal, less organized method of getting informed about safety on 
+              campus. 
+            </p>
+            <p> Stanford undergrad Ashna Khetan mentioned a similar method of staying up to date: “the alert 
+              thing that happens with our email, and if I miss it then I see it on Fizz”, a college community 
+              discussion app. For larger scale crimes, Khetan says “we hear about it for a few days.”
+            </p>
+            <p> 
+              Other undergrads recognize that this method of informing students leaves crimes under the radar.
+            </p>
+            <p class="quote">
+              “It can be harmful when people aren’t informed, especially on sexual violence reports that 
+              go unacknowledged by people.”
+            </p>
+            <p> says Lexi Kupor, another Stanford sophomore. Villaysack agreed with this sentiment, 
+              and voiced that as a student living on campus,            
+            </p>
+            <p class="quote">  
+              “It would be useful to see what crimes are likely to happen.”            
+            </p>
+            <p> 
+              After seeing Campus Crimewatch, he shared his thoughts on how it provides an encompassing 
+              overview of campus crime:
+            </p>
+            <p class="quote"> 
+              “It's interesting to look at and be aware of, especially if you’re going out for parties and want 
+              to know what areas are safe on campus to walk around.”
+            </p>
         </div>
       </div>
     </section>
 
-    <section id="tipsSection">
-      <div id="tips">
-
-      </div>
-    </section>
-
+  <!--Here is the section for our mission statement-->
     <section id="inspoSection">
         <h2> Why we made Campus Crimewatch </h2>
         <p>
@@ -171,6 +206,7 @@
         </i>
     </section>
 
+    <!--Make sure to link to your university's public safety resources!-->
     <section id="resource_sect">
       <p>
         <em>If you need to report a crime or public safety concern, 

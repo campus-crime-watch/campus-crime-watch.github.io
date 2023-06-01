@@ -1,3 +1,5 @@
+// set configurations for ScrollReveal
+// you can modify these to your liking & checkout their documentation to learn more about each feature
 const config = {
     delay: 500,
     duration: 500,
@@ -14,50 +16,63 @@ const config = {
     }
 };
 
-fetch('data/stat_sentences.json')
-  .then(response => response.json())
-  .then(data => {
-    // Sort the data in descending order based on percentage (parsed as numbers 1st)
-    data.sort((a, b) => {
-      const percentageA = parseFloat(a.split(':')[1].trim().split('%')[0]);
-      const percentageB = parseFloat(b.split(':')[1].trim().split('%')[0]);
-      return percentageB - percentageA;
-    });
+document.addEventListener('DOMContentLoaded', function () {
 
-    const jsonContent = document.getElementById('json-content');
+  const jsonContent = document.getElementById('json-content');
 
-    data.slice(0, 6).forEach(sentence => {
-      const parts = sentence.split(':');
-      const year = parts[0].trim();
-      const details = parts[1].trim();
-      const [percentage, restOfSentence] = details.split('%');
+  //grab sentences that we created in crime_category.py from json file
+  fetch('data/stat_sentences.json')
+    .then(response => response.json())
+    .then(data => {
 
-      const sentenceElement = document.createElement('p');
-      sentenceElement.classList.add('json-sentence');
-      const yearElement = document.createElement('span'); 
-      const percentageElement = document.createElement('span'); 
-      const restOfSentenceElement = document.createElement('span'); 
+      //iterate through each sentence and split it into its respective parts
+      data.forEach(sentence => {
+        const parts = sentence.split(' ');
+        const count = parts[2];
+        const categoryParts = parts.slice(3, parts.length - 2);
+        const category = categoryParts.join(' ');
 
-      yearElement.textContent = year + ': ';
-      percentageElement.textContent = percentage.trim() + '% ';
-      restOfSentenceElement.textContent = restOfSentence.trim();
+        const sentenceElement = document.createElement('p');
+        sentenceElement.classList.add('json-sentence');
+        const countElement = document.createElement('span');
+        const categoryElement = document.createElement('span');
 
-      percentageElement.classList.add('emphasis');
+        //get the count (number) from each sentence and the crime category
+        countElement.textContent = count;
+        categoryElement.textContent = ' ' + category;
 
-      sentenceElement.appendChild(yearElement);
-      sentenceElement.appendChild(percentageElement);
-      sentenceElement.appendChild(restOfSentenceElement);
+        // create CSS classes so we can style the number, crime category, and rest of sentence seperately 
+        countElement.classList.add('emphasis');
+        categoryElement.classList.add('emphasis');
+        sentenceElement.classList.add('rest-of-sentence');
 
-      jsonContent.appendChild(sentenceElement);
-      jsonContent.appendChild(document.createElement('br'));
-    });
+        //reconstruct the sentence back to one piece to be displayed as a sentence instead of individual parts 
+        sentenceElement.appendChild(document.createTextNode('There were '));
+        sentenceElement.appendChild(countElement);
+        sentenceElement.appendChild(categoryElement);
+        sentenceElement.appendChild(document.createTextNode(' in ' + parts[parts.length - 1]));
+
+        //add the complete sentence to our log & insert breaks between each sentence so it's not displayed in a giant chunk
+        jsonContent.appendChild(sentenceElement);
+        jsonContent.appendChild(document.createElement('br'));
+        jsonContent.appendChild(document.createElement('br'));
+        jsonContent.appendChild(document.createElement('br'));
+      });
+    })
+
+    .catch(error => {
+      console.log('Error:', error);
+
   });
+});
 
+// create variables for the ScrollReveal effects
 const scroll = ScrollReveal(config);
 const left = document.querySelectorAll(".text-holder.left");
-const filter = document.querySelectorAll(".input-wrapper");
 const graph = document.getElementById("my_dataviz");
+const filter = document.querySelectorAll(".input-wrapper");
 
+// use ScrolReveal to show each element in succession as you scroll
 scroll.reveal(left, {delay: 1000});
 scroll.reveal(graph, {delay: 1500});
-scroll.reveal(filter, {delay: 2000});
+scroll.reveal(filter, {delay: 1750});

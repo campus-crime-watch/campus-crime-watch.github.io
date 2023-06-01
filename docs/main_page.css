@@ -231,7 +231,7 @@ nav {
     margin: 50px auto;
     max-width: 800px;
     position:relative;
-    top:120px;
+    top: 50px;
   }
  
   #landing-page h1 {
@@ -246,6 +246,7 @@ nav {
     line-height: 1.5;
     color: #4C5357;
     margin-bottom: 0;
+    text-align: center;
   }
 
 /* News Ticker */
@@ -620,7 +621,7 @@ nav {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
   .data {
@@ -645,11 +646,12 @@ nav {
 /* Year, Month, Week, Day buttons */
 .input-wrapper {
   display: flex;
-  justify-content: center; /* Add this line to center the items */
+  justify-content: center; 
+  padding-bottom: 45px;
 }
 
 #my_dataviz {
-  margin-top: 10px;
+  margin-top: 35px;
   position: relative;
 }
 
@@ -731,6 +733,20 @@ nav {
     line-height: 1.5em;
   }
 
+  .story .quote {
+    color:#7DB581;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 18px;
+    max-width: 700px;
+    padding-left: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    line-height: 1.5em;
+  }
+
   #inspoSection {
     text-align: center;
   }
@@ -772,15 +788,21 @@ nav {
 }
 
 #json-content{
-  width: 45%;
+  flex-grow: 1
+}
+
+.json-sentence {
+  white-space: nowrap; 
+  overflow: visible;
 }
 
 .json-sentence:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 0;
 }
 
 .text-holder.left{
   float: left;
+  width: 70%;
   text-align: left;
   justify-content: flex-start;
   align-items: flex-start;
@@ -793,15 +815,29 @@ nav {
   align-items: right;
 }
 
+.text-container {
+  width: 100%;
+  float: left;
+  text-align: left;
+  align-items: flex-start;
+  margin-left: -6.5%;
+  margin-top: 55px;
+  position: relative;
+}
+
 html.sr .load-hidden{
   visibility: hidden;
 }
 
+.rest-of-sentence {
+  font-size: 1em; 
+}
+
 .emphasis {
-font-weight: bold;
-color: rgb(187 71 71);
-font-size: 2em;
-position: relative;
+  font-weight: bold;
+  color: rgb(187 71 71);
+  font-size: 1.1em;
+  position: relative;
 }
 
 footer {

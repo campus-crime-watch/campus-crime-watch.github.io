@@ -1,19 +1,18 @@
-// create data_set
-const data1 = [
-    {group: "A", value: 4},
-    {group: "B", value: 16},
-    {group: "C", value: 8}
- ];
- /*
- {
-   A: count,
-   B: count}
- */
- // set the dimensions and margins of the graph
+// set the dimensions and margins of the graph
  const margin = {top: 30, right: 30, bottom: 70, left: 60},
      width = 460 - margin.left - margin.right,
      height = 400 - margin.top - margin.bottom;
  
+function getWidth() {
+  return Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+}
+
  // append the svg object to the body of the page
  const svg = d3.select("#my_dataviz")
    .append("svg")
@@ -88,8 +87,6 @@ async function updateOption(selectedOption) {
     features = data["features"]
     console.log(features)
 
-    // histogram_data = {}
-
     hisogram_data = buildHistogramData(features, selectedOption)
 
     // turn histogram data into preffered format
@@ -147,11 +144,11 @@ function updateHistogram(data, selectedOption) {
   svg.selectAll("rect")
     .on("mousemove", function(event, d) {
       // Show the tooltip and update its position on mousemove
-      var [x, y] = d3.pointer(event);
+      var [x, y] = d3.pointer(event, svg.node());
 
       tooltip.style("opacity", 1)
         .html(d.group + ": " + d.value + " crimes")
-        .style("left", (x+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+        .style("left", (x+420) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
         .style("top", (y) + "px");
     })
     .on("mouseout", function() {
