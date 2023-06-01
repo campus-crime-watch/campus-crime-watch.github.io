@@ -3,7 +3,6 @@
   <head>
     <link href="main_page.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap" rel="stylesheet">  
-    <script src="scroll.js" defer ></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
@@ -55,13 +54,13 @@
           <span></span>
           <span></span>
           <ul id="menu">
-            <a href="#mapSection"><li>Map Tool</li></a>
-            <a href="#dataSection"><li>Data</li></a>
-            <a href="#narrativeSection"><li>Student voices</li></a>
+            <li><a href="#mapSection">Map Tool</a></li>
+            <li><a href="#dataSection">Data</a></li>
+            <li><a href="#narrativeSection">Student voices</a></li>
             <!--the below section can be added if you want students to submit crime tips 
               to you about incidents they see on your site-->
             <!--<a href="#tipsSection"><li>Your Story</li></a> -->
-            <a href="#inspoSection"><li>About Us</li></a>
+            <li><a href="#inspoSection">About Us</a></li>
           </ul>
       </div>
     </div>
@@ -107,64 +106,11 @@
         <nav id="filter-group" class="filter-group"></nav>
       </div>
 
-        <!-- <div class = 'dropdown' id="time-period" onchange="updateMap()">
-              <div class="option" data-value="730">Two Years</div>
-              <div class="option" data-value="1095">Three Years</div>
-              <div class="option" data-value="custom">Custom</div>
-          <div class = 'options'>
-            <option value="30">Last 30 Days</option>
-            <option value="90">Last 90 Days</option>
-            <option value="365">Current Year</option>
-            <option value="730">Two Years</option>
-            <option value="1095">Three Years</option>
-            <option value="custom">Custom</option>
-            <option value="all">All</option>
-          </div>
-        </div> -->
     </section>
 
     <script src="map1.js" defer></script>
     <script src="map2.js" defer></script>
 
-
-    <!-- <script> THE TAB CONTROLS
-
-      <div id="tabs">
-        <button class="tab active" data-map="mapbox1">Map with Clusters</button>
-        <button class="tab" data-map="mapbox2">Map with Filters</button>
-      </div>
-
-      document.addEventListener('DOMContentLoaded', (event) => {
-        document.querySelectorAll('.tab').forEach((tab) => {
-            tab.addEventListener('click', (event) => {
-                const mapId = event.target.dataset.map;
-
-                // Show the selected map and hide the others
-                document.querySelectorAll('.mapbox').forEach((mapbox) => {
-                    if (mapbox.id === mapId) {
-                        mapbox.classList.add('active');
-                    } else {
-                        mapbox.classList.remove('active');
-                    }
-                });
-                    if (mapId === 'mapbox1') {
-                        map1.resize();
-                    } else {
-                        map2.resize();
-                    }
-
-                // Highlight the selected tab and unhighlight the others
-                document.querySelectorAll('.tab').forEach((tab) => {
-                    if (tab.dataset.map === mapId) {
-                        tab.classList.add('active');
-                    } else {
-                        tab.classList.remove('active');
-                    }
-                });
-              });
-          });
-        });
-      </script> -->
   
   <!--Here is the section for the summary statistic sentences & the histogram-->
     <section id="dataSection">
