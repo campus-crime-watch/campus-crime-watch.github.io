@@ -881,13 +881,13 @@ html.sr .load-hidden{
 }
 
 .rest-of-sentence {
-  font-size: 1em; 
+  font-size: 1.1em; 
 }
 
 .emphasis {
   font-weight: bold;
   color: rgb(187 71 71);
-  font-size: 1.1em;
+  font-size: 1.3em;
   position: relative;
 }
 
