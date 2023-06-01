@@ -64,36 +64,36 @@ Below is an overview of the project structure:
 ├── README.md
 ├── data
 │   ├── processed (Raw data that has been transformed)
-        ├── e.g. `daily_crime_clean.csv`
-        └── `ready_for_json.csv`
+        ├── e.g. daily_crime_clean.csv
+        └── ready_for_json.csv
 │   └── raw (Copy of original source data)
-        └── e.g. `daily_crime_raw.pdf`
+        └── e.g. daily_crime_raw.pdf
 ├── docs (All the files that generate the web app - HTML, CSS, JavaScript)
     └── data (json files full of data used by JavaScript files)
-        ├── `news_feed.json`
-        ├── `stat_sentences.json`
-        └── `crime.geojson`
-    ├── `index.html`
-    ├── `about_page.html`
-    ├── `clery_act.html`
-    ├── `main_page.css`
-    ├── `data_viz.js`
-    ├── `histogram.js`
-    ├── `map1.js`
-    ├── `map2.js`
-    ├── `news_ticker.js`
-    ├── `scroll.js`
-    └── `sentences.js`
+        ├── news_feed.json
+        ├── stat_sentences.json
+        └── crime.geojson
+    ├── index.html
+    ├── about_page.html
+    ├── clery_act.html
+    ├── main_page.css
+    ├── data_viz.js
+    ├── histogram.js
+    ├── map1.js
+    ├── map2.js
+    ├── news_ticker.js
+    ├── scroll.js
+    └── sentences.js
 ├── notebooks (Jupyter notebooks checking the quality of our dataset)
-    └── `data_quality.ipynb`
+    └── data_quality.ipynb
 ├── scripts (Number-prefixed data processing scripts)
-│   ├── `extract.py`
-    ├── `pre_process.py`
-    ├── `clean_geocode.py`
-    ├── `crime_category.py`
-    ├── `csv_to_geojson.py`
-    ├── `feed.py`
-    └── `run_pipeline.py`
+│   ├── extract.py
+    ├── pre_process.py
+    ├── clean_geocode.py
+    ├── crime_category.py
+    ├── csv_to_geojson.py
+    ├── feed.py
+    └── run_pipeline.py
 ```
 
 ## Making The Web App Go Live
