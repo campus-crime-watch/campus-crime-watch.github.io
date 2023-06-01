@@ -44,15 +44,15 @@ You can create a data pipeline that will:
   6. export all this data to a geojson file for the interactive map
 
 **How the data pipeline works**
-* [`extract.py`] extracts the crime data from the pdf file using a Python module called pdfplumber. If your school gave you data in another format, like a csv file or an API, you will have to grab the data another way. Regardless, this is a step and script that you must have in the pipeline. 
+* `extract.py` extracts the crime data from the pdf file using a Python module called pdfplumber. If your school gave you data in another format, like a csv file or an API, you will have to grab the data another way. Regardless, this is a step and script that you must have in the pipeline. 
 
-* [`pre_process.py`] cleans the extracted data. Column headers will be edited to snakecase. We will seperate the date and time from the reported date column into their own seperate columns. 
+* `pre_process.py` cleans the extracted data. Column headers will be edited to snakecase. We will seperate the date and time from the reported date column into their own seperate columns. 
 
-* [`clean_geocode.py`] creates exact, standardized addresses that can be used in the map.
+* `clean_geocode.py` creates exact, standardized addresses that can be used in the map.
 
-* [`crime_category.py`] uses the geocoded crime dataset to create counts of the general categories of crime from the Clery Act. This is our way of standardizing the incident names to get general counts of each crime without going through the massive pain and headache of editing each incident name. Then, sentences are created that describe the percent change in each crime category from year to year. These sentences are written to a json file to be displayed on the web app. 
+* `crime_category.py` uses the geocoded crime dataset to create counts of the general categories of crime from the Clery Act. This is our way of standardizing the incident names to get general counts of each crime without going through the massive pain and headache of editing each incident name. Then, sentences are created that describe the percent change in each crime category from year to year. These sentences are written to a json file to be displayed on the web app. 
 
-* [`csv_to_geojson.py`] takes the crime categories created above and the geo locations and writes them to a json file in the docs/data folder to be used in the map. 
+* `csv_to_geojson.py` takes the crime categories created above and the geo locations and writes them to a json file in the docs/data folder to be used in the map. 
 
 ## Files & Directories
 
@@ -64,36 +64,36 @@ Below is an overview of the project structure:
 ├── README.md
 ├── data
 │   ├── processed (Raw data that has been transformed)
-        ├── e.g. daily_crime_clean.csv
-        └── ready_for_json.csv
-│   └── raw  (Copy of original source data)
-        └── e.g. daily_crime_raw.pdf
+        ├── e.g. `daily_crime_clean.csv`
+        └── `ready_for_json.csv`
+│   └── raw (Copy of original source data)
+        └── e.g. `daily_crime_raw.pdf`
 ├── docs (All the files that generate the web app - HTML, CSS, JavaScript)
     └── data (json files full of data used by JavaScript files)
-        ├── news_feed.json
-        ├── stat_sentences.json
-        └── crime.geojson
-    ├── index.html
-    ├── about_page.html
-    ├── clery_act.html
-    ├── main_page.css
-    ├── data_viz.js
-    ├── histogram.js
-    ├── map1.js
-    ├── map2.js
-    ├── news_ticker.js
-    ├── scroll.js
-    └── sentences.js
+        ├── `news_feed.json`
+        ├── `stat_sentences.json`
+        └── `crime.geojson`
+    ├── `index.html`
+    ├── `about_page.html`
+    ├── `clery_act.html`
+    ├── `main_page.css`
+    ├── `data_viz.js`
+    ├── `histogram.js`
+    ├── `map1.js`
+    ├── `map2.js`
+    ├── `news_ticker.js`
+    ├── `scroll.js`
+    └── `sentences.js`
 ├── notebooks (Jupyter notebooks checking the quality of our dataset)
-    └── data_quality.ipynb
+    └── `data_quality.ipynb`
 ├── scripts (Number-prefixed data processing scripts)
-│   ├── extract.py
-    ├── pre_process.py
-    ├── clean_geocode.py
-    ├── crime_category.py
-    ├── csv_to_geojson.py
-    ├── feed.py
-    └── run_pipeline.py
+│   ├── `extract.py`
+    ├── `pre_process.py`
+    ├── `clean_geocode.py`
+    ├── `crime_category.py`
+    ├── `csv_to_geojson.py`
+    ├── `feed.py`
+    └── `run_pipeline.py`
 ```
 
 ## Making The Web App Go Live
@@ -112,13 +112,13 @@ For a step-by-step guide and more information, please consult the [official docu
 This feature is only possible if your university or the university's newspaper reports on crime on and near the university. Stanford has a daily police blotter, but if your school has reports every other week or so, you will have to adjust your code for that. 
 
 How it works: 
-* [`feed.py`] takes from the news feed and makes a json file ([`news_feed.json`])
-* [`news_ticker.js`] takes from this json file and displays it via the ticker
+* `feed.py` takes from the news feed and makes a json file (`news_feed.json`)
+* `news_ticker.js` takes from this json file and displays it via the ticker
 
 How to make a news ticker:
 * find your university's RSS feed
 * write code that scrapes from the RSS feed and formats crime and safety data into json file format 
-* add a section on your site's html page ([`index.html`]) that links to the news ticker ([`news_ticker.js`])
+* add a section on your site's html page (`index.html`) that links to the news ticker (`news_ticker.js`)
 * turn this into a Github action so that it automatically updates the latest news on your site whenever the RSS feed updates
 
 ## Building The Histogram
@@ -127,11 +127,11 @@ How to make a news ticker:
 These sentences are meant to give a quick overall view of crime on Stanford's campus from year to year. It displays the crime category from each year that had the highest number of reported crimes. 
 
 How it works:
-* the [`create_sentences()`] function from [`crime_category.py`] write sentences for the type of crime with the highest count for each year. It writes these sentences to [`docs/data/stat_sentences.json`]
-* create a JavaScript file ([`sentences.js`])
-* [`sentences.js`] takes the sentences from [`stat_sentences.json`] and splits them into different parts (crime count, crime category, the rest of the sentence) so you can use CSS to add emphasis to the different sections of the sentences when they display. This code then uses the JavaScript library ScrollReveal to have the sentences and histogram appear on the viewpoint in a delayed manner that depends on when the user scrolls down. 
+* the `create_sentences()` function from `crime_category.py` write sentences for the type of crime with the highest count for each year. It writes these sentences to `docs/data/stat_sentences.json`
+* create a JavaScript file (`sentences.js`)
+* `sentences.js` takes the sentences from `stat_sentences.json` and splits them into different parts (crime count, crime category, the rest of the sentence) so you can use CSS to add emphasis to the different sections of the sentences when they display. This code then uses the JavaScript library ScrollReveal to have the sentences and histogram appear on the viewpoint in a delayed manner that depends on when the user scrolls down. 
 
-You can modify the code in [`create_sentences()`] to display different aspects of the data. For instance, if you have 5+ years of data, you can display the percent increase or increase in reported crime over the years, the number of active cases, the locations with the highest reported crimes, etc. 
+You can modify the code in `create_sentences()` to display different aspects of the data. For instance, if you have 5+ years of data, you can display the percent increase or increase in reported crime over the years, the number of active cases, the locations with the highest reported crimes, etc. 
 
 ## Disclaimers
 Remember that our code is made to fit the structure of Stanford's daily crime dataset. If your dataset is formatted differently (e.g. you need to make modifications to pdfplumber because the format is not standardized, there's extra or missing columns in your data, etc.), you should be mindful to modify our code to account for the differences in your dataset. 
