@@ -109,17 +109,20 @@ For a step-by-step guide and more information, please consult the [official docu
 
 ## Creating The News Ticker
 
-This feature is only possible if your university or the university's newspaper reports on crime on and near the university. Stanford has a daily police blotter, but if your school has reports every other week or so, you will have to adjust your code for that. 
+This feature is only possible if your university or the university's newspaper reports on crime on and near the university. Stanford has a daily police blotter and sometimes has 'Crime & Safety' articles, but if your school has reports every other week or so, you will have to adjust your code for that.
+
+The News Ticker checks an online university news site and updates the ticker if there are new relevant articles.
 
 How it works: 
-* `feed.py` takes from the news feed and makes a json file (`news_feed.json`)
-* `news_ticker.js` takes from this json file and displays it via the ticker
+* the `ticker` element in `index.html` has the html for the news ticker, and `main_page.css` gives the horizontal scrolling animation.
+* `feed.py` takes from a RSS news feed (e.g. https://stanforddaily.com/feed/), and parses it using `feedparser`. It then goes through news entries to find relevant news (e.g. news with "Crime & Safety" tag), and takes the `title`, `date`, and `link` and add this information to a dictionary in the format: __. Finally, it writes this data as a json file into `docs/data/news_feed.json`.
+* `news_ticker.js` takes from this json file, and adds to the `ticker` element each news with the title and date, and link to the article.
+* `.github/workflows/feed.yml` allows GitHub to automatically run `feed.py` on schedule (e.g. ours runs every two hours, see `cron: '0 */2 * * *'` in `feed.yml`). By running `feed.py` it updates the `news_feed.json` if there are new articles. 
 
-How to make a news ticker:
-* find your university's RSS feed
-* write code that scrapes from the RSS feed and formats crime and safety data into json file format 
-* add a section on your site's html page (`index.html`) that links to the news ticker (`news_ticker.js`)
-* turn this into a Github action so that it automatically updates the latest news on your site whenever the RSS feed updates
+How to make your own:
+* Find your university newspaper's RSS feed, and replace the https://stanforddaily.com/feed/ link in `feed.py`. We found Stanford's by scrolling down and clicking here:
+* Each RSS feed is formatted differently. Adjust the `feed.py` script to scrape your university's specific news feed for relevant articles. It should ideally take the `title`, `date` and `link`.
+* Adjust the `cron` of `feed.yml` to run on your preffered schedule (we chose every 2 hours). You can use https://crontab.guru/ to pick a schedule.
 
 ## Building The Histogram
 

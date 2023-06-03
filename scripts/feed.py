@@ -7,6 +7,8 @@ entries = NewsFeed.entries
 
 news_dict = {"news" : []}
 
+# how relevant news is found is different for each RSS feed
+# adjust your search code accordingly
 for entry in entries:
     for tag in entry["tags"]:
         if 'Crime & Safety' in tag.values():
