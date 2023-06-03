@@ -94,34 +94,21 @@ def create_sentences():
     path = os.path.join(base_dir, "data/processed/crime_categories.csv")
     df = pd.read_csv(path)
 
-    prev_year = None
-    prev_data = None
     sentences = []
 
-    # Iterate through our crime_categories.csv file and calculate a percentage 
-    # increase or decrease in each crime type from year to year. 
+    # Iterate through the crime_categories.csv file
     for index, row in df.iterrows():
         year = row["Year"]
         data = {category: int(row[category]) for category in df.columns if category != "Year"}
+        
+        # Find the crime category with the highest number of crimes for the current year
+        top_category = max(data, key=data.get)
+        top_category_count = data[top_category]
 
-        if prev_year is not None:
-            for category, value in data.items():
-                prev_value = prev_data.get(category)
-                if prev_value is not None:
-                    if prev_value != 0:
-                        pct_change = ((value - prev_value) / prev_value) * 100
-                    else:
-                        pct_change = 0
-                    # detects if percentage is an increase or decrease in that type of crime
-                    change_type = "increase" if pct_change > 0 else "decrease"
-
-                    # crafts a sentence like this: "2022: 55% increase in theft." and saves it to the list of sentences. 
-                    stat_sentence = f"{year}: {pct_change: .2f}% {change_type} in {category}"  
-                    sentences.append(stat_sentence)  
-            
-        prev_year = year
-        prev_data = data
-
+        # Craft the sentence and append it to the list of sentences
+        stat_sentence = f"There were {top_category_count} {top_category} crimes reported in {year}."
+        sentences.append(stat_sentence)
+    
     # Write the sentences to the docs/data folder as a json file to be displayed on the web app. 
     output_file = os.path.join(base_dir, "docs/data/stat_sentences.json")
     with open(output_file, "w") as f:

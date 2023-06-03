@@ -1,3 +1,5 @@
+// set configurations for ScrollReveal
+// you can modify these to your liking & checkout their documentation to learn more about each feature
 const config = {
     delay: 500,
     duration: 500,
@@ -14,50 +16,57 @@ const config = {
     }
 };
 
-fetch('data/stat_sentences.json')
-  .then(response => response.json())
-  .then(data => {
-    // Sort the data in descending order based on percentage (parsed as numbers 1st)
-    data.sort((a, b) => {
-      const percentageA = parseFloat(a.split(':')[1].trim().split('%')[0]);
-      const percentageB = parseFloat(b.split(':')[1].trim().split('%')[0]);
-      return percentageB - percentageA;
+document.addEventListener('DOMContentLoaded', function () {
+  const jsonContent = document.getElementById('json-content');
+
+  fetch('data/stat_sentences.json')
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(sentence => {
+        const parts = sentence.split(' ');
+        const count = parts[2];
+        const categoryParts = parts.slice(3, parts.length - 3);
+        const category = categoryParts.join(' ');
+
+        const sentenceElement = document.createElement('p');
+        sentenceElement.classList.add('json-sentence');
+
+        const countElement = document.createElement('span');
+        countElement.textContent = count;
+        countElement.classList.add('emphasis');
+
+        const categoryElement = document.createElement('span');
+        categoryElement.textContent = category;
+        categoryElement.classList.add('emphasis');
+
+        const restOfSentenceElement = document.createElement('span');
+        restOfSentenceElement.classList.add('rest-of-sentence');
+        restOfSentenceElement.textContent = ' ' + parts[parts.length - 3] + ' ' + parts[parts.length - 2] + ' ' + parts[parts.length - 1];
+
+        sentenceElement.appendChild(document.createTextNode('There were '));
+        sentenceElement.appendChild(countElement);
+        sentenceElement.appendChild(document.createTextNode(' '));
+        sentenceElement.appendChild(categoryElement);
+        sentenceElement.appendChild(document.createTextNode(restOfSentenceElement.textContent));
+
+        jsonContent.appendChild(sentenceElement);
+        jsonContent.appendChild(document.createElement('br'));
+        jsonContent.appendChild(document.createElement('br'));
+        jsonContent.appendChild(document.createElement('br'));
+      });
+    })
+    .catch(error => {
+      console.log('Error:', error);
     });
+});
 
-    const jsonContent = document.getElementById('json-content');
-
-    data.slice(0, 6).forEach(sentence => {
-      const parts = sentence.split(':');
-      const year = parts[0].trim();
-      const details = parts[1].trim();
-      const [percentage, restOfSentence] = details.split('%');
-
-      const sentenceElement = document.createElement('p');
-      sentenceElement.classList.add('json-sentence');
-      const yearElement = document.createElement('span'); 
-      const percentageElement = document.createElement('span'); 
-      const restOfSentenceElement = document.createElement('span'); 
-
-      yearElement.textContent = year + ': ';
-      percentageElement.textContent = percentage.trim() + '% ';
-      restOfSentenceElement.textContent = restOfSentence.trim();
-
-      percentageElement.classList.add('emphasis');
-
-      sentenceElement.appendChild(yearElement);
-      sentenceElement.appendChild(percentageElement);
-      sentenceElement.appendChild(restOfSentenceElement);
-
-      jsonContent.appendChild(sentenceElement);
-      jsonContent.appendChild(document.createElement('br'));
-    });
-  });
-
+// create variables for the ScrollReveal effects
 const scroll = ScrollReveal(config);
 const left = document.querySelectorAll(".text-holder.left");
-const filter = document.querySelectorAll(".input-wrapper");
 const graph = document.getElementById("my_dataviz");
+const filter = document.querySelectorAll(".input-wrapper");
 
+// use ScrolReveal to show each element in succession as you scroll
 scroll.reveal(left, {delay: 1000});
 scroll.reveal(graph, {delay: 1500});
-scroll.reveal(filter, {delay: 2000});
+scroll.reveal(filter, {delay: 1750});

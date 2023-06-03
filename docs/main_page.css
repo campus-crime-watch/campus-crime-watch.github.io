@@ -47,7 +47,7 @@ nav {
   .title {
     color: #7DB587;
     font-size: 24px;
-    margin-left: 55px;
+    margin-left: 45px;
     font-weight: 600;
     display: flex;
     align-items: left;
@@ -96,7 +96,7 @@ nav {
 
 .progress-container {
   position:fixed;
-  top:55px;
+  top:59px;
   z-index: 5;
   width: 100%;
   height: 8px;
@@ -120,16 +120,6 @@ nav {
   user-select: none;
 }
   
-  #menuToggle a {
-    text-decoration:none;
-    color: #232323;
-    transition: color 0.3s ease;
-  }
-
-  #menuToggle a:hover {
-    color:#7DB587;
-    ;
-  }
 
   #menuToggle input
   {
@@ -188,7 +178,6 @@ nav {
   transform: rotate(-45deg) translate(0, -1px);
   }
 
-
   #menu {
     position: fixed;
     width: 200px;
@@ -207,7 +196,6 @@ nav {
   }
 
   #menu li {
-    padding: 25px 30px;
     margin: 0;
     font-size: 17px;
     text-align: left;
@@ -217,92 +205,72 @@ nav {
     background-color: #F5F1E0;
   }
 
+  #menu li:hover {
+    background-color:#d4cdb2;
+    cursor: pointer;
+  }
+
+  #menu a {
+    display:block;
+    padding: 10px 25px;
+    text-decoration:none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+
+
+
   #menuToggle input:checked ~ ul {
   transform: none;
   }
-/* scroller */ 
-.scroll-indicator {
-  width: 40px;
-  height: 60px;
-  border: 2px solid rgba(125, 181, 129, 0.6);
-  border-radius: 50px;
-  position: fixed;
-  bottom: 20px;
-  right:20px;
-  box-shadow: 0px 0px 35px -5px rgba(100, 181, 129, 1);
-  z-index: 1;
-}
 
-  .scroll-indicator::before {
-    content: '';
-    position: absolute;
-    top: .5em;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: rgba(125, 181, 129, 0.6);
-    border-radius: 50%;
-    transform: translate(-50%, 0);
-    animation: scrollAnim 1.8s .5s infinite ease-in;
-    box-shadow: 0px 0px 35px -5px rgba(100, 181, 129, 1);
-  }
-
-  .scroll-indicator.stop::before {
-    animation-play-state: paused; 
-  }
-
-  /* Animation */
-  @keyframes scrollAnim {
-    0% {
-      transform: translate(-50%, 0) rotateX(0);
-      opacity: 0;
-    }
-
-    5% {
-      opacity: .5;
-    }
-
-    15% {
-      opacity: 1;
-    }
-
-    90%,
-    100% {
-      opacity: 0;
-    }
-
-    100% {
-      transform: translate(-50%, 30px) rotateX(30deg);
-    }
-  }
-  /* Animation */
 
 
 #landing-page {
     text-align: center;
     margin: 50px auto;
-    max-width: 800px;
+    max-width: 1200px;
     position:relative;
-    top:120px;
+    top: 50px;
+  }
+
+  #landing-page #titles {
+    max-width: 800px;
+    margin:auto;
   }
  
-  #landing-page h1 {
+  #landing-page #titles h1 {
     font-size: 80px;
+    max-width: 800px;
     line-height: 1;
     margin-top: 10px;
     margin-bottom: 10px;
     color:#7DB587
   }
-  #landing-page p {
+  #landing-page #titles p {
     font-size: 20px;
     line-height: 1.5;
     color: #4C5357;
     margin-bottom: 0;
+    text-align: center;
+  }
+
+  #landing-page #appInfo {
+    max-width: 1200px;
+  }
+  #landing-page #appInfo p {
+    font-size: 15px;
+    font-weight: 350;
+  }
+  #landing-page #appInfo p a{
+    font-weight: 600;
+    color: #4C5357;
   }
 
 /* News Ticker */
 .news-ticker {
   margin: 62px auto;
+  top:5px;
   width: 100%;
   height: 30px;
   position: relative;
@@ -351,7 +319,7 @@ nav {
 /* MAP */ 
 .map {
   position: relative;
-  margin: 200px 0 100px;
+  margin: 140px 0 100px;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -374,41 +342,6 @@ nav {
   height: 700px;
   margin: 0 auto;
 }
-
-/* #tabs {
-  position: absolute;
-  top: 0;
-  left: 50%; 
-  transform: translateX(-50%);
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  width: 100%; 
-}
-
-.tab {
-  display: block;
-  background-color: #ffffff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  flex-grow: 1;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  transition: background-color 0.3s ease;
-}
-
-.tab:hover {
-  background-color: #7DB581;
-  color:#FAF8F0;
-
-}
-
-.tab.active {
-  background: #7DB581;
-  color: #FAF8F0;
-} */
 
 /* hiding cluster map and switch tabs */
 
@@ -671,7 +604,7 @@ nav {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
   .data {
@@ -696,11 +629,12 @@ nav {
 /* Year, Month, Week, Day buttons */
 .input-wrapper {
   display: flex;
-  justify-content: center; /* Add this line to center the items */
+  justify-content: center; 
+  padding-bottom: 45px;
 }
 
 #my_dataviz {
-  margin-top: 10px;
+  margin-top: 35px;
   position: relative;
 }
 
@@ -837,15 +771,21 @@ nav {
 }
 
 #json-content{
-  width: 45%;
+  flex-grow: 1
+}
+
+.json-sentence {
+  white-space: nowrap; 
+  overflow: visible;
 }
 
 .json-sentence:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 0;
 }
 
 .text-holder.left{
   float: left;
+  width: 70%;
   text-align: left;
   justify-content: flex-start;
   align-items: flex-start;
@@ -858,15 +798,29 @@ nav {
   align-items: right;
 }
 
+.text-container {
+  width: 100%;
+  float: left;
+  text-align: left;
+  align-items: flex-start;
+  margin-left: -6.5%;
+  margin-top: 55px;
+  position: relative;
+}
+
 html.sr .load-hidden{
   visibility: hidden;
 }
 
+.rest-of-sentence {
+  font-size: 1.1em; 
+}
+
 .emphasis {
-font-weight: bold;
-color: rgb(187 71 71);
-font-size: 2em;
-position: relative;
+  font-weight: bold;
+  color: rgb(187 71 71);
+  font-size: 1.3em;
+  position: relative;
 }
 
 footer {
