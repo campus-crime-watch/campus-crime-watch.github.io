@@ -79,10 +79,8 @@ Below is an overview of the project structure:
     ├── main_page.css
     ├── data_viz.js
     ├── histogram.js
-    ├── map1.js
-    ├── map2.js
+    ├── map.js
     ├── news_ticker.js
-    ├── scroll.js
     └── sentences.js
 ├── notebooks (Jupyter notebooks checking the quality of our dataset)
     └── data_quality.ipynb
