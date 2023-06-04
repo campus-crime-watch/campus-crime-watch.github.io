@@ -336,7 +336,7 @@ nav {
 }
 */
 
-#mapbox2 {
+#mapbox {
   position: relative;
   width:100%;
   height: 700px;
@@ -484,69 +484,6 @@ nav {
 }
 
 
-/* map functions
-#filter-group { 
-  font-size: 12px;
-  font-family: 'Helvetica', sans-serif;
-  position: absolute;
-  width: 25%;
-  top: 40px;
-  left: 0px;
-  padding: 10px;
-  z-index:5;
-  background-color: transparent;
-  box-shadow: none;
-}
-
-
-  #filter-group input[type='checkbox'] {
-    display: none;
-    }
-
-  #filter-group input[type='checkbox'] + label {
-    background-color: #888;
-    display: block;
-    border-radius: 3px;
-    cursor: pointer;
-    padding: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    text-transform: capitalize;
-    }
-
-    #filter-group input[type='checkbox'] + label:before {
-      content: '';
-      margin-right: 5px;
-    }
-      
-    #filter-group input[type='checkbox']:checked + label {
-    background-color: #7DB581;
-    }
-      
-    #filter-group input[type='checkbox']:checked + label:before {
-    content: '✔';
-    }
-
-    #filter-group {
-      display:none;
-    } */
-
-/* .map-overlay .map-overlay-inner {
-  background-color: rgba(125, 181, 129, 0.6);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-  padding: 10px;
-  margin-bottom: 10px;
-  }
-
-  .map-overlay input {
-    background-color: transparent;
-    display: inline-block;
-    width: 100%;
-    position: relative;
-    margin: 0;
-    cursor: ew-resize;
-  } */
-
 /* POP-UP */ 
 .custom-popup .mapboxgl-popup-content {
   background-color: rgba(76, 83, 87, 0.8);
@@ -618,7 +555,6 @@ nav {
     font-size: 50px;
   }
 
-
   /*stack on smaller screen */
   @media screen and (max-width: 768px) {
     .data-container {
@@ -651,7 +587,7 @@ nav {
 
 .input-wrapper .options {
   display: flex;
-  justify-content: center; /* Add this line to center the items */
+  justify-content: center; 
 }
 
 .input-wrapper .options input[type="radio"] {
@@ -669,12 +605,12 @@ nav {
 }
 
 .input-wrapper .options label:first-of-type {
-  border-top-left-radius: 4px; /* Apply rounded corners to the first label */
+  border-top-left-radius: 4px; 
   border-bottom-left-radius: 4px;
 }
 
 .input-wrapper .options label:last-of-type {
-  border-top-right-radius: 4px; /* Apply rounded corners to the last label */
+  border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
@@ -746,6 +682,18 @@ nav {
     text-align: left;
     line-height: 1.5em; 
   }
+
+  #inspoSection p a,
+  #resource_sect p a {
+    color: #7DB581;
+  }
+
+  #inspoSection p a:hover,
+  #resource_sect p a:hover {
+    color:#232323; 
+
+  }
+
   #inspoSection p.centered {
     text-align: center;
     margin-top: 30px;
@@ -759,7 +707,7 @@ nav {
     line-height: 1.5em;
     font-size: 15px;
   }
-
+  
 #main-container{
   min-height: calc(100vh - 50px);
   padding-bottom: 50px;

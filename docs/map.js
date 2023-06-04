@@ -1,8 +1,8 @@
-function initializeMap2() {
+function initializeMap() {
 
     mapboxgl.accessToken = 'pk.eyJ1IjoidHJhY3l6eiIsImEiOiJjbGg1czdiczAyOWJlM2ZwanRxMnVucWc0In0.ZYsCAE_BAM76V1JuJJIGNA'; 
-    const map2 = new mapboxgl.Map({
-      container: 'mapbox2',
+    const map = new mapboxgl.Map({
+      container: 'mapbox',
       style: 'mapbox://styles/tracyzz/clh9x0t5q000l01rf5jwtexp4', 
       center: [-122.182, 37.424],
       zoom: 13.7,
@@ -71,8 +71,6 @@ function initializeMap2() {
     
 
     function fetchDataAndRenderMap() {
-      // map2.on('load', () => {
-      //     // Fetch GeoJSON from remote URL
         fetch(dataSource)
           .then(response => response.json())
           .then(data => {
@@ -104,7 +102,7 @@ function initializeMap2() {
               });
             }
     
-            map2.addSource('su-crimes', {
+            map.addSource('su-crimes', {
               type: 'geojson',
               // Use a URL for the value for the `data` property.
               data: data
@@ -112,7 +110,7 @@ function initializeMap2() {
 
             console.log('su-crimes source added');
     
-            map2.addLayer({
+            map.addLayer({
               id: 'unclustered-point',
               type: 'circle',
               source: 'su-crimes',
@@ -146,9 +144,9 @@ function initializeMap2() {
     function updateMap(value, text) {
       pastDate = new Date();
 
-      if (map2.getSource('su-crimes')) {
-        map2.removeLayer('unclustered-point');
-        map2.removeSource('su-crimes');
+      if (map.getSource('su-crimes')) {
+        map.removeLayer('unclustered-point');
+        map.removeSource('su-crimes');
       }
 
       if (value !== "custom") {
@@ -193,16 +191,18 @@ function initializeMap2() {
       startDate = start;
       endDate = end;
       
-      if (map2.getSource('su-crimes')) {
-          map2.removeLayer('unclustered-point');
-          map2.removeSource('su-crimes');
+      if (map.getSource('su-crimes')) {
+          map.removeLayer('unclustered-point');
+          map.removeSource('su-crimes');
       }
 
       fetchDataAndRenderMap();
     }
 
+    
+    // Legend
 
-    map2.on('load', () => {
+    map.on('load', () => {
       fetchDataAndRenderMap();
       const layers =[
         'Theft',
@@ -224,8 +224,6 @@ function initializeMap2() {
         '#fee2e2', //others
       ];
 
-
-      // Legend
       const legend = document.getElementById('legend');
 
       layers.forEach((layer,i) => {
@@ -253,9 +251,9 @@ function initializeMap2() {
       className: 'custom-popup'
     })
 
-    map2.on('mouseenter', 'unclustered-point', (event) => {
-        map2.getCanvas().style.cursor = 'pointer';
-        const features = map2.queryRenderedFeatures(event.point, {
+    map.on('mouseenter', 'unclustered-point', (event) => {
+        map.getCanvas().style.cursor = 'pointer';
+        const features = map.queryRenderedFeatures(event.point, {
             layers: ['unclustered-point']
         });
             if (!features.length) {
@@ -274,11 +272,11 @@ function initializeMap2() {
             <b>On Campus?</b>: ${feature.properties['on_campus?']}<br>
             <b>Date Reported</b>: ${feature.properties.date}<br>
             <b>Case Status</b>: ${feature.properties.disposition}</p>`
-        ).addTo(map2);
+        ).addTo(map);
   });
   
-    map2.on('mouseleave', 'unclustered-point', () => {
-      map2.getCanvas().style.cursor = '';
+    map.on('mouseleave', 'unclustered-point', () => {
+      map.getCanvas().style.cursor = '';
       popup.remove();
       });
 
@@ -286,5 +284,4 @@ function initializeMap2() {
 
   
 
-  
-  initializeMap2();
+  initializeMap();
