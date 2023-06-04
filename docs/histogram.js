@@ -2,16 +2,6 @@
  const margin = {top: 30, right: 30, bottom: 70, left: 60},
      width = 460 - margin.left - margin.right,
      height = 400 - margin.top - margin.bottom;
- 
-function getWidth() {
-  return Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.documentElement.clientWidth
-  );
-}
 
  // append the svg object to the body of the page
  const svg = d3.select("#my_dataviz")
@@ -34,6 +24,7 @@ function getWidth() {
  const yAxis = svg.append("g")
    .attr("class", "myYaxis")
  
+// Listen for if user changes view options (clicks on button)
 const options = d3.selectAll('input[name="option"]');
 options.on('change', function() {
     const selectedOption = d3.select(this).property('value');
@@ -85,7 +76,6 @@ async function updateOption(selectedOption) {
     const res = await fetch('data/stanford_crime.geojson')
     data = await res.json();
     features = data["features"]
-    console.log(features)
 
     hisogram_data = buildHistogramData(features, selectedOption)
 
@@ -126,7 +116,7 @@ function updateHistogram(data, selectedOption) {
     .style("fill", "white")  ;
     
  
-   // Create the u variable
+   // Create the u variable (aka the histogram bars)
    var u = svg.selectAll("rect")
      .data(data)
      .join("rect") // Add a new rect for each new elements
