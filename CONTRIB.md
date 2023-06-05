@@ -1,8 +1,3 @@
-```{highlight} shell
-```
-
-(contributing)=
-
 # Contributing
 
 Contributions are **not** welcome, as we are not actively maintaining this site. Repurposing our code and customizing it into sites for other college campuses is very welcome and the goal of this project! 
