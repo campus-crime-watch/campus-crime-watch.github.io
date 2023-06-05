@@ -3,7 +3,12 @@ import json
 import time
 import requests
 
-# old function that cleaned up results from manual. storing here in case of future use.
+# Command + F to search for the term "CUSTOMIZE" to see where to edit
+# the code to customize this to your university
+
+# [DO NOT CALL]
+# Old function that cleaned up results from manual. 
+# Storing here in case of future use.
 def geocode_old():
     # file = "data/raw/stanford_crime.csv"
     # nf = "data/processed/stanford_crime_merge.csv"
@@ -34,8 +39,11 @@ def geocode_old():
         for row in cleaned_data:
             writer.writerow(row)
 
+# Dictionary that retreives the source data column name
+#   given the ARCGIS expected name
 # Key: Standard name expected by ArcGIS
 # Val: Name of field as it appears in source data
+# CUSTOMIZE : the values
 DEFAULT_FIELD_MAPPING = {
     'Address': 'location',
     'City': 'City',
@@ -47,7 +55,6 @@ class GeocodingError(Exception):
     pass
 
 class ArcGIS:
-
     def __init__(self):
         self.endpoint = "https://locator.stanford.edu/arcgis/rest/services/geocode/NorthAmerica/GeocodeServer/geocodeAddresses"
 
@@ -55,6 +62,8 @@ class ArcGIS:
         rows_by_id = {}
         to_geocode = []
         print("Preparing data for geocoding...")
+
+        # Formats data so that ArcGIS can process it 
         with open(csv_path, 'r', newline='') as infile:
             reader = csv.DictReader(infile)
             # Object ID is a unique row ID required by ArcGIS
@@ -70,6 +79,7 @@ class ArcGIS:
                 # This will let us merge the geocoded data to the row downstream
                 rows_by_id[object_id] = row
                 object_id += 1
+
         # Now we geocode
         print(f"Geocoding {len(to_geocode)} rows of data...")
         results = self.geocode(
@@ -90,7 +100,7 @@ class ArcGIS:
         for row in geo_data:
             attrs = row['attributes']
             object_id = attrs['ResultID']
-                        # Update original row with data points
+            # Update original row with data points
             output_row = orig_data[object_id]
             output_row.update({
                 'match_score':attrs['Score'],
@@ -105,10 +115,14 @@ class ArcGIS:
             writer.writeheader()
             writer.writerows(to_write)
 
+    # Takes the source data nd fomats it into an ArcGIS row
     def _prepare_row(self, row, object_id, field_mapping):
         address_key = field_mapping['Address']
         city_key = field_mapping['City']
         region_key = field_mapping['Region']
+
+        # Sets the City and Region to be Stanford and California
+        # CUSTOMIZE : change this based on your university location
         data = {
             'attributes': {
                 'OBJECTID': object_id,
@@ -125,6 +139,10 @@ class ArcGIS:
             pass
         return data
 
+    # Makes a call to ArcGIS platform online to geocode data
+    # Calls the platform to geocode addresses in batches of 1000 locations
+    #    to avoid overwhelming the platform. It waits 1 section in between
+    #     batches
     @classmethod
     def geocode(cls, url, addresses, results=[], batch_size=1000, throttle=1):
         payload = {
@@ -137,6 +155,7 @@ class ArcGIS:
             results.extend(data['locations'])
         except KeyError:
             raise GeocodingError(data)
+
         # If records remain to process, perform a recursive call
         remaining_addresses = addresses[batch_size:]
         if remaining_addresses:
@@ -150,6 +169,7 @@ class ArcGIS:
         return results
 
 def geocode_pipeline():
+    # CUSTOMIZE : change this to your input csv file
     input_file = 'data/processed/stanford_crime_clean.csv'
     mapping = DEFAULT_FIELD_MAPPING
     geocoder = ArcGIS()
