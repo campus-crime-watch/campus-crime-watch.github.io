@@ -23,8 +23,6 @@ Libraries that we use in this project:
 
 ## Getting Started
 
-We will assume that you know how to create a Github project and repository. Once you've created one for this project and cloned it to your local machine, make sure that you create the directories listed in the Files & Directories section below. 
-
 Spend some time reading through our files/scripts which have comments describing the purpose of each code block and how you can personalize our code for your specific dataset. 
 
 After you've obtained the daily crime log dataset from your university, make sure to drop it in the data/raw folder to get started. 
@@ -102,7 +100,6 @@ For a step-by-step guide and more information, please consult the [official docu
 * Make sure the name of the repository from which the web app is deployed is ***organization_name.github.io*** where ***organization_name*** matches the name of your organization precisely. In our case, since our organization name is `campus-crime-watch`, we named the repo `campus-crime-watch.github.io`. This way, you'll have a nice and clean URL. 
 * To keep it clean, our web app is deployed from a folder in the main branch of the repo called [`docs`](https://github.com/campus-crime-watch/campus-crime-watch.github.io/tree/main/docs). This folder holds all the HTML, CSS and JS files, as well as the finalized geojson data (product of the data pipeline) that would be later added as the underlying data source of the map.  
 
-
 ## Building The Map
 
 ## Creating The News Ticker
@@ -165,6 +162,12 @@ How it works:
 
 You can modify the code in `create_sentences()` to display different aspects of the data. For instance, if you have 5+ years of data, you can display the percent increase or increase in reported crime over the years, the number of active cases, the locations with the highest reported crimes, etc. 
 
+## Github Actions
+
+You can automate both the data pipeline and news ticker using [Github Actions](https://docs.github.com/en/actions). You can set a frequency for your code to run and you don't have to manually run it yourself. This is how our news ticker automatically updates itself when new articles are posted!
+
+Check out `.github/workflows` to see our automation of the map (`map_data.yml) and news ticker (`feed.yml`). 
+
 ## Disclaimers
 Remember that our code is made to fit the structure of Stanford's daily crime dataset. If your dataset is formatted differently (e.g. you need to make modifications to pdfplumber because the format is not standardized, there's extra or missing columns in your data, etc.), you should be mindful to modify our code to account for the differences in your dataset. 
 
@@ -175,5 +178,3 @@ If your school does not have an RSS feed or newspaper that reports on crime and 
 There's an option to include a tip button where students can submit tips or comments on public safety on your campus. Perhaps this feature could be a moderated discussion board on the site. 
 
 If you have to manually ask for data every six months or year, you cannot automatically update the dataset every few weeks since there's nothing it can automatically pull from. If you do have an API you can pull from, automating the dataset's updates is a crucial feature that you should implement. 
-
-We are journalists first and programmers second —— so our code might not be the most efficient or concise. We hope that collaboration from people with more coding skills and experience can bring Campus Crimewatch to its fullest potential. 
