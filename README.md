@@ -106,7 +106,7 @@ For a step-by-step guide and more information, please consult the [official docu
 
 The News Ticker displays as a black strip on top of the site if you customize the process for accquiring crime related news for your campus. A good place to look for pre exisitng news feeds would be your university, school paper, or a local news outlet that covers crime on or near campus. Its possible that you may want to pull data in from multiple sources and combine them into a single news feed. 
 
-All this is possible by customizing `scripts/feed.py`. This script can be run using GitHub Actions (link) via the `.github/workflows/feed.yml` file.
+All this is possible by customizing `scripts/feed.py`. This script can be run using GitHub Actions ([read GitHub Actions documention](https://palewi.re/docs/first-github-scraper/)) via the `.github/workflows/feed.yml` file.
 
 For example, Stanford has a daily police blotter and sometimes has 'Crime & Safety' articles. The Stanford news ticker checks the Stanford Daily's news feed and updates the ticker if there are new relevant articles.
 
