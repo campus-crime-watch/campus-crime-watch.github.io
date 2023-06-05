@@ -3,6 +3,9 @@ import json
 import time
 import requests
 
+# IMPORTANT: Our code geocodes data using a Stanford ArcGIS system. For
+# your university, you must find your own geocoding method.
+
 # Command + F to search for the term "CUSTOMIZE" to see where to edit
 # the code to customize this to your university
 

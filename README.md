@@ -48,7 +48,7 @@ You can create a data pipeline that will:
 
 * `pre_process.py` cleans the extracted data. Column headers will be edited to snakecase. We will seperate the date and time from the reported date column into their own seperate columns. 
 
-* `clean_geocode.py` creates exact, standardized addresses that can be used in the map.
+* `clean_geocode.py` creates exact, standardized addresses that can be used in the map. NOTE: We use a Stanford ArcGIS tool to get the addresses. For your university, you will have to find your own geocoding methods. 
 
 * `crime_category.py` uses the geocoded crime dataset to create counts of the general categories of crime from the Clery Act. This is our way of standardizing the incident names to get general counts of each crime without going through the massive pain and headache of editing each incident name. Then, sentences are created that describe the percent change in each crime category from year to year. These sentences are written to a json file to be displayed on the web app. 
 
