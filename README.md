@@ -177,11 +177,3 @@ There's an option to include a tip button where students can submit tips or comm
 If you have to manually ask for data every six months or year, you cannot automatically update the dataset every few weeks since there's nothing it can automatically pull from. If you do have an API you can pull from, automating the dataset's updates is a crucial feature that you should implement. 
 
 We are journalists first and programmers second —— so our code might not be the most efficient or concise. We hope that collaboration from people with more coding skills and experience can bring Campus Crimewatch to its fullest potential. 
-
-## Useful Libraries
-
-[Jupyter notebooks are useful for seeing your altair charts before inserting them into your script.]: https://jupyter.org/
-[Altair is a useful for creating data viz.]: https://altair-viz.github.io/
-[Pandas is a powerful Python module that we used for data cleaning and analysis.]: https://pandas.pydata.org/pandas-docs/stable/
-[pipenv]: https://pipenv.readthedocs.io/en/latest/
-[requests]: https://2.python-requests.org/en/master/
