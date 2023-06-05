@@ -1,5 +1,7 @@
 # How We Created Campus Crimewatch
 
+**We are not actively maintaining this site. Pull requests are not accepted. Please fork this repo and create your own site!**
+
 This project is protected by copyright. See our LICENSE. 
 
 The data on Campus Crimewatch consists of daily crime incident reports from from January 1, 2019 to April 18, 2023 at Stanford University. 
