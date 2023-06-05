@@ -46,7 +46,7 @@ You can create a data pipeline that will:
 
 * `pre_process.py` cleans the extracted data. Column headers will be edited to snakecase. We will seperate the date and time from the reported date column into their own seperate columns. 
 
-* `clean_geocode.py` creates exact, standardized addresses that can be used in the map.
+* `clean_geocode.py` creates exact, standardized addresses that can be used in the map. NOTE: We use a Stanford ArcGIS tool to get the addresses. For your university, you will have to find your own geocoding methods. 
 
 * `crime_category.py` uses the geocoded crime dataset to create counts of the general categories of crime from the Clery Act. This is our way of standardizing the incident names to get general counts of each crime without going through the massive pain and headache of editing each incident name. Then, sentences are created that describe the percent change in each crime category from year to year. These sentences are written to a json file to be displayed on the web app. 
 
@@ -104,9 +104,11 @@ For a step-by-step guide and more information, please consult the [official docu
 
 ## Creating The News Ticker
 
-This feature is only possible if your university or the university's newspaper reports on crime on and near the university. Stanford has a daily police blotter and sometimes has 'Crime & Safety' articles, but if your school has reports every other week or so, you will have to adjust your code for that.
+The News Ticker displays as a black strip on top of the site if you customize the process for accquiring crime related news for your campus. A good place to look for pre exisitng news feeds would be your university, school paper, or a local news outlet that covers crime on or near campus. Its possible that you may want to pull data in from multiple sources and combine them into a single news feed. 
 
-The News Ticker checks an online university news site and updates the ticker if there are new relevant articles.
+All this is possible by customizing `scripts/feed.py`. This script can be run using GitHub Actions (link) via the `.github/workflows/feed.yml` file.
+
+For example, Stanford has a daily police blotter and sometimes has 'Crime & Safety' articles. The Stanford news ticker checks the Stanford Daily's news feed and updates the ticker if there are new relevant articles.
 
 How it works: 
 * the `ticker` element in `index.html` has the html for the news ticker, and `main_page.css` gives the horizontal scrolling animation.
