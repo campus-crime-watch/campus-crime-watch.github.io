@@ -25,7 +25,7 @@ Libraries that we use in this project:
   * [geopandas](https://geopandas.org/en/stable/) -  working with geospatial data in Python
   * <em>JavaScript:</em> [ScrollReveal](https://scrollrevealjs.org/guide/hello-world.html) -  animates elements as they enter or leave the viewport
   * <em>JavaScript:</em> [Mapbox](https://www.mapbox.com/mapbox-gljs) - web map
-  * <em>JavaScript:</em> [Flatpickr] (https://flatpickr.js.org/)- datetime picker
+  * <em>JavaScript:</em> [Flatpickr](https://flatpickr.js.org/)- datetime picker
 
 ## Getting Started
 
