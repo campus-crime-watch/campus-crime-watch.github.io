@@ -15,7 +15,6 @@ function initializeMap() {
     // a start date 
     let pastDate = new Date("April 18, 2023 00:00:00");
     pastDate.setDate(pastDate.getDate() - 30); 
-    console.log(pastDate);
     let startDate = null;
     let endDate = null;
     let isCustomSelected = false;
@@ -172,8 +171,6 @@ function initializeMap() {
       } else {
         pastDate = new Date("April 18, 2023 00:00:00");
         pastDate.setDate(pastDate.getDate() - parseInt(value));
-        console.log(value)
-        console.log(pastDate);
       }
     
       // Update selected option text
