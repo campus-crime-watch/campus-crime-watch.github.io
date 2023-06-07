@@ -181,10 +181,8 @@ nav {
   #menu {
     position: fixed;
     width: 200px;
-    height: 100vh;
-    margin: -81px 0 0 -50px;
-    padding: 30px;
-    padding-top: 100px;
+    margin: -85px 0 0 -50px;
+    padding: 100px 30px;
     
     background: transparent;
     list-style-type: none;
@@ -201,7 +199,7 @@ nav {
     text-align: left;
     opacity: 0.8;
     font-weight: 300;
-    line-height: 3em;
+    line-height: 2em;
     background-color: #F5F1E0;
   }
 
