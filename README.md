@@ -102,15 +102,17 @@ We found it the easiest to host the web app through [GitHub Pages](https://pages
 
 For a step-by-step guide and more information, please consult the [official documentation](https://docs.github.com/en/pages). The following are some crucial points for the app to go live:
 * Make sure the name of the repository from which the web app is deployed is ***organization_name.github.io*** where ***organization_name*** matches the name of your organization precisely. In our case, since our organization name is `campus-crime-watch`, we named the repo `campus-crime-watch.github.io`. This way, you'll have a nice and clean URL. 
-* To keep it clean, our web app is deployed from a folder in the main branch of the repo called [`docs`](https://github.com/campus-crime-watch/campus-crime-watch.github.io/tree/main/docs). This folder holds all the HTML, CSS and JS files, as well as the finalized geojson data (product of the data pipeline) that would be later added as the underlying data source of the map.  
+* To keep it clean, our web app is deployed from a folder in the main branch of the repo called [`docs`](https://github.com/campus-crime-watch/campus-crime-watch.github.io/tree/main/docs). This folder holds all the HTML, CSS and JS files, as well as the finalized GeoJSON data (product of the data pipeline) that would be later added as the underlying data source of the map.  
 
 ## Building The Map
 
 The map is created using [Mapbox GL JS](https://www.mapbox.com/mapbox-gljs), a JavaScript library for customizable interactive web map.
 
-// map.js
-// html map div id name matches container name
-// fetchable data source 
+For more instructions on installation, please refer to the [quick start guide](https://docs.mapbox.com/mapbox-gl-js/guides/install/). You will need a Mapbox account and a unique Mapbox access token to get started. 
+ 
+* In your HTML file, include a `<div>` container and give it a unique `id`. This id will be refered to when initializing the map.
+* `map.js` is where all of our code for initialization, plotting the data points, filtering through dropdown menu, as well as tooltips and legend goes. Please refer to different sections of the file for specific features and functions. 
+* The GeoJSON file containing the data points (the output of `csv_to_geojson.py`) is added via a `"data"` property when accessing the `map.addSource` method. The value of the `"data"` property is a URL of the GeoJson file, should have already been written into `docs/data` as an output of the data pipeline. In our case, the URL is '(https://campus-crime-watch.github.io/data/stanford_crime.geojson)'
 
 ## Creating The News Ticker
 
