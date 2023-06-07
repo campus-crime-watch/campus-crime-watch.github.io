@@ -113,7 +113,7 @@ For more instructions on installation, please refer to the [quick start guide](h
 How to display the crime data on the map:
 
 * In your HTML file, include a `<div>` container and give it a unique `id`. This id will be refered to when initializing the map.
-* `map.js` is where all of our code for initialization, plotting the data points, filtering through dropdown menu, as well as tooltips and legend goes. Please refer to different sections of the file for specific features and functions. 
+* `map.js` contains where all of our code for initialization, jittering and plotting the data points, filtering through dropdown menu, as well as tooltips and legend. Please refer to different sections of the file for specific features and functions. 
 * The GeoJSON file containing the data points (the output of `csv_to_geojson.py`) is added via a `"data"` property when accessing the `map.addSource` method. The value of the `"data"` property is a URL of the GeoJson file, should have already been written into `docs/data` as an output of the data pipeline. In our case, the URL is '(https://campus-crime-watch.github.io/data/stanford_crime.geojson)'
 
 For more information, see [Mapbox GL JS guides](https://docs.mapbox.com/mapbox-gl-js/guides/) for detailed documentation of options. 
