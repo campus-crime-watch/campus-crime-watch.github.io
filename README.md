@@ -135,7 +135,7 @@ For more information, see [Mapbox GL JS guides](https://docs.mapbox.com/mapbox-g
 
 ## Creating The News Ticker
 
-The News Ticker displays as a black strip on top of the site if you customize the process for accquiring crime related news for your campus. A good place to look for pre-exisitng news feeds would be your university, school paper, or a local news outlet that covers crime on or near campus. Its possible that you may want to pull data in from multiple sources and combine them into a single news feed. 
+The News Ticker displays as a black strip on top of the site if you customize the process for accquiring crime related news for your campus. A good place to look for pre-exisitng news feeds would be your school paper, or a local news outlet that covers crime on or near campus. Its possible that you want to pull data in from multiple sources and combine them into a single news feed. 
 
 All this is possible by customizing `scripts/feed.py`. This script can be run using GitHub Actions ([GitHub Actions documention](https://palewi.re/docs/first-github-scraper/)) via the `.github/workflows/feed.yml` file.
 
@@ -143,7 +143,7 @@ For example, Stanford has a daily police blotter and sometimes has 'Crime & Safe
 
 How it works: 
 * the `ticker` element in `index.html` has the html for the ticker, and `main_page.css` gives the scrolling animation.
-* `feed.py` takes from a RSS news feed (e.g. https://stanforddaily.com/feed/), and parses it using `feedparser`. It then iterates the news entries to find relevant news (e.g. news with "Crime & Safety" tag), and takes the `title`, `date`, and `link` to create a dictionary: 
+* `feed.py` takes from a RSS news feed (e.g. https://stanforddaily.com/feed/), parses it using `feedparser`, iterates the entries to find relevant news (e.g. news with "Crime & Safety" tag), and takes the `title`, `date`, and `link` to create a dictionary: 
   ```
   {news: [
            {title: 'Example Title 1',
@@ -155,12 +155,12 @@ How it works:
          ]
    }
   ```
-  Finally, it writes this data as a json file to `docs/data/news_feed.json`.
-* `news_ticker.js` takes from the json file, and adds to the news to the `ticker` element.
-* `.github/workflows/feed.yml` allows GitHub to run `feed.py` on schedule (e.g. every two hours, see `cron: '0 */2 * * *'` in `feed.yml`). It runs `feed.py` and updates `news_feed.json` if there are new articles. 
+  It writes this data to `docs/data/news_feed.json`.
+* `news_ticker.js` adds news from `news_feed.json` to the `ticker` element.
+* `.github/workflows/feed.yml` allows GitHub to run `feed.py` on schedule (e.g. every two hours, see `cron: '0 */2 * * *'` in `feed.yml`).
 
 Make your own:
-* Find your university newspaper's RSS feed, and replace the https://stanforddaily.com/feed/ link in `feed.py`. Here's some [tips](https://help.socialbee.com/article/78-how-can-i-find-the-rss-feed-of-a-website) on how to find an RSS feed for a site.
+* Find your RSS feed(s), and replace the https://stanforddaily.com/feed/ link in `feed.py`. Here's some [tips](https://help.socialbee.com/article/78-how-can-i-find-the-rss-feed-of-a-website) on how to find a site's RSS feed.
 * Each RSS feed is formatted differently. Adjust the `feed.py` script to scrape for relevant articles. It should ideally take the `title`, `date` and `link`.
 * Adjust the `cron` of `feed.yml` to run on your preffered schedule. This [tool](https://crontab.guru/) creates a cron schedule.
 
@@ -183,7 +183,7 @@ How it works:
    }
    ```
    depending on how your `.geojson` is formatted, creating this object will have different code.
-  * `updateHistogram()` then creates the graph, including building the axis labels, bars, and tooltip. The code defaults to x-axis labels for each bar, but can be customized (e.g. if the option is `month`, our code only shows each January)
+  * `updateHistogram()` creates the graph, including axis labels, bars, and tooltip. The code defaults to x-axis labels for each bar, but can be customized (e.g. for the `month` option, our code shows each January)
 
 ## Creating The Summary Statistic Sentences 
 These sentences are meant to give a quick overall view of crime on Stanford's campus from year to year. It displays the crime category from each year that had the highest number of reported crimes. 
