@@ -106,7 +106,10 @@ For a step-by-step guide and more information, please consult the [official docu
 
 ## Building The Map
 
-The map is created using [Mapbox GL JS](https://www.mapbox.com/mapbox-gljs), a JavaScript library for customizable interactive web map. 
+The map is created using [Mapbox GL JS](https://www.mapbox.com/mapbox-gljs), a JavaScript library for customizable interactive web map.
+// map.js
+// html map div id name matches container name
+// fetchable data source 
 
 ## Creating The News Ticker
 
