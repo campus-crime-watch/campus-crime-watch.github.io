@@ -106,6 +106,8 @@ For a step-by-step guide and more information, please consult the [official docu
 
 ## Building The Map
 
+The map is created using [Mapbox GL JS](https://www.mapbox.com/mapbox-gljs), a JavaScript library for customizable interactive web map. 
+
 ## Creating The News Ticker
 
 The News Ticker displays as a black strip on top of the site if you customize the process for accquiring crime related news for your campus. A good place to look for pre exisitng news feeds would be your university, school paper, or a local news outlet that covers crime on or near campus. Its possible that you may want to pull data in from multiple sources and combine them into a single news feed. 
