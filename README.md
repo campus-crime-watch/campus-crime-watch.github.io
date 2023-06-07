@@ -152,14 +152,14 @@ Make your own:
 * Adjust the `cron` of `feed.yml` to run on your preffered schedule. This [tool](https://crontab.guru/) creates a cron schedule.
 
 ## Building The Histogram
-The histogram uses d3.js to shows crime counts by year and by month. It relies on the fact that the `.geojson` data has date related inforamtion to help sort.
+The histogram uses d3.js to shows crime counts by year and month. It relies on the fact that the `.geojson` data has date related inforamtion to help sort.
 
 How it works: 
-* the `#my_dataviz` element in `index.html` puts a placeholder for the histogram and includes buttons (e.g. Per Year, Per Month) as options. 
-* `histogram.js` builds the histogram on the client-side (it organizes crime data in realtime), depending on what view option is clicked. Here's a rundown of what's going on:
+* the `#my_dataviz` element in `index.html` creates a histogram placehodler and option buttons (e.g. Per Year, Per Month). 
+* `histogram.js` builds the histogram on the client-side (organizes crime data in realtime), depending on what option is clicked. Here's a rundown of what's going on:
   * lines 28-32 sets event listeners to the buttons so if an option is changed, it calles `updateOption()`
   * `updateOption()` gets the `.geojson` file of crime data and calls `buildHistogramData()`
-  * `buildHistogramData()` creates an object for the histogram to display based on the view option. For example, if a user picks 'Per Year', then the `cateogry` is `year`, so `buildHistogramData()` creates an object that looks like:
+  * `buildHistogramData()` creates an object for the histogram to display based on the view option. For example, if a user picks 'Per Year', then the `cateogry` is `year`, so `buildHistogramData()` creates an object like:
    ```
    histogram_data = {
      2019: 1369,
@@ -170,7 +170,7 @@ How it works:
    }
    ```
    depending on how your `.geojson` is formatted, creating this object will have different code.
-  * `updateHistogram()` then creates the actual graph using the hisgoram data. This includes building the axis labels, bars, and tooltip. The code defautls to labels for each bar, but can be customized (e.g. if the option is `month`, then our code only puts the January labels on the x axis)
+  * `updateHistogram()` then creates the graph, including building the axis labels, bars, and tooltip. The code defaults to x-axis labels for each bar, but can be customized (e.g. if the option is `month`, our code only shows each January)
 
 ## Creating The Summary Statistic Sentences 
 These sentences are meant to give a quick overall view of crime on Stanford's campus from year to year. It displays the crime category from each year that had the highest number of reported crimes. 
