@@ -88,13 +88,12 @@
     </section>
 
     <section class="map" id="mapSection">
-      <div id='mapbox1' class="mapbox"></div>
         <div class="dropdown-container">
           <div class="dropdown" style="position:relative">
-            <button class="select" id="display-button">Last 60 Days</button>
+            <button class="select" id="display-button">Last 30 Days</button>
             <div class="drop-options" style="display:none;">
+              <div class="drop-option" data-value="30">Last 30 Days</div>
               <div class="drop-option" data-value="60">Last 60 Days</div>
-              <div class="drop-option" data-value="90">Last 90 Days</div>
               <div class="drop-option" data-value="365">Current Year</div>
               <div class="drop-option" data-value="custom">Custom...</div>        
               <input type="text" id="dateRangePicker" placeholder="Select Date Range" style="display:none">

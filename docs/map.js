@@ -11,9 +11,11 @@ function initializeMap() {
      
     const dataSource = 'https://campus-crime-watch.github.io/data/stanford_crime.geojson'
     
+    /* map functions - time filter */
     // a start date 
     let pastDate = new Date("April 18, 2023 00:00:00");
-    pastDate.setDate(pastDate.getDate() - 60); 
+    pastDate.setDate(pastDate.getDate() - 30); 
+    console.log(pastDate);
     let startDate = null;
     let endDate = null;
     let isCustomSelected = false;
@@ -47,9 +49,6 @@ function initializeMap() {
       !isCustomSelected == false;
     });
 
-
-    // filter functions 
-        /* map functions - time filter */
     $('.dropdown').hover(
       function() {
         // on mouseenter
@@ -69,7 +68,11 @@ function initializeMap() {
       updateMap(value, text);
     });
     
+    /* category filter */
+    let selectedCategory = null; // global variable that keeps track of category selection
+    
 
+    /* fetching data from url; preparing data by jittering & filtering */
     function fetchDataAndRenderMap() {
         fetch(dataSource)
           .then(response => response.json())
@@ -91,24 +94,24 @@ function initializeMap() {
             });
 
             if (startDate !== null && endDate !== null) {
-              data.features = data.features.filter(feature => {
+              data.features  = data.features.filter(feature => {
                   var featureDate = new Date(feature.properties.date);
-                  return featureDate >= startDate && featureDate <= endDate;
+                  return featureDate >= startDate && featureDate <= endDate; //&& (selectedCategory == null || feature.properties.category == selectedCategory)
               });
-          } else if (pastDate !== null) {
+            } else if (pastDate !== null) {
               data.features = data.features.filter(feature => {
                 var featureDate = new Date(feature.properties.date);
-                return featureDate >= pastDate;
+                return featureDate >= pastDate ; //&& (selectedCategory == null || feature.properties.category == selectedCategory)
               });
             }
-    
+
+            // TODO: Further filtering for categories, overwriting data.features as you go
+
+          /* Adding the filtered data points to map */
             map.addSource('su-crimes', {
               type: 'geojson',
-              // Use a URL for the value for the `data` property.
-              data: data
+              data: data // Your data URL 
             });
-
-            console.log('su-crimes source added');
     
             map.addLayer({
               id: 'unclustered-point',
@@ -137,10 +140,10 @@ function initializeMap() {
               ]
               }
             });
-            console.log('layer added');
           });
         }
 
+    /* Updating the map each time a filter is selected */ 
     function updateMap(value, text) {
       pastDate = new Date();
 
@@ -167,8 +170,10 @@ function initializeMap() {
       } else if (value === "365") {
         pastDate = new Date(new Date().getFullYear(), 0, 1); 
       } else {
-        pastDate = new Date();
+        pastDate = new Date("April 18, 2023 00:00:00");
         pastDate.setDate(pastDate.getDate() - parseInt(value));
+        console.log(value)
+        console.log(pastDate);
       }
     
       // Update selected option text
@@ -200,7 +205,7 @@ function initializeMap() {
     }
 
     
-    // Legend
+  /* LEGEND */
 
     map.on('load', () => {
       fetchDataAndRenderMap();
@@ -232,18 +237,24 @@ function initializeMap() {
         const key = document.createElement('span');
         key.className = 'legend-key';
         key.style.backgroundColor = color;
-        
-
+      
         const value = document.createElement('span');
         value.innerHTML = `${layer}`;
         item.appendChild(key);
         item.appendChild(value);
         legend.appendChild(item);
+        
+        // Add an event listener to the item
+        // item.addEventListener('click', () => {
+        //   selectedCategory = layer;
+        //   fetchDataAndRenderMap();
+        // });
       });
     });   
 
 
-    //POP-UP
+  /* POP-UP */
+
     // an event listener that runs when a user clicks on the map element. */
     const popup = new mapboxgl.Popup({
       closeButton: false,
