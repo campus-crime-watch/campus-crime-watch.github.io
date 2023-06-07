@@ -122,15 +122,15 @@ For more information, see [Mapbox GL JS guides](https://docs.mapbox.com/mapbox-g
 
 ## Creating The News Ticker
 
-The News Ticker displays as a black strip on top of the site if you customize the process for accquiring crime related news for your campus. A good place to look for pre exisitng news feeds would be your university, school paper, or a local news outlet that covers crime on or near campus. Its possible that you may want to pull data in from multiple sources and combine them into a single news feed. 
+The News Ticker displays as a black strip on top of the site if you customize the process for accquiring crime related news for your campus. A good place to look for pre-exisitng news feeds would be your university, school paper, or a local news outlet that covers crime on or near campus. Its possible that you may want to pull data in from multiple sources and combine them into a single news feed. 
 
-All this is possible by customizing `scripts/feed.py`. This script can be run using GitHub Actions ([read GitHub Actions documention](https://palewi.re/docs/first-github-scraper/)) via the `.github/workflows/feed.yml` file.
+All this is possible by customizing `scripts/feed.py`. This script can be run using GitHub Actions ([GitHub Actions documention](https://palewi.re/docs/first-github-scraper/)) via the `.github/workflows/feed.yml` file.
 
-For example, Stanford has a daily police blotter and sometimes has 'Crime & Safety' articles. The Stanford news ticker checks the Stanford Daily's news feed and updates the ticker if there are new relevant articles.
+For example, Stanford has a daily police blotter and sometimes has 'Crime & Safety' articles. The Stanford news ticker checks the Stanford Daily's news feed every 2 hours and updates the ticker if there are new relevant articles.
 
 How it works: 
-* the `ticker` element in `index.html` has the html for the news ticker, and `main_page.css` gives the horizontal scrolling animation.
-* `feed.py` takes from a RSS news feed (e.g. https://stanforddaily.com/feed/), and parses it using `feedparser`. It then goes through news entries to find relevant news (e.g. news with "Crime & Safety" tag), and takes the `title`, `date`, and `link` and add this information to a dictionary in the format: 
+* the `ticker` element in `index.html` has the html for the ticker, and `main_page.css` gives the scrolling animation.
+* `feed.py` takes from a RSS news feed (e.g. https://stanforddaily.com/feed/), and parses it using `feedparser`. It then iterates the news entries to find relevant news (e.g. news with "Crime & Safety" tag), and takes the `title`, `date`, and `link` to create a dictionary: 
   ```
   {news: [
            {title: 'Example Title 1',
@@ -142,14 +142,14 @@ How it works:
          ]
    }
   ```
-  Finally, it writes this data as a json file into `docs/data/news_feed.json`.
-* `news_ticker.js` takes from this json file, and adds to the `ticker` element each news with the title and date, and link to the article.
-* `.github/workflows/feed.yml` allows GitHub to automatically run `feed.py` on schedule (e.g. ours runs every two hours, see `cron: '0 */2 * * *'` in `feed.yml`). By running `feed.py` it updates the `news_feed.json` if there are new articles. 
+  Finally, it writes this data as a json file to `docs/data/news_feed.json`.
+* `news_ticker.js` takes from the json file, and adds to the news to the `ticker` element.
+* `.github/workflows/feed.yml` allows GitHub to run `feed.py` on schedule (e.g. every two hours, see `cron: '0 */2 * * *'` in `feed.yml`). It runs `feed.py` and updates `news_feed.json` if there are new articles. 
 
-How to make your own:
-* Find your university newspaper's RSS feed, and replace the https://stanforddaily.com/feed/ link in `feed.py`. Here's some tips on how to find an RSS feed for a site: https://help.socialbee.com/article/78-how-can-i-find-the-rss-feed-of-a-website.
-* Each RSS feed is formatted differently. Adjust the `feed.py` script to scrape your university's specific news feed for relevant articles. It should ideally take the `title`, `date` and `link`.
-* Adjust the `cron` of `feed.yml` to run on your preffered schedule (we chose every 2 hours). You can use https://crontab.guru/ to pick a schedule.
+Make your own:
+* Find your university newspaper's RSS feed, and replace the https://stanforddaily.com/feed/ link in `feed.py`. Here's some [tips](https://help.socialbee.com/article/78-how-can-i-find-the-rss-feed-of-a-website) on how to find an RSS feed for a site.
+* Each RSS feed is formatted differently. Adjust the `feed.py` script to scrape for relevant articles. It should ideally take the `title`, `date` and `link`.
+* Adjust the `cron` of `feed.yml` to run on your preffered schedule. This [tool](https://crontab.guru/) creates a cron schedule.
 
 ## Building The Histogram
 The histogram uses d3.js to shows crime counts by year and by month. It relies on the fact that the `.geojson` data has date related inforamtion to help sort.
