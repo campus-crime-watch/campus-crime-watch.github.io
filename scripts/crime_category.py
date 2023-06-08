@@ -88,6 +88,7 @@ def standardize_crimes():
     # Add the standardized crime category data to the geocoded dataset for the map
     df["category"] = category_column
     df.to_csv("data/processed/stanford_crime_clean_geocoded_categorized.csv")
+    df.to_csv("docs/data/stanford_crime_clean_geocoded_categorized.csv")
 
 def create_sentences():
     base_dir = Path(__file__).parents[1]
